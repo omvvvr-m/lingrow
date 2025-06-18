@@ -142,7 +142,7 @@ button {
 
 
 body {
-    
+
     padding: 0px;
 }
 
@@ -154,7 +154,7 @@ body {
     color: black;
     text-align: center;
 
-    
+
 }
 
 .containers {
@@ -171,7 +171,7 @@ body {
 
 .first-course {
 
-    border-radius: 40px ;
+    border-radius: 40px;
     background-color: white;
     width: 60%;
     max-width: 20rem;
@@ -183,7 +183,7 @@ body {
 .ilets {
     width: 100%;
     height: 15rem;
-border-radius: 40px;
+    border-radius: 40px;
 
 
 
@@ -206,8 +206,8 @@ border-radius: 40px;
 
     width: 100%;
     height: 15rem;
-border-radius: 40px;
-    
+    border-radius: 40px;
+
 
 
 }
@@ -218,18 +218,20 @@ border-radius: 40px;
     background-color: white;
     width: 60%;
     max-width: 20rem;
-    height: 30rem; 
+    height: 30rem;
     box-shadow: 0 4px 8px;
 
 }
 
-.first-course:hover,.second-course:hover,.third-course:hover{
-transform: scale(1.07);
-box-shadow: rgb(197, 191, 185);
-transition-duration: 0.5s;
+.first-course:hover,
+.second-course:hover,
+.third-course:hover {
+    transform: scale(1.07);
+    box-shadow: rgb(197, 191, 185);
+    transition-duration: 0.5s;
 
 
-}    
+}
 
 
 p {
@@ -239,17 +241,21 @@ p {
     margin: 1rem;
 
 }
-@media screen and (max-width:700px){
-   
-    .containers{
-gap: 2.5 rem;
+
+@media screen and (max-width:700px) {
+
+    .containers {
+        gap: 2.5 rem;
     }
-.first-course,.second-course,.third-course{
-width: 100%;
-height: 15 rem;
+
+    .first-course,
+    .second-course,
+    .third-course {
+        width: 100%;
+        height: 15 rem;
 
 
-}
+    }
 }
 
 
@@ -422,6 +428,15 @@ height: 15 rem;
     width: 80%;
     max-width: 30rem;
     height: 40rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.oc-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    /* transform: scale(1.1); */
+
 }
 
 .oc-card img {
@@ -458,10 +473,21 @@ height: 15 rem;
 
 }
 
+.oc-card .card-footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
 .oc-card .duration {
 
-    align-self: flex-start;
+    /* margin-right: auto;
     margin-top: auto;
+*/
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
     align-items: center;
@@ -489,6 +515,9 @@ height: 15 rem;
 
 .oc-card button {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     font-weight: 100;
     font-family: 'Oswald', sans-serif;
@@ -497,7 +526,7 @@ height: 15 rem;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     box-shadow: none;
-    margin-top: auto;
+    margin-left: auto;
     align-self: flex-end;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
@@ -558,10 +587,48 @@ height: 15 rem;
         margin: 2rem;
         border-radius: 50px;
         background-color: var(--forth-color);
-        width: 70%;
-        height: 30rem;
+        width: 90%;
         max-width: none;
+        min-height: 2rem;
     }
+
+    .oc-card .card-footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: 0;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .oc-card .duration {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .oc-card button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        font-weight: 100;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        box-shadow: none;
+        align-self: center;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 60%;
+        height: 4rem;
+        z-index: 0;
+    }
+
 }
 
 /* =============================== CARD =============================== */
