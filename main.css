@@ -11,6 +11,113 @@ body {
     padding: 0px;
 }
 
+/* =============================NAVBAR========================== */
+
+.navbar {
+    background-color:#6e0371 ;
+    padding-right: 0.9375rem; padding-left: 0.9375rem;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a {
+    color: white;
+}
+
+.navlist {
+    list-style: none;
+}
+.navlist a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navlist li {
+    display: inline-block;
+    margin-right: 1.5625rem;
+    padding: 0.625rem 1.25rem;
+}
+.navlist li :hover {
+    color:white ;
+    background-color: rgb(197, 191, 185);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+}
+button {
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border-color: gold;
+    padding: 0.625rem;
+    width: 5rem;
+    height:5.625rem;
+    font-weight: bolder;
+    box-shadow:  0 0.25rem 0.5rem ;
+}
+/* button :hover {
+    color: white;
+    width: 80px;
+    height: 90px;
+    background-color: #a348b7;
+} */
+  
+ /*======================*/
+
+@media (max-width: 1130px) {
+.navbar {
+    background-color:#6e0371 ;
+    padding-right: 15px; padding-left: 15px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a {
+    color: white;
+}
+
+.navlist {
+    list-style: none;
+}
+.navlist a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navlist li {
+    display: inline-block;
+    margin-right: 25px;
+    padding: 10px 20px;
+}
+.navlist li :hover {
+    color:white ;
+    background-color: rgb(197, 191, 185);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+button {
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border-color: gold;
+    padding: 10px;
+    width: 80px;
+    height: 90px;
+    font-weight: bolder;
+    box-shadow:  0 4px 8px ;
+}
+/* button :hover {
+    color: white;
+    width: 80px;
+    height: 90px;
+    background-color: #a348b7;
+} */
+
+}
+
 /* ========================== Section Divider ========================== */
 
 .main-blanket {
