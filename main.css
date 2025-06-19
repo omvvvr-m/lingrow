@@ -1040,6 +1040,20 @@ p {
 }
 
 /* ========================== Section Divider ========================== */
+
+/* ========================== Section Divider ========================== */
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========================== Section Divider ========================== */
 
 footer{
@@ -1050,8 +1064,9 @@ padding: 6px;
 }
 
 .footer-links{font-family: "owsald";
-font-size: larger;
+font-size: 20px;
 display: inline-flexbox;
+font-weight: 300px;
 }
 .footer-links a{
 text-decoration: none;
@@ -1059,7 +1074,7 @@ color: white;}
 
 .footer-links li{
     display: inline-flex;
-    margin: 30px;
+    margin: 60px;
     padding: 15px;
 }
 
@@ -1085,7 +1100,7 @@ border-radius: 50px;
 font-size: 30px;
 text-decoration: none;
 padding: 20px;
-margin: 7.5px;
+margin: 4px;
 transition: 0.3 ease-out;
 
 }
