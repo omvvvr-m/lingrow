@@ -17,7 +17,7 @@ body {
 /* =============================NAVBAR========================== */
 
 .navbar {
-    background-color: #6e0371;
+    background-color:#ff7aac;
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 .logo a {
-    color: white;
+    color: black;
 }
 
 .navlist {
@@ -38,6 +38,7 @@ body {
 
 .navlist a {
     color: white;
+    font-family: "Oswald, sans-serif";
     font-weight: bold;
     text-decoration: none;
 }
@@ -46,11 +47,12 @@ body {
     display: inline-block;
     margin-right: 1.5625rem;
     padding: 0.625rem 1.25rem;
+    font-family: "Oswald, sans-serif";
 }
 
 .navlist li :hover {
     color: white;
-    background-color: rgb(197, 191, 185);
+    background-color:#97536c;
     padding: 0.625rem 1.25rem;
     border-radius: 0.625rem;
 }
@@ -65,14 +67,37 @@ button {
     height: 5.625rem;
     font-weight: bolder;
     box-shadow: 0 0.25rem 0.5rem;
+    font-family: "Oswald, sans-serif";
 }
 
-/* button :hover {
-    color: white;
-    width: 80px;
-    height: 90px;
-    background-color: #a348b7;
-} */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ff7aac;
+  width: 180px;;
+  list-style:none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.navlist li:hover .dropdown {
+  display: block;
+  background-color: #ff7aac;
+}
+.dropdown li {
+  padding: 10px 15px;
+  border-top: 1px ;
+  width: 30;
+
+}
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  white-space: normal;
+}
+.dropdown li a :hover {
+  background-color: #ff7aac;
+}
 
 /*======================*/
 
