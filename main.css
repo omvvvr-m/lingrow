@@ -21,14 +21,20 @@ body {
 
 .navbar {
     background-color: var(--primary-color);
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 3rem;
+    padding-left: 5rem;
+    border-radius: 38rem;
+    margin: 2rem auto 0;
+    width: fit-content;
+    font-size: large;
 }
 
 .navdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .logo {}
@@ -52,6 +58,7 @@ body {
 .navlist a {
     color: white;
     font-family: "Oswald, sans-serif";
+    font-size: large;
     font-weight: bold;
     text-decoration: none;
 }
@@ -123,13 +130,114 @@ button {
 
 /*======================*/
 
+
+@media (max-width: 1130px) {
+    .navbar {
+        background-color: #ff7aac;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 4rem;
+        font-size: medium;
+    }
+
+    .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo a {
+        color: white;
+        font-size:1.2;
+    }
+
+    .navlist {
+        list-style: none;
+    }
+
+    .navlist a {
+        color: white;
+        font-family: "Oswald, sans-serif";
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .navlist li {
+        display: inline-block;
+        margin-right: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-family: "Oswald, sans-serif";
+    }
+
+    .navlist li :hover {
+        color: white;
+        background-color: #97536c;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.5rem;
+    }
+
+    button {
+        background-color: transparent;
+        color: white;
+        border-radius: 2rem;
+        border-color: gold;
+        padding: 0.4rem;
+        width: 4.5rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        font-weight: bolder;
+        box-shadow: 0 0.2rem 0.4rem;
+        font-family: "Oswald, sans-serif";
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #ff7aac;
+        width: 9rem;
+        ;
+        list-style: none;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .navlist li:hover .dropdown {
+        display: block;
+        background-color: #ff7aac;
+    }
+
+    .dropdown li {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+        border-top: 0.0625rem;
+        width: 30;
+
+    }
+
+    .dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        white-space: normal;
+    }
+
+    .dropdown li a :hover {
+        background-color: #ff7aac;
+    }
+
+}
+
+
+
 @media screen and (max-width:785px) {
     .navlist {
         position: fixed;
         top: 0;
-        right: -100%;
-        height: 100vh;
-        width: min(15em, 100%);
+        /* right: -1rem; */
+        right: 100%;
+        height: 80vh;
+        width: min(14em, 100%);
         background-color: #bd597f;
         z-index: 10;
         border-left: 1px solid #ff7aac;
@@ -156,119 +264,34 @@ button {
     }
 
     .mobnav {
-        display: block;
-        top: 0;
-        right: 0;
-        width: 15em;
-        height: 100vh;
-        background-color: #ff7aac;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        flex-direction: column;
-        padding-top: 4rem;
-        z-index: 10;
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border-radius:20%;
+        border: 2px solid white;
+        color:yellow;
+        background-color: red;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        z-index: 20;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .navlist.open {
         right: 0;
     }
+  
+
+
 }
 
 /* ==================== */
-@media (max-width: 1130px) {
-    .navbar {
-        background-color: #ff7aac;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-    }
-
-    .navdiv {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .logo a {
-        color: black;
-    }
-
-    .navlist {
-        list-style: none;
-    }
-
-    .navlist a {
-        color: white;
-        font-family: "Oswald, sans-serif";
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .navlist li {
-        display: inline-block;
-        margin-right: 1.5625rem;
-        padding: 0.625rem 1.25rem;
-        font-family: "Oswald, sans-serif";
-    }
-
-    .navlist li :hover {
-        color: white;
-        background-color: #97536c;
-        padding: 0.625rem 1.25rem;
-        border-radius: 0.625rem;
-    }
-
-    button {
-        background-color: transparent;
-        color: white;
-        border-radius: 50px;
-        border-color: gold;
-        padding: 0.5rem;
-        width: 5rem;
-        height: 5.625rem;
-        font-weight: bolder;
-        box-shadow: 0 0.25rem 0.5rem;
-        font-family: "Oswald, sans-serif";
-    }
-
-    .dropdown {
-        display: none;
-        position: absolute;
-        background-color: #ff7aac;
-        width: 11.25rem;
-        ;
-        list-style: none;
-        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-        z-index: 100;
-    }
-
-    .navlist li:hover .dropdown {
-        display: block;
-        background-color: #ff7aac;
-    }
-
-    .dropdown li {
-        padding: 0.625rem 0.9375rem;
-        border-top: 0.0625rem;
-        width: 30;
-
-    }
-
-    .dropdown li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        white-space: normal;
-    }
-
-    .dropdown li a :hover {
-        background-color: #ff7aac;
-    }
-
-}
-
-
-
-
 
 /* ========================== Section Divider ========================== */
 
