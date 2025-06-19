@@ -857,53 +857,68 @@ p {
 footer{
 width: 100%;
 background-color: var(--primary-color);
-
+border-radius: 2rem;
 
 
 }
 .photo{
-width: 5rem;
+width: 3rem;
 border-radius: 50px;
 margin: 1rem;
 
 }
 .footer-description{
-font-family: "owsald";
+font-family: "owsald",sans-serif;
 font-weight: 500;
-font-size: larger;
+font-size: medium;
 color:white;
 
 }
 .row{
 display: flex;
-flex-wrap: wrap;
 margin: auto;
-align-items: flex-start;
+align-items:center;
 justify-content: space-between;
 
 }
 
 .col{
-    flex-basis:30% ;
+    flex-basis: 30%;
     padding: 5px;
     
 }
+.books{
+    margin-right: 20rem;
+    position: relative;
+    color: black;
+}
+.books p {
+font-size: medium;
+color: #FBF8EF;
+
+}
+
 ul li{
     list-style: none;
     margin: 12px;
+    
 }
 ul a {
 text-decoration: none;
-font-size: larger;
+font-size: medium;
 font-family: "oswald";
 color: white;
 
-
 }
 
+.footer-links{
 
-
-
+}
+.start{
+font-size: medium;
+font-family: "oswald";
+color: black;
+}
 
 
 
