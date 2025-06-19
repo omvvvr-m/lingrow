@@ -17,7 +17,7 @@ body {
 /* =============================NAVBAR========================== */
 
 .navbar {
-    background-color:#ff7aac;
+    background-color: var(--primary-color);
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
 }
@@ -28,8 +28,18 @@ body {
     justify-content: space-between;
 }
 
+.logo {}
+
 .logo a {
-    color: black;
+    font-weight: 500;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.3rem;
 }
 
 .navlist {
@@ -52,7 +62,7 @@ body {
 
 .navlist li :hover {
     color: white;
-    background-color:#97536c;
+    background-color: #97536c;
     padding: 0.625rem 1.25rem;
     border-radius: 0.625rem;
 }
@@ -71,32 +81,37 @@ button {
 }
 
 .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #ff7aac;
-  width: 11.25rem;;
-  list-style:none;
-  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
-  z-index: 100;
+    display: none;
+    position: absolute;
+    background-color: #ff7aac;
+    width: 11.25rem;
+    ;
+    list-style: none;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
+
 .navlist li:hover .dropdown {
-  display: block;
-  background-color: #ff7aac;
+    display: block;
+    background-color: #ff7aac;
 }
+
 .dropdown li {
-  padding: 0.625rem 0.9375rem;
-  border-top: 0.0625rem ;
-  width: 30;
+    padding: 0.625rem 0.9375rem;
+    border-top: 0.0625rem;
+    width: 30;
 
 }
+
 .dropdown li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  white-space: normal;
+    color: white;
+    text-decoration: none;
+    display: block;
+    white-space: normal;
 }
+
 .dropdown li a :hover {
-  background-color: #ff7aac;
+    background-color: #ff7aac;
 }
 
 .mobnav {
@@ -108,18 +123,19 @@ button {
 @media screen and (max-width:785px) {
     .navlist {
         position: fixed;
-        top:0;
-        right:-100%;
+        top: 0;
+        right: -100%;
         height: 100vh;
-        width:min(15em,100%);
+        width: min(15em, 100%);
         background-color: #bd597f;
-        z-index:10;
+        z-index: 10;
         border-left: 1px solid #ff7aac;
         display: flex;
         flex-direction: column;
         padding-top: 4rem;
         transition: right 0.3s ease-out;
     }
+
     button {
         color: white;
         background-color: #F96E2A;
@@ -133,22 +149,24 @@ button {
         display: block;
         margin-top: 1rem;
         cursor: pointer;
-        font-family:"Oswald, sans-serif";
+        font-family: "Oswald, sans-serif";
     }
+
     .mobnav {
-    display: block;
-    top: 0;
-    right: 0;
-    width: 15em;
-    height: 100vh;
-    background-color: #ff7aac;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    flex-direction: column;
-    padding-top: 4rem;
-    z-index: 10;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 15em;
+        height: 100vh;
+        background-color: #ff7aac;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
+        padding-top: 4rem;
+        z-index: 10;
     }
-    .navlist.open{
+
+    .navlist.open {
         right: 0;
     }
 }
@@ -156,89 +174,95 @@ button {
 /* ==================== */
 @media (max-width: 1130px) {
     .navbar {
-    background-color:#ff7aac;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+        background-color: #ff7aac;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo a {
+        color: black;
+    }
+
+    .navlist {
+        list-style: none;
+    }
+
+    .navlist a {
+        color: white;
+        font-family: "Oswald, sans-serif";
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navlist li {
+        display: inline-block;
+        margin-right: 1.5625rem;
+        padding: 0.625rem 1.25rem;
+        font-family: "Oswald, sans-serif";
+    }
+
+    .navlist li :hover {
+        color: white;
+        background-color: #97536c;
+        padding: 0.625rem 1.25rem;
+        border-radius: 0.625rem;
+    }
+
+    button {
+        background-color: transparent;
+        color: white;
+        border-radius: 50px;
+        border-color: gold;
+        padding: 0.5rem;
+        width: 5rem;
+        height: 5.625rem;
+        font-weight: bolder;
+        box-shadow: 0 0.25rem 0.5rem;
+        font-family: "Oswald, sans-serif";
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #ff7aac;
+        width: 11.25rem;
+        ;
+        list-style: none;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .navlist li:hover .dropdown {
+        display: block;
+        background-color: #ff7aac;
+    }
+
+    .dropdown li {
+        padding: 0.625rem 0.9375rem;
+        border-top: 0.0625rem;
+        width: 30;
+
+    }
+
+    .dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        white-space: normal;
+    }
+
+    .dropdown li a :hover {
+        background-color: #ff7aac;
+    }
+
 }
 
-.navdiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo a {
-    color: black;
-}
-
-.navlist {
-    list-style: none;
-}
-
-.navlist a {
-    color: white;
-    font-family: "Oswald, sans-serif";
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.navlist li {
-    display: inline-block;
-    margin-right: 1.5625rem;
-    padding: 0.625rem 1.25rem;
-    font-family: "Oswald, sans-serif";
-}
-
-.navlist li :hover {
-    color: white;
-    background-color:#97536c;
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.625rem;
-}
-
-button {
-    background-color: transparent;
-    color: white;
-    border-radius: 50px;
-    border-color: gold;
-    padding: 0.5rem;
-    width: 5rem;
-    height: 5.625rem;
-    font-weight: bolder;
-    box-shadow: 0 0.25rem 0.5rem;
-    font-family: "Oswald, sans-serif";
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #ff7aac;
-  width: 11.25rem;;
-  list-style:none;
-  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
-  z-index: 100;
-}
-.navlist li:hover .dropdown {
-  display: block;
-  background-color: #ff7aac;
-}
-.dropdown li {
-  padding: 0.625rem 0.9375rem;
-  border-top: 0.0625rem ;
-  width: 30;
-
-}
-.dropdown li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  white-space: normal;
-}
-.dropdown li a :hover {
-  background-color: #ff7aac;
-}
-
-}
 /* ============================= */
 
 
@@ -935,70 +959,75 @@ p {
 
 /* ========================== Section Divider ========================== */
 /* ========================== Section Divider ========================== */
-footer{
-width: 100%;
-background-color: var(--primary-color);
-border-radius: 2rem;
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
 
 
 }
-.photo{
-width: 3rem;
-border-radius: 50px;
-margin: 1rem;
 
-}
-.footer-description{
-font-family: "owsald",sans-serif;
-font-weight: 500;
-font-size: medium;
-color:white;
-
-}
-.row{
-display: flex;
-margin: auto;
-align-items:center;
-justify-content: space-between;
+.photo {
+    width: 3rem;
+    border-radius: 50px;
+    margin: 1rem;
 
 }
 
-.col{
+.footer-description {
+    font-family: "owsald", sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    color: white;
+
+}
+
+.row {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.col {
     flex-basis: 30%;
     padding: 5px;
-    
+
 }
-.books{
+
+.books {
     margin-right: 20rem;
     position: relative;
     color: black;
 }
+
 .books p {
-font-size: medium;
-color: #FBF8EF;
+    font-size: medium;
+    color: #FBF8EF;
 
 }
 
-ul li{
+ul li {
     list-style: none;
     margin: 12px;
-    
+
 }
+
 ul a {
-text-decoration: none;
-font-size: medium;
-font-family: "oswald";
-color: white;
+    text-decoration: none;
+    font-size: medium;
+    font-family: "oswald";
+    color: white;
 
 }
 
-.footer-links{
+.footer-links {}
 
-}
-.start{
-font-size: medium;
-font-family: "oswald";
-color: black;
+.start {
+    font-size: medium;
+    font-family: "oswald";
+    color: black;
 }
 
 
