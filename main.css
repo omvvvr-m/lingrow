@@ -936,19 +936,13 @@ p {
     justify-content: center;
 }
 
-.tablet-inner img.ipad {
+.tablet-inner img {
     width: 100%;
     height: auto;
     display: block;
     z-index: 1;
 }
 
-.tablet-inner .bg {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: 0;
-}
 
 .anytime {
     position: absolute;
@@ -960,7 +954,6 @@ p {
     font-family: 'Dancing Script', sans-serif;
     font-size: clamp(3rem, 8vw, 10rem);
     background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     pointer-events: none;
@@ -1042,10 +1035,6 @@ ul a {
 
 
 /* ========================== Section Divider ========================== */
-.social-icon{
-
-
-
-}
+.social-icon {}
 
 /* ========================== Section Divider ==========================
