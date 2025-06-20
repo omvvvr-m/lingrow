@@ -1148,10 +1148,44 @@ p {
 
 /* ========================== Section Divider ========================== */
 
+.stats-section {
+  text-align: center;
+  background-color: var(--primary-color-light);
+  padding: 60px ;
+  
+}
 
 
 
+section div  {
+ display: inline-block ;
+justify-content: center;
+  
+}
+.stat-box {
+  background-color: var(--primary-color-light);
+  
+  
+}
 
+.stat-box h3 {
+  font-size: 32px;
+  color: #333;
+}
+
+.stat-box p.icons{
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.stat-box p.stat-detailed{
+font-size:20px ;
+color:black;
+text-align: center;
+font-family: "owsald";
+
+
+}
 
 
 
@@ -1164,14 +1198,17 @@ p {
 footer {
 
     background-color: black;
-    width: 99%;
+    width: 100%;
     padding: 6px;
+    text-align: center;
 }
 
 .footer-links {
     font-family: "owsald";
     font-size: 20px;
-    display: inline-flexbox;
+    display: flex;
+    justify-content: center;
+    gap:30px;
     font-weight: 300px;
 }
 
@@ -1180,26 +1217,25 @@ footer {
     color: white;
 }
 
+
+.footer-links li :hover {
+    color: var(--fifth-color);
+}
+
 .footer-links li {
     display: inline-flex;
     margin: 60px;
     padding: 15px;
 }
 
-.footer-links li :hover {
-    color: var(--fifth-color);
+
+.social-icons{
+justify-content: center;
+align-items: center;
+gap: 15px;
+display: flex;
+padding: 20px;
 }
-
-
-.social-icons {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-
-}
-
 
 .social-icons a {
     color: black;
