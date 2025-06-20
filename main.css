@@ -1219,23 +1219,22 @@ body {
 
 .stats-section {
     text-align: center;
-    background-color: var(--primary-color-light);
-    padding: 60px;
+    background-color: var(--gradient-s);
+    padding: 60px ;
+width: 100%;
+}
+.ppp{
 
+    gap: 30px;
+    display: flex;
+    margin-left: 150px;
 }
 
 
-
-section div {
+section span {
     display: inline-block;
     justify-content: center;
-
-}
-
-.stat-box {
-    background-color: var(--primary-color-light);
-
-
+;
 }
 
 .stat-box h3 {
@@ -1252,8 +1251,8 @@ section div {
 .stat-box p.stat-detailed {
     font-size: 20px;
     color: var(--forth-color);
-    text-align: center;
-    font-family: "owsald";
+    gap: 30px;
+    font-family: "oswald";
 
 
 }
@@ -1275,7 +1274,7 @@ footer {
 }
 
 .footer-links {
-    font-family: "owsald";
+    font-family: "oswald";
     font-size: 20px;
     display: flex;
     justify-content: center;
