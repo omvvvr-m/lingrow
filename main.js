@@ -68,5 +68,28 @@ window.addEventListener('scroll', () => {
 });
 
 
+//////////////////////////////  carousel  /////////////////////////////////////
+
+let current = 0 ;
+const cards = document.querySelectorAll(".reviews");
+
+function showReview(index) {
+    cards.forEach((card, i) => {
+        card.classList.toggle("active",i == index);
+    });
+}
+
+function nextReview() {
+    current = (current + 1) % cards.length;
+    showReview(current);
+}
+
+function prevReview() {
+    current = (current - 1 + cards.length) % cards.length;
+    showReview(current);
+}
+
+setInterval(nextReview,6000);
+
 
 
