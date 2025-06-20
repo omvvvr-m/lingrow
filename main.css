@@ -1238,7 +1238,7 @@ justify-content: center;
 
 .stat-box h3 {
   font-size: 32px;
-  color: #333;
+  color:black;
 }
 
 .stat-box p.icons{
@@ -1248,7 +1248,7 @@ justify-content: center;
 }
 .stat-box p.stat-detailed{
 font-size:20px ;
-color:black;
+color:var(--forth-color);
 text-align: center;
 font-family: "owsald";
 
