@@ -94,5 +94,29 @@ function prevReview() {
 
 setInterval(nextReview, 6000);
 
+//////////////////////////////  carousel  /////////////////////////////////////
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var num1 = document.getElementById("session-completed");
+    var num2 = document.getElementById("clients");
+    function animatedCounter(element, start, end, duration) {
+        var range = end - start;
+        var current = start;
+        var increment = end > start ? 1 : -1;
+        let stepTime = Math.max(Math.floor(duration / range), 1); // prevent zero ms
+
+        var timer = setInterval(function () {
+            current += increment;
+            element.innerText = "+" + current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    animatedCounter(num1, 0, 500, 1000);
+    animatedCounter(num2, 0, 1200, 1500);
+});
 
 
