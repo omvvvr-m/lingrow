@@ -107,7 +107,7 @@ body {
 .dropdown {
     display: none;
     position: absolute;
-    background-color: #ff7aac;
+    background-color: var(--primary-color);
     width: 11.25rem;
     ;
     list-style: none;
@@ -117,7 +117,7 @@ body {
 
 .navlist li:hover .dropdown {
     display: block;
-    background-color: #ff7aac;
+    background-color: var(--primary-color);
 }
 
 .dropdown li {
@@ -135,7 +135,7 @@ body {
 }
 
 .dropdown li a :hover {
-    background-color: #ff7aac;
+    background-color: var(--primary-color);
 }
 
 .mobnav {
@@ -147,51 +147,106 @@ body {
 
 @media (max-width: 1130px) {
     .navbar {
-        background-color: var(--primary-color);
+        /* background-color: var(--primary-color);
         padding-right: 0.5rem;
         padding-left: 0.5rem;
         border-radius: 4rem;
+        font-size: medium; */
+
+        border: solid 0.03rem rgba(255, 255, 255, 0.11);
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 200;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: var(--main-radius);
+        margin: 0.5rem auto 0;
+        width: 85%;
+        height: 1.8rem;
         font-size: medium;
+        box-shadow: 0 0 16px -5px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .navdiv {
+        /* display: flex;
+        align-items: center;
+        justify-content: space-between; */
+
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        width: auto;
+        height: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .logo {
+    margin-right: auto;
     }
 
     .logo a {
-        color: white;
-        font-size: 1.2;
+        /* color: white;
+        font-size: 1.2; */
+
+      font-weight: 500;
+      font-size: 20px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 0.1rem;
     }
 
     .navlist {
-        list-style: none;
+        /* list-style: none; */
+
+     position: absolute;
+     list-style: none;
+     display: flex;
+     align-items: center;
+     margin: 0px;
+     padding: 0px;
     }
 
     .navlist a {
-        color: white;
+        /* color: white;
         font-family: "Oswald, sans-serif";
         font-weight: bold;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.9rem; */
+
+     color: white;
+     font-family: "Oswald", sans-serif;
+     font-size: medium;
+     font-weight: 200;
+     text-decoration: none;
     }
 
     .navlist li {
-        display: inline-block;
+        /* display: inline-block;
         margin-right: 1rem;
         padding: 0.4rem 0.8rem;
-        font-family: "Oswald, sans-serif";
+        font-family: "Oswald, sans-serif"; */
+
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     .navlist li :hover {
         color: white;
-        background-color: #97536c;
+        /* background-color: #97536c;
         padding: 0.4rem 0.8rem;
-        border-radius: 0.5rem;
+        border-radius: 0.5rem; */
     }
 
-    button {
+    /* button {
         background-color: transparent;
         color: white;
         border-radius: 2rem;
@@ -203,12 +258,25 @@ body {
         font-weight: bolder;
         box-shadow: 0 0.2rem 0.4rem;
         font-family: "Oswald, sans-serif";
+    } */
+
+
+    .navbar button {
+    font-family: "Oswald", sans-serif;
+    background-color: white;
+    color: black;
+    border-radius: var(--main-radius);
+    border: none;
+    width: 5rem;
+    height: 1.625rem;
+    font-size: 1rem;
+    font-weight: 400;
     }
 
     .dropdown {
         display: none;
         position: absolute;
-        background-color: #ff7aac;
+        background-color: var(--primary-color);
         width: 9rem;
         ;
         list-style: none;
@@ -218,7 +286,7 @@ body {
 
     .navlist li:hover .dropdown {
         display: block;
-        background-color: #ff7aac;
+        background-color: var(--primary-color);
     }
 
     .dropdown li {
@@ -237,31 +305,31 @@ body {
     }
 
     .dropdown li a :hover {
-        background-color: #ff7aac;
+        background-color: var(--primary-color);
     }
 
 }
 
 
 
-@media screen and (max-width:785px) {
+@media screen and (max-width:770px) {
     .navlist {
         position: fixed;
         top: 0;
-        /* right: -1rem; */
-        right: 100%;
+        right: -1rem;
+        /* right: 100%; */
         height: 80vh;
         width: min(14em, 100%);
-        background-color: #bd597f;
+        background-color: rgb(68, 67, 67);
         z-index: 10;
-        border-left: 1px solid #ff7aac;
+        border-left: 1px solid var(--primary-color);
         display: flex;
         flex-direction: column;
         padding-top: 4rem;
         transition: right 0.3s ease-out;
     }
 
-    button {
+    /* button {
         color: white;
         background-color: #F96E2A;
         box-shadow: 0;
@@ -275,18 +343,18 @@ body {
         margin-top: 1rem;
         cursor: pointer;
         font-family: "Oswald, sans-serif";
-    }
+    } */
 
     .mobnav {
         display: flex;
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background: none;
+        /* background: none; */
         border-radius: 20%;
-        border: 2px solid white;
-        color: yellow;
-        background-color: red;
+        border: 2px solid var(--primary-color);
+        color: white;
+        background-color: var(--primary-color);
         font-size: 2rem;
         width: 3rem;
         height: 3rem;
