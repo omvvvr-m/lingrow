@@ -297,7 +297,7 @@
         </section>
         <!----------------------------- Section Divider ----------------------------->
 
-<section  title="packs">
+        <section title="packs">
 
 
 
@@ -312,7 +312,7 @@
 
 
 
-</section>
+        </section>
 
 
 
@@ -383,38 +383,65 @@
 
 
 
-<section class="stats-section">
-  
-  <div class="stat-box">
-    
-        <p class="icons"> <i class="fa fa-check-square" aria-hidden="true"></i>
- </p>
-      <h3 id="session-completed">+100</h3>
-      <p class="stat-detailed">Sessions Completed</p>
-    </div>
-    <div class="stat-box">
-        <p class="icons"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <section class="stats-section">
 
- </p>
-      <h3>+1200</h3>
-      <p class="stat-detailed">Certified Clients</p>
-    </div>
-    <div class="stat-box">
+            <div class="stat-box">
 
-        <p class="icons"> <i class="fa fa-university" aria-hidden="true"></i>
- </p>
-      <h3>800</h3>
-      <p  class="stat-detailed">Expert instructors from USA</p>
-    </div>
-    <div class="stat-box">
+                <p class="icons"> <i class="fa fa-check-square" aria-hidden="true"></i>
+                </p>
+                <h3 id="session-completed">+100</h3>
+                <p class="stat-detailed">Sessions Completed</p>
+            </div>
+            <div class="stat-box">
+                <p class="icons"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>
 
-        <p class="icons"> <i class="fa fa-certificate" aria-hidden="true"></i>
-  </p>
-      <h3>20</h3>
-      <p class="stat-detailed">Years of Experience</p>
-    </div>
-  </div>
-</section>
+                </p>
+                <h3>+1200</h3>
+                <p class="stat-detailed">Certified Clients</p>
+            </div>
+            <div class="stat-box">
+
+                <p class="icons"> <i class="fa fa-university" aria-hidden="true"></i>
+                </p>
+                <h3>800</h3>
+                <p class="stat-detailed">Expert instructors from USA</p>
+            </div>
+            <div class="stat-box">
+
+                <p class="icons"> <i class="fa fa-certificate" aria-hidden="true"></i>
+                </p>
+                <h3>20</h3>
+                <p class="stat-detailed">Years of Experience</p>
+            </div>
+            </div>
+
+            <script>
+                var num1 = document.getElementById("session-completed");
+                function animatedcounter(element, start, end, duration) {
+                    var range = end - start;
+                    var current = start;
+                    var increment = 0;
+                    if (end > start) {
+                        increment = 1;
+                    }
+                    else {
+                        increment = -1;
+                    }
+
+                    let stepTime = Math.abs(Math.floor(duration / range * 4));
+
+                    var timer = setInterval(function () {
+                        current += increment;
+                        element.innerText = "+" + current;
+                        if (current == end) {
+                            clearInterval(timer);
+                        }
+                    }, stepTime);
+                }
+                animatedcounter(num1, 0, 100, 4)
+            </script>
+
+        </section>
 
 
 
@@ -449,64 +476,15 @@
 
 
 
-</footer>
-
-            </div>
         </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+        </footer>
         <!----------------------------- Section Divider ----------------------------->
 
         <script src="nav.js"></script>
-<script>   
 
 
-    var num1=document.getElementById("sessions-completed");
-    function animatedcounter( element,start,end,dauration){
-        var range=end-start;
-        var current=start;
-        var increment=0;
-        if (end >start){
-            increment=1;
-        }
-else{
-    increment=-1;
-}
-
-        let stepTime = Math.abs(Math.floor(duration / range * 4)); // convert to ms
-
-
-var timer=setInterval(function () {
-current += increment;
-element.textcontent =current;
-if(current==end){
-    clearInterval(timer);
-}
-},stepTime);
-}
-animatedcounter(num1,0,100,4)
-
-
-</script>
- 
 
 
     </body>
