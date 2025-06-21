@@ -631,8 +631,8 @@ body {
     width: 15rem;
     height: 4rem;
     z-index: 0;
-transition: transform 0.2 ease;
-border-radius: var(--main-radius);
+    transition: transform 0.2 ease;
+    border-radius: var(--main-radius);
 }
 
 .Plans {
@@ -1266,7 +1266,7 @@ x .pros-section {
     justify-content: center;
 
 
-gap: 3rem;
+    gap: 3rem;
 
     gap: 3rem;
 
@@ -1279,31 +1279,30 @@ gap: 3rem;
 
 .pack1 {
 
-    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
 
 
     margin: 2rem;
     border-radius: var(--main-radius);
-    background-color: gray;
+    border: 2px solid var(--primary-color);
+    background-color: rgb(255, 255, 255);
     width: 80%;
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+
 }
 
 
 .pack2 {
 
-    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
 
-   margin:2rem ;
-   background-color: var(--primary-color);
+    margin: 2rem;
+    background-color: var(--primary-color);
 
     margin: 2rem;
 
     border-radius: var(--main-radius);
-    
+
     width: 80%;
     max-width: 30rem;
     height: 40rem;
@@ -1312,40 +1311,42 @@ gap: 3rem;
 
 }
 
-.pack1:hover,.pack2:hover{
+.pack1:hover,
+.pack2:hover {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
 
-transform: scale(1.03);
+    transform: scale(1.03);
 
 }
 
 .pack-container1 {
-margin-left: 2rem;
-color: var(--primary-dark-card-color);
-font-family: "oswald";
+    margin-left: 2rem;
+    color: var(--primary-dark-card-color);
+    font-family: "oswald";
 
 }
 
 
 .pack-container2 {
-margin-left: 2rem;
-color: var(--forth-color);
-font-family: "oswald";
+    margin-left: 2rem;
+    color: var(--forth-color);
+    font-family: "oswald";
 
 }
 
 
-.old-price{
+.old-price {
     text-decoration: line-through;
 }
 
-.pack-p{
+.pack-p {
     width: 25rem;
     height: 4rem;
     align-items: center;
-transition: transform 0.2 ease;
-border-radius: var(--main-radius);
-font-family: "oswald",sans-serif;
-font-size: larger;
+    transition: transform 0.2 ease;
+    border-radius: var(--main-radius);
+    font-family: "oswald", sans-serif;
+    font-size: larger;
 
 
 }
@@ -1360,7 +1361,7 @@ font-size: larger;
 .pack-p:hover {
     cursor: pointer;
     transform: scale(1.03);
-    background-color:grey;
+    background-color: grey;
 }
 
 
@@ -1375,14 +1376,14 @@ font-size: larger;
 .stats-section {
     text-align: center;
     background-color: var(--gradient-s);
-    
+
     margin: 30px 0;
 }
 
 .ppp {
 
     gap: 40px;
-    display:inline-flex;
+    display: inline-flex;
     margin: 0;
 }
 
@@ -1418,32 +1419,34 @@ font-size: larger;
 }
 
 @media screen and (max-width:700px) {
-  
-.stats-section {
 
-    width: 100%;
-margin: 15px 0 ;}
+    .stats-section {
 
-.ppp {
+        width: 100%;
+        margin: 15px 0;
+    }
 
-    gap: 20px;}
-   
-.stat-section span  {
-    margin-left: 2rem;
-}
+    .ppp {
+
+        gap: 20px;
+    }
+
+    .stat-section span {
+        margin-left: 2rem;
+    }
 
 
-.stat-box h3 {
-    font-size: 16px;
-    
-}
+    .stat-box h3 {
+        font-size: 16px;
 
-.stat-box p.stat-detailed {
-    font-size: 13px;
-    
-    gap: 15px;
+    }
 
-}
+    .stat-box p.stat-detailed {
+        font-size: 13px;
+
+        gap: 15px;
+
+    }
 
 }
 
@@ -1461,7 +1464,7 @@ footer {
 
     background-color: var(--gradient-s);
     width: 100%;
-    
+
 }
 
 .footer-links {
@@ -1483,10 +1486,11 @@ footer {
     color: purple;
 }
 
- footer li{
-margin: 60px;
+footer li {
+    margin: 60px;
 
-list-style: none;}
+    list-style: none;
+}
 
 
 footer li {
@@ -1541,17 +1545,18 @@ footer ul {
 
 @media screen and (max-width:700px) {
 
-    footer li{
-margin: 60px;
-padding: 15px;
+    footer li {
+        margin: 60px;
+        padding: 15px;
 
 
- }
-    
+    }
 
-footer{
-    width: 100%px;}
-    
+
+    footer {
+        width: 100%px;
+    }
+
 
     footer li {
         margin: 60px;
@@ -1565,28 +1570,28 @@ footer{
     }
 
 
-footer {
-    width: 100%;
-    padding: 3%;
+    footer {
+        width: 100%;
+        padding: 3%;
 
-}
+    }
 
-.footer-links {
-    font-size: 11px;
-}
+    .footer-links {
+        font-size: 11px;
+    }
 
-.social-icons a {
-    font-size: 20px;
-}
-
-
-
-footer li {
-    margin: 40px;
-    padding: 5px;
+    .social-icons a {
+        font-size: 20px;
+    }
 
 
-}
+
+    footer li {
+        margin: 40px;
+        padding: 5px;
+
+
+    }
 
 
 }
