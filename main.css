@@ -596,12 +596,7 @@ body {
     background: linear-gradient(135deg, var(--primary-color), #a400aa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
-
-
-
-
 
 .main-logo {
     width: 40rem;
@@ -775,8 +770,7 @@ body {
 
 
 /* ========================== Section Divider ========================== */
-
-.pros-section {
+x .pros-section {
     height: auto;
     display: flex;
     justify-content: center;
@@ -789,7 +783,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-height: 50rem;
+    /* max-height: 50rem; */
     width: 100%;
     background-color: var(--primary-color);
 }
@@ -821,7 +815,8 @@ body {
 .pros-card {
     /* border: solid 0.03rem rgba(255, 255, 255, 0.11); */
 
-    /* background-color: var(--primary-dark-card-color); */
+    background-color: white;
+    /* padding: 12px; */
     overflow: hidden;
     padding: 0.3rem;
     display: flex;
@@ -829,8 +824,11 @@ body {
     align-items: center;
     flex-direction: column;
     /* border: 1px solid white; */
-    margin: 2rem;
+    margin: 0.5rem;
+    margin-bottom: 3rem;
     border-radius: var(--main-radius);
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     width: 80%;
     max-width: 20rem;
     height: 35rem;
@@ -839,16 +837,21 @@ body {
 
 .pros-card .pros-card-title {
 
-    font-family: "Oswald", sans-serif;
+    font-family: "Poppins", sans-serif;
+    margin: 0.3rem;
     margin-right: auto;
     font-weight: 400;
     font-size: clamp(2rem, 1vw, 5rem);
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+
 }
 
 .pros-card-img-container {
     width: 95%;
     height: 60%;
+    /* max-height: rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -861,8 +864,10 @@ body {
 .pros-card p {
     font-family: "Oswald", sans-serif;
 
+
     /* margin-right: auto; */
-    color: rgba(255, 255, 255, 0.445);
+    color: var(--primary-color);
+    /* margin-top: auto; */
     font-weight: 200;
     font-size: 1.2rem;
 }
@@ -1350,26 +1355,14 @@ body {
     color: var(--forth-color);
     gap: 30px;
     font-family: "oswald";
-
-
 }
 
 @media screen and (max-width:1920px) {
 
     .stats-section {
-
         width: 100%;
-
     }
-
-
-
-
 }
-
-
-
-
 
 /* ========================== Section Divider ========================== */
 
