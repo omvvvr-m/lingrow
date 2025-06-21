@@ -1258,27 +1258,38 @@ x .pros-section {
 }
 
 /* ========================== Section Divider ========================== */
-.packs {
+.catchy{
 
 
-
-    display: flex;
-    justify-content: center;
-
-
-    gap: 3rem;
-
-    gap: 3rem;
-
-
-
-
-
-
+   margin: 0.1rem;
+    margin-top: 50px;
+    color: var(--primary-color);
+    text-align: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "Poppins", sans-serif;
 }
 
-.pack1 {
 
+
+
+
+
+
+.packs {
+
+        
+display: flex;
+justify-content: center;
+gap: 3rem;
+    
+}
+
+
+
+
+.pack1{
 
 
     margin: 2rem;
@@ -1299,7 +1310,7 @@ x .pros-section {
     margin: 2rem;
     background-color: var(--primary-color);
 
-    margin: 2rem;
+    
 
     border-radius: var(--main-radius);
 
@@ -1320,7 +1331,7 @@ x .pros-section {
 }
 
 .pack-container1 {
-    margin-left: 2rem;
+    margin: 2rem;
     color: var(--primary-dark-card-color);
     font-family: "oswald";
 
@@ -1361,9 +1372,18 @@ x .pros-section {
 .pack-p:hover {
     cursor: pointer;
     transform: scale(1.03);
-    background-color: grey;
+    background-color: var(--gradient-f);
 }
 
+@media screen and (width:700px){
+.packs{
+    
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        
+}}
 
 
 /* ========================== Section Divider ========================== */
