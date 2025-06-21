@@ -19,6 +19,7 @@ body {
     padding: 0px;
 }
 
+
 /* =============================NAVBAR========================== */
 
 .navbar {
@@ -1253,14 +1254,14 @@ body {
 }
 
 /* ========================== Section Divider ========================== */
-.packs{
+.packs {
 
 
 
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 
-gap: 3rem;
+    gap: 3rem;
 
 
 
@@ -1269,11 +1270,12 @@ gap: 3rem;
 
 
 }
-.pack1{
+
+.pack1 {
 
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
-    
-   
+
+
     margin: 2rem;
     border-radius: var(--main-radius);
     background-color: gray;
@@ -1284,10 +1286,10 @@ gap: 3rem;
 }
 
 
-.pack2{
+.pack2 {
 
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
-   margin:2rem ;
+    margin: 2rem;
     border-radius: var(--main-radius);
     background-color: var(--forth-color);
     width: 80%;
@@ -1325,7 +1327,7 @@ gap: 3rem;
 }
 
 
-section span {
+.stats-section span {
     display: inline-block;
     justify-content: center;
     margin-left: 4rem;
@@ -1351,13 +1353,14 @@ section span {
 
 
 }
+
 @media screen and (max-width:1920px) {
-  
-.stats-section {
 
-    width: 100%;
+    .stats-section {
 
-}
+        width: 100%;
+
+    }
 
 
 
@@ -1381,7 +1384,7 @@ footer {
     font-size: 20px;
     display: flex;
     justify-content: center;
-    
+
     font-weight: 300px;
 }
 
@@ -1394,19 +1397,21 @@ footer {
 .footer-links li :hover {
     color: var(--fifth-color);
 }
- footer li{
-margin: 60px;
-padding: 15px;
-list-style: none;
 
- }
-footer ul{
+footer li {
+    margin: 60px;
+    padding: 15px;
+    list-style: none;
+
+}
+
+footer ul {
 
     display: flex;
     justify-content: center;
     align-items: center;
-   margin: 0;
-   padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -1444,18 +1449,19 @@ footer ul{
 
 
 @media screen and (max-width:700px) {
-    footer li{
-margin: 60px;
-padding: 15px;
-list-style: none;
+    footer li {
+        margin: 60px;
+        padding: 15px;
+        list-style: none;
 
- }
+    }
+
     .footer-links li {
         /* margin-inline-start: -5px; */
     }
 }
 
-footer{
+footer {
     width: 100%;
     padding: 3%;
 }
@@ -1470,12 +1476,12 @@ footer{
 
 
 
-footer li{
-margin: 40px;
-padding: 5px;
+footer li {
+    margin: 40px;
+    padding: 5px;
 
 
- }
+}
 
 
 
