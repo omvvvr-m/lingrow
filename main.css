@@ -35,7 +35,7 @@ body {
     height: 4rem;
     font-size: large;
     box-shadow: 0 0 16px -5px rgba(27, 0, 36, 0.3);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
 }
@@ -325,7 +325,7 @@ body {
         background-color: rgb(68, 67, 67);
         z-index: 10;
         border-left: 1px solid var(--primary-color);
-        display: flex;
+        display: none;
         flex-direction: column;
         padding-top: 4rem;
         transition: right 0.3s ease-out;
@@ -348,7 +348,7 @@ body {
     } */
 
     .mobnav {
-        display: flex;
+        display: none;
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -565,14 +565,20 @@ body {
 
 
 
-.main-title>* {
-    line-height: 8.3rem;
+.main-title {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    line-height: 0.8;
     letter-spacing: -0.3rem;
     font-weight: 500;
     font-size: 8rem;
     font-family: "Oswald", sans-serif;
     text-align: left;
 }
+
+.main-title>* {}
+
 
 /* .main-title .first-line {
 
@@ -583,14 +589,10 @@ body {
 } */
 
 .main-title .fluent {
-
     font-size: 13rem;
     font-weight: 900;
     font-family: 'Dancing Script', sans-serif, italic;
-
-    /* color: black; */
-
-    background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
+    background: linear-gradient(135deg, var(--primary-color), #a400aa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -598,65 +600,11 @@ body {
 
 
 
+
+
 .main-logo {
     width: 40rem;
     height: auto;
-}
-
-@media (max-width: 1130px) {
-
-    .main-blanket-background {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50rem;
-        width: 100%;
-        max-width: 100vw;
-        margin: 0px;
-        padding: 0px;
-    }
-
-
-    .main-blanket-elements {
-
-        text-align: center;
-        font-size: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-title>* {
-        line-height: 4rem;
-        letter-spacing: -0.3rem;
-        font-weight: 500;
-        font-size: 5rem;
-        font-family: "Oswald", sans-serif;
-        text-align: left;
-    }
-
-    .main-title .fluent {
-
-        font-size: 8rem;
-        font-weight: 900;
-        font-family: 'Dancing Script', sans-serif, italic;
-        background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-    }
-
-    .main-title {
-        text-align: center;
-    }
-
-    .main-logo {
-        width: 90%;
-        max-width: 30rem;
-    }
 }
 
 .btns-container {
@@ -670,7 +618,7 @@ body {
 }
 
 .CTA {
-    line-height: 4rem;
+    line-height: 0em;
     letter-spacing: 0rem;
     display: flex;
     position: relative;
@@ -684,8 +632,8 @@ body {
     border: none;
     margin-top: 3rem;
     margin-left: 0rem;
-    width: 20rem;
-    height: 5rem;
+    width: 15rem;
+    height: 4rem;
     z-index: 0;
     transition: transform 0.2s ease;
     border-radius: var(--main-radius);
@@ -706,8 +654,8 @@ body {
     color: var(--primary-color);
     margin-top: 3rem;
     margin-left: 0rem;
-    width: 20rem;
-    height: 5rem;
+    width: 15rem;
+    height: 4rem;
     z-index: 0;
     transition: transform 0.2s ease;
     border-radius: var(--main-radius);
@@ -730,6 +678,97 @@ body {
 
 .CTA:hover span {
     color: white;
+}
+
+@media (max-width: 1130px) {
+
+    .main-blanket-background {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        margin: 0px;
+        padding-bottom: 3rem;
+        padding-top: 4rem;
+    }
+
+
+    .main-blanket-elements {
+
+        text-align: center;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-title>* {
+        line-height: 5rem;
+        letter-spacing: -0.3rem;
+        font-weight: 500;
+        font-size: 5rem;
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+    }
+
+    .main-title .fluent {
+
+
+
+        /* background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+        display: flex;
+        font-size: 8rem;
+        font-weight: 900;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .main-title {
+        text-align: center;
+    }
+
+    .main-logo {
+        width: 90%;
+        max-width: 30rem;
+    }
+
+
+    .btns-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-blanket-elements button {
+
+        margin: 0px;
+        gap: 0;
+        ;
+
+
+    }
+
 }
 
 
