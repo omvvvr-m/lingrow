@@ -70,34 +70,16 @@ window.addEventListener('scroll', () => {
 
 //////////////////////////////  carousel  /////////////////////////////////////
 
-let current = 0;
-const cards = document.querySelectorAll('.reviews');
 
-function showReview(index) {
-    cards.forEach((card, i) => {
-        card.classList.toggle('active', i == index);
-    });
-}
 
-function nextReview() {
-    current = (current + 1) % cards.length;
-    showReview(current);
-    console.log("Next");
-}
-
-function prevReview() {
-    current = (current - 1 + cards.length) % cards.length;
-    showReview(current);
-    console.log("Previous");
-
-}
-
-setInterval(nextReview, 6000);
+// setInterval(nextReview, 6000);
 
 //////////////////////////////  carousel  /////////////////////////////////////
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
     var num1 = document.getElementById("session-completed");
     var num2 = document.getElementById("clients");
     function animatedCounter(element, start, end, duration) {
@@ -117,6 +99,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animatedCounter(num1, 0, 500, 1000);
     animatedCounter(num2, 0, 1200, 1500);
-});
 
+
+
+
+    let current = 0;
+    const cards = document.querySelectorAll('.reviews');
+
+    function showReview(index) {
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextReview() {
+        current = (current + 1) % cards.length;
+        showReview(current);
+        console.log("Next: ", current);
+    }
+
+    function prevReview() {
+        current = (current - 1 + cards.length) % cards.length;
+        showReview(current);
+        console.log("Previous: ", current);
+    }
+
+    window.nextReview = nextReview;
+    window.prevReview = prevReview;
+
+});
 

@@ -3,7 +3,7 @@
     /* --primary-color: #0e0e0e; */
     --primary-color: #3e008f;
     --primary-dark-card-color: #080808;
-    --primary-color-light: #adadad;
+    --primary-color-light: #6f00ff;
     --secondary-color: #0071e3;
     --gradient-f: #3e008f;
     --gradient-s: #d13bff;
@@ -1220,10 +1220,11 @@ body {
 .stats-section {
     text-align: center;
     background-color: var(--gradient-s);
-    padding: 60px ;
-width: 100%;
+    padding: 60px;
+    width: 100%;
 }
-.ppp{
+
+.ppp {
 
     gap: 30px;
     display: flex;
@@ -1234,7 +1235,7 @@ width: 100%;
 section span {
     display: inline-block;
     justify-content: center;
-;
+    ;
 }
 
 .stat-box h3 {
