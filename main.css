@@ -1269,9 +1269,7 @@ section span {
 footer {
 
     background-color: black;
-    width: 100%;
     padding: 6px;
-    text-align: center;
 }
 
 .footer-links {
@@ -1279,7 +1277,7 @@ footer {
     font-size: 20px;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    
     font-weight: 300px;
 }
 
@@ -1292,11 +1290,19 @@ footer {
 .footer-links li :hover {
     color: var(--fifth-color);
 }
+ footer li{
+margin: 60px;
+padding: 15px;
+list-style: none;
 
-.footer-links li {
-    display: inline-flex;
-    margin: 60px;
-    padding: 15px;
+ }
+footer ul{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin: 0;
+   padding: 0;
 }
 
 
@@ -1339,12 +1345,15 @@ footer {
     }
 }
 
-@media screen and (max-width:700px) {
-    .footer-links li {
-        margin-inline-start: -25px;
-    }
+footer{
+    width: 100%;
 }
+footer li{
+margin: 40px;
+padding: 10px;
 
+
+ }
 
 
 
