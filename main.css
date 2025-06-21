@@ -631,8 +631,8 @@ body {
     width: 15rem;
     height: 4rem;
     z-index: 0;
-    transition: transform 0.2s ease;
-    border-radius: var(--main-radius);
+transition: transform 0.2 ease;
+border-radius: var(--main-radius);
 }
 
 .Plans {
@@ -1265,8 +1265,10 @@ x .pros-section {
     display: flex;
     justify-content: center;
 
-    gap: 3rem;
 
+gap: 3rem;
+
+    gap: 3rem;
 
 
 
@@ -1287,15 +1289,21 @@ x .pros-section {
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 
 .pack2 {
 
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
+
+   margin:2rem ;
+   background-color: var(--primary-color);
+
     margin: 2rem;
+
     border-radius: var(--main-radius);
-    background-color: var(--forth-color);
+    
     width: 80%;
     max-width: 30rem;
     height: 40rem;
@@ -1304,11 +1312,60 @@ x .pros-section {
 
 }
 
+.pack1:hover,.pack2:hover{
+
+transform: scale(1.03);
+
+}
+
+.pack-container1 {
+margin-left: 2rem;
+color: var(--primary-dark-card-color);
+font-family: "oswald";
+
+}
+
+
+.pack-container2 {
+margin-left: 2rem;
+color: var(--forth-color);
+font-family: "oswald";
+
+}
+
+
+.old-price{
+    text-decoration: line-through;
+}
+
+.pack-p{
+    width: 25rem;
+    height: 4rem;
+    align-items: center;
+transition: transform 0.2 ease;
+border-radius: var(--main-radius);
+font-family: "oswald",sans-serif;
+font-size: larger;
+
+
+}
 
 
 
+.pack-p:hover::before {
+    left: 0;
+}
 
 
+.pack-p:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color:grey;
+}
+
+
+
+/* ========================== Section Divider ========================== */
 
 
 
@@ -1318,20 +1375,23 @@ x .pros-section {
 .stats-section {
     text-align: center;
     background-color: var(--gradient-s);
-    padding: 30px;
-    width: 100%;
+    
     margin: 30px 0;
 }
 
 .ppp {
 
-    gap: 30px;
-    display: flex;
-    margin-left: 150px;
+    gap: 40px;
+    display:inline-flex;
+    margin: 0;
 }
 
 
+
+
+
 .stats-section span {
+
     display: inline-block;
     justify-content: center;
     margin-left: 4rem;
@@ -1340,12 +1400,13 @@ x .pros-section {
 
 .stat-box h3 {
     font-size: 32px;
-    color: black;
+    color: var(--forth-color);
+    font-family: "oswald";
 }
 
 .stat-box p.icons {
     font-size: 30px;
-    color: black;
+    color: var(--forth-color);
     text-align: center;
 }
 
@@ -1356,6 +1417,36 @@ x .pros-section {
     font-family: "oswald";
 }
 
+@media screen and (max-width:700px) {
+  
+.stats-section {
+
+    width: 100%;
+margin: 15px 0 ;}
+
+.ppp {
+
+    gap: 20px;}
+   
+.stat-section span  {
+    margin-left: 2rem;
+}
+
+
+.stat-box h3 {
+    font-size: 16px;
+    
+}
+
+.stat-box p.stat-detailed {
+    font-size: 13px;
+    
+    gap: 15px;
+
+}
+
+}
+
 @media screen and (max-width:1920px) {
 
     .stats-section {
@@ -1363,12 +1454,14 @@ x .pros-section {
     }
 }
 
+
 /* ========================== Section Divider ========================== */
 
 footer {
 
-    background-color: black;
-    padding: 6px;
+    background-color: var(--gradient-s);
+    width: 100%;
+    
 }
 
 .footer-links {
@@ -1387,8 +1480,14 @@ footer {
 
 
 .footer-links li :hover {
-    color: var(--fifth-color);
+    color: purple;
 }
+
+ footer li{
+margin: 60px;
+
+list-style: none;}
+
 
 footer li {
     margin: 60px;
@@ -1416,12 +1515,12 @@ footer ul {
 }
 
 .social-icons a {
-    color: black;
-    background-color: var(--forth-color);
+    color: white;
+    background-color: purple;
     border-radius: 50px;
     font-size: 30px;
     text-decoration: none;
-    padding: 20px;
+    padding: 26px;
     margin: 4px;
     transition: 0.3 ease-out;
 
@@ -1431,8 +1530,8 @@ footer ul {
 
 
 .social-icons a:hover {
-    color: var(--fifth-color);
-    background-color: black;
+    color: var(--forth-color);
+    background-color: var(--gradient-s);
     transform: scale(1.01);
     box-shadow: rgb(197, 191, 185);
     transition-duration: 0.5s;
@@ -1441,6 +1540,19 @@ footer ul {
 
 
 @media screen and (max-width:700px) {
+
+    footer li{
+margin: 60px;
+padding: 15px;
+
+
+ }
+    
+
+footer{
+    width: 100%px;}
+    
+
     footer li {
         margin: 60px;
         padding: 15px;
@@ -1451,19 +1563,20 @@ footer ul {
     .footer-links li {
         /* margin-inline-start: -5px; */
     }
-}
+
 
 footer {
     width: 100%;
     padding: 3%;
+
 }
 
 .footer-links {
-    font-size: 15px;
+    font-size: 11px;
 }
 
 .social-icons a {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -1476,7 +1589,7 @@ footer li {
 }
 
 
-
+}
 
 
 
