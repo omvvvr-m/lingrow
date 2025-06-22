@@ -116,70 +116,40 @@
                 <p class="pros-title">
                     Why Lingrow
                 </p>
-                <div class="cards-container">
-                    <!---------------------- Card ---------------------->
-                    <div class="pros-card">
-                        <p class="pros-card-title">
-                            Fun to Learn
+                <div class="pros-card fun">
+                    <div class="pros-card-img">
+                        <img src="imgs/fun2learn.jpg">
+                    </div>
+                    <div class="pros-text-container">
+                        <p class="pros-card-title">Fun to learn</p>
+                        <p class="pros-card-description"><i class="fas fa-smile-beam"></i>&nbsp;&nbsp;&nbsp;Say goodbye
+                            to boring
+                            lessons! With our interactive content, real-life scenarios, and fun speaking challenges,
+                            learning English becomes an exciting, enjoyable journey you’ll actually look forward to.
+                            <br>
+                            <br>
+                            <br>
+                            ><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;&nbsp;Get expert-designed lessons and
+                            real speaking practice that builds confidence, improves fluency, and prepares you for
+                            real-world conversations — not just textbook English.
+                            <br>
+                            <br>
+                            <br>
+                            <i class="fas fa-clock"></i> &nbsp;&nbsp;&nbsp;Learn on your own schedule with flexible
+                            access to lessons,
+                            speaking tasks, and personalized feedback — perfect for busy students, professionals, and
+                            anyone on the go.
                         </p>
 
-                        <div class="pros-card-img-container">
-                            <img src="imgs/fun2learn.jpg">
-                        </div>
-                        <p class="pros-card-description">
-                            Say goodbye to boring lessons! Our interactive content and speaking challenges make learning
-                            English exciting and enjoyable.
                         </p>
                     </div>
-                    <!---------------------- Card ---------------------->
-                    <!---------------------- Card ---------------------->
-                    <div class="pros-card">
-                        <p class="pros-card-title">
-                            Reliable Resources
-                        </p>
-
-                        <div class="pros-card-img-container">
-                            <img src="imgs/reliable.jpg">
-                        </div>
-                        <p class="pros-card-description">
-                            Get access to expert-approved lessons and real test-style practice that you can trust — no
-                            fluff, just results.
-                        </p>
-                    </div>
-                    <!---------------------- Card ---------------------->
-                    <!---------------------- Card ---------------------->
-                    <div class="pros-card">
-                        <p class="pros-card-title">
-                            Benefits That Show
-                        </p>
-
-                        <div class="pros-card-img-container">
-                            <img src="imgs/talk.jpg">
-                        </div>
-                        <p class="pros-card-description">
-                            Watch your skills grow — fast. From test scores to real conversations, you’ll feel the
-                            progress.
-                        </p>
-                    </div>
-                    <!---------------------- Card ---------------------->
-                    <!---------------------- Card ---------------------->
-                    <div class="pros-card">
-                        <p class="pros-card-title">
-                            Learn Your Way
-                        </p>
-
-                        <div class="pros-card-img-container">
-                            <img src="imgs/laptop.jpg">
-                        </div>
-                        <p class="pros-card-description">
-                            Flexible, bite-sized lessons that fit your vibe — anytime, anywhere, on any device.
-                        </p>
-                    </div>
-                    <!---------------------- Card ---------------------->
-
                 </div>
             </div>
+
         </section>
+
+
+
 
         <!----------------------------- Section Divider ----------------------------->
         <!----------------------------- Section Divider ----------------------------->
@@ -480,7 +450,7 @@
                         <h3 class="username">TheSillyAvocado</h3>
                         <p class="role">University Student-Egypt</p>
                     </div>
-                      </div>
+                </div>
                 <p class="stdreview">
                     This platform helped me improve my English speaking skills quickly.
                     The interactive lessons and pronunciation practice made me feel more confident during
@@ -510,16 +480,16 @@
             <button class="next" onclick="nextReview()">&#10095</button>
 
 
-                
+
 
 
         </div>
-      </div>  
-                    
+        </div>
 
 
 
-                    <!---------------------------------------------------------------------------------->
+
+        <!---------------------------------------------------------------------------------->
 
 
 
@@ -569,7 +539,23 @@
         <script src="nav.js"></script>
 
 
+        <!-- Smooth Scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+        <script>
+            const lenis = new Lenis({
+                duration: 1,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true
+            })
 
+            function raf(time) {
+                lenis.raf(time)
+                requestAnimationFrame(raf)
+            }
+
+            requestAnimationFrame(raf)
+        </script>
+        <!-- Smooth Scroll -->
 
     </body>
 
