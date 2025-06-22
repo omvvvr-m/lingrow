@@ -143,6 +143,10 @@ body {
     background-color: var(--primary-color-light);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .mobnav {
     display: none;
 }
