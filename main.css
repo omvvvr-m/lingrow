@@ -14,9 +14,7 @@
 
 }
 
-html {
-    scroll-behavior: auto;
-}
+html {}
 
 body {
     margin: 0px;
@@ -148,7 +146,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 .mobnav {
@@ -484,7 +482,7 @@ html {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
     color: var(--primary-color);
-    
+
     text-shadow: 2px 2px 4px var(--primary-color);
 
     margin: 0.1rem;
@@ -502,7 +500,7 @@ html {
     border-radius: 0.75rem;
     box-shadow: 0.375rem 0.375rem 0 var(--primary-color-light);
     overflow: hidden;
-    
+
 }
 
 .reviews {
@@ -603,79 +601,79 @@ html {
 
     .st-rw {
 
-    letter-spacing: 0rem;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    font-weight: 750;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    
-    text-shadow: 2px 2px 4px var(--primary-color);
+        letter-spacing: 0rem;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        font-weight: 750;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.8rem;
+        color: var(--primary-color);
 
-    margin: 0.1rem;
-    margin-top: 50px;
-    text-align: center;
- }
+        text-shadow: 2px 2px 4px var(--primary-color);
+
+        margin: 0.1rem;
+        margin-top: 50px;
+        text-align: center;
+    }
 
 
-    
+
 
     .carousel {
-    max-width: 70%;
-    padding: 1rem;
-    margin: 2rem auto;
-  }
+        max-width: 70%;
+        padding: 1rem;
+        margin: 2rem auto;
+    }
 
-  .reviews {
-    display: none;
-    text-align: left;
-    transition: all 0.5s ease;
-    /* position: relative; */
-}
+    .reviews {
+        display: none;
+        text-align: left;
+        transition: all 0.5s ease;
+        /* position: relative; */
+    }
 
-.reviews.active {
-    display: block;
-}
+    .reviews.active {
+        display: block;
+    }
 
-  .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
+    .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
-  .avatar1,
-  .avatar2,
-  .avatar3 {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 0.5rem;
-  }
+    .avatar1,
+    .avatar2,
+    .avatar3 {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+    }
 
-  .username {
-    font-size: 1rem;
-  }
+    .username {
+        font-size: 1rem;
+    }
 
-  .role {
-    font-size: 0.75rem;
-  }
+    .role {
+        font-size: 0.75rem;
+    }
 
-  .stdreview {
-    font-size: 0.8rem;
-    margin-left: 0.9;
-  }
+    .stdreview {
+        font-size: 0.8rem;
+        margin-left: 0.9;
+    }
 
-  .stars {
-    font-size: 2rem;
-  }
+    .stars {
+        font-size: 2rem;
+    }
 
-  .prev,
-  .next {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.4rem;
-  }
+    .prev,
+    .next {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
+    }
 }
 
 
@@ -1922,47 +1920,51 @@ body {
 
 
 @media screen and (width:768px)and (min-width: 500px) {
-    .packs{
+    .packs {
 
-justify-content: flex-start;
-flex-direction: column;
-align-items: center;
-gap: 20px;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-.pack1 pack ,.pack2 pack , .pack3 pack {
+    .pack1 pack,
+    .pack2 pack,
+    .pack3 pack {
 
 
-    width: 100%;
-    max-width: 30rem;
-    height: auto;
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+    }
+
+
+
+
 }
 
 
 
 
-}
+@media screen and (max-width:1130px) {
+    .packs {
 
-
-
-
-@media screen and (max-width:1130px){
-    .packs{
-
-justify-content: flex-start;
-flex-direction: column;
-align-items: center;
-gap: 10px;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
 
     }
 
-.pack1 pack ,.pack2 pack , .pack3 pack {
+    .pack1 pack,
+    .pack2 pack,
+    .pack3 pack {
 
 
-    width: 100%;
-    
-    height: auto;
-}
+        width: 100%;
+
+        height: auto;
+    }
 
 }
 
@@ -2055,12 +2057,12 @@ gap: 10px;
 
 
 
-  @media screen and (max-width:1130px)  {
+@media screen and (max-width:1130px) {
 
     .stats-section {
 
         width: 100%;
-        
+
     }
 
     .ppp {
@@ -2076,7 +2078,9 @@ gap: 10px;
     .stat-box p.stat-detailed {
         font-size: 1px;
 
-        gap: 15px;}}
+        gap: 15px;
+    }
+}
 
 
 
@@ -2231,7 +2235,7 @@ footer ul {
 
     }
 
-    
+
 
 
     footer {
