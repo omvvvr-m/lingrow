@@ -129,3 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+window.onload = function () {
+  setInterval(nextReview, 3000);
+};
+
+
