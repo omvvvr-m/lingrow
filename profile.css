@@ -1,0 +1,61 @@
+.fa-user-circle{
+
+font-size: 10rem;
+
+}
+.first-name{
+font-family: "oswald";
+font-weight: 500;
+
+}
+.gmail{
+font-family: "oswald";
+font-weight: 250;
+
+}
+.profile-details{
+
+
+
+display: flex;
+align-items: flex-start;
+margin: 30px;
+gap: 2rem;
+}
+
+.info{
+
+display: flex;
+flex-direction: column;
+
+
+}
+.EPB{
+margin: 2rem 0;
+border-radius: var(--main-radius);
+
+}
+
+#hidden-form{
+justify-content: flex-start;
+
+flex-direction: column;
+width: 80%;
+
+height: 40rem;
+
+max-width: 10rem;
+
+}
+
+label{
+
+    font-family: "oswald";
+    font-weight: 400;
+}
+input{
+
+
+    gap: 2rem;
+}
+placeholder-shown::before;

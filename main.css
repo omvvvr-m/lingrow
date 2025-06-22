@@ -1756,6 +1756,7 @@ body {
 .pack {
     margin: 2rem;
     border-radius: var(--main-radius);
+
     border: 2px solid var(--primary-color);
     background-color: rgb(255, 255, 255);
     width: 80%;
