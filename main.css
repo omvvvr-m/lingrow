@@ -154,21 +154,57 @@ body {
 /*======================*/
 
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:768px) {
+
+    .navbar {
+        width: 100% !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        /* background-color: #1c1c1c !important;  */
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
 
     .mobnav {
         display: block;
         position: fixed;
-        top: 2rem;
-        right: 1rem;
-        z-index: 210;
+        top: 1rem;
+        right: 0;
+        z-index: 9999;
         background-color: white;
-        border-radius: 50%;
+        border-radius: 30%;
         border: none;
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
         cursor: pointer;
+        ;
     }
+
+    #loginbtn {
+        all: unset;
+        display: block;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        font-family: "Oswald", sans-serif;
+        padding: 0.6rem 1.5rem;
+        border-radius: 999px;
+        width: fit-content;
+        margin: 1rem auto 2rem auto;
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        order: 99;
+        cursor: pointer;
+        text-align: center;
+    }
+
+
+
 
     .navlist {
         flex-direction: column;
@@ -181,6 +217,8 @@ body {
         padding-top: 5rem;
         transition: right 0.3s ease-in-out;
         z-index: 200;
+        display: flex;
+        align-items: center;
     }
 
 
@@ -222,10 +260,17 @@ body {
         align-items: center;
         justify-content: center;
         width: auto;
-        height: 100%;
+        height: 40%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+
     }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
 
 
 
@@ -238,7 +283,7 @@ body {
 
 
 
-        border: solid 0.03rem var(--primary-color);
+        /* border: solid 0.03rem var(--primary-color);
         position: fixed;
         left: 50%;
         transform: translate(-50%, 0);
@@ -251,6 +296,22 @@ body {
         font-size: medium;
         box-shadow: 0 0 16px -5px var(--primary-color-light);
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(10px); */
+
+        border: solid 0.03rem rgba(188, 72, 255, 0.11);
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 200;
+        /* background-color: rgba(0, 0, 0, 0.9); */
+        background-color: rgba(62, 0, 143, 0.9);
+        border-radius: var(--main-radius);
+        margin: 2rem auto 0;
+        width: 85%;
+        height: 4rem;
+        font-size: large;
+        box-shadow: 0 0 16px -5px rgba(27, 0, 36, 0.3);
+        backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
 
@@ -265,8 +326,8 @@ body {
         justify-content: center;
         width: auto;
         height: 100%;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .logo {
@@ -392,6 +453,11 @@ body {
 
     .dropdown li a :hover {
         background-color: var(--primary-color);
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
     }
 
 }
@@ -853,7 +919,9 @@ body {
 
 }
 
-
+.pros-card-container {
+    width: 100%;
+}
 
 
 .pros-card {
@@ -864,6 +932,11 @@ body {
     justify-content: left;
 }
 
+.pros-card.pros-card.right {
+
+    justify-content: right;
+}
+
 .pros-card-img {
     height: 100%;
     width: 50%;
@@ -871,9 +944,17 @@ body {
 
 }
 
-.pros-card.fun .pros-card-img {
+.pros-card .pros-card-img {
+    border-radius: 0;
     border-bottom-right-radius: 30rem;
     border-top-right-radius: 30rem;
+}
+
+.pros-card.right .pros-card-img {
+    border-radius: 0;
+
+    border-bottom-left-radius: 30rem;
+    border-top-left-radius: 30rem;
 }
 
 .pros-card-img img {
@@ -889,16 +970,21 @@ body {
     margin: 0 2rem;
     display: flex;
     flex-direction: column;
+    align-self: center;
     text-align: left;
 
 }
 
 .pros-card-title {
-    font-size: clamp(3rem, 7rem, 8rem);
+    font-size: clamp(3rem, 5vw, 8rem);
     font-weight: 600;
     font-family: "Poppins";
     color: white;
     margin: 0px;
+}
+
+.pros-card-phone-description {
+    display: none;
 }
 
 .pros-card-description {
@@ -906,6 +992,105 @@ body {
     color: white;
     font-family: 'Poppins';
     width: 40vw;
+}
+
+
+
+@media (max-width:768px) {
+
+    .pros-card-container {
+        display: flex;
+        width: 100vw;
+        height: 70vh;
+        overflow-x: scroll;
+    }
+
+    .pros-card {
+        display: flex;
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+
+    .pros-section {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
+    .pros-card.right {
+
+        justify-content: right;
+
+    }
+
+    .pros-card.right {
+
+        justify-content: right;
+    }
+
+    .pros-card-description {
+        display: none;
+    }
+
+    .pros-card-phone-description {
+        display: flex;
+        flex-direction: row;
+        font-size: clamp(0.7rem, 1vw, 8rem);
+
+        margin: 0px;
+        color: white;
+        font-family: 'Poppins';
+        width: 80vw;
+    }
+
+    .pros-card-img {
+
+        width: 90vw;
+
+    }
+
+
+    .pros-card.fun .pros-card-img {
+        align-self: left;
+        margin-right: auto;
+        margin-bottom: auto;
+        border-radius: 0;
+        width: 90vw;
+        height: 40vh;
+        align-self: center;
+        border-bottom-right-radius: 30rem;
+        border-top-right-radius: 30rem;
+    }
+
+    .pros-card.last .pros-card-img {
+        align-self: right;
+        margin-left: auto;
+        margin-bottom: auto;
+        width: 90vw;
+        height: 40vh;
+        border-radius: 0;
+        border-bottom-left-radius: 30rem;
+        border-top-left-radius: 30rem;
+    }
+
+    .pros-card.right .pros-card-img {
+        margin-top: auto;
+        border-radius: 0;
+        width: 90vw;
+        align-self: center;
+        border-top-left-radius: 30rem;
+        border-top-right-radius: 30rem;
+    }
+
+
 }
 
 
@@ -1058,8 +1243,31 @@ body {
     .tablet {
         width: 80%;
         perspective: 17rem;
+    }
+
+    .tablet-inner {
+        animation: rot linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 60%;
+    }
+
+}
+
+@keyframes rot {
+
+    from {
+
+        transform: rotateX(40deg);
 
     }
+
+    to {
+
+        transform: rotateX(0deg);
+
+    }
+
+
 }
 
 .tablet-inner {
@@ -1072,6 +1280,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: rot linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
 }
 
 .tablet-inner img {
@@ -1110,6 +1321,7 @@ body {
 }
 
 .our-courses-elements {
+    perspective: 40rem;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -1145,15 +1357,37 @@ body {
     width: 70%;
     max-width: 30rem;
     height: 40rem;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(100px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+
+@keyframes card-appear {
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
+}
+
+.oc-card.dShow {
+    animation: card-appear 1s forwards;
+}
+
+
+.oc-card.dShow.lOC {
+    animation-delay: 0.1s;
+}
+
+.oc-card.dShow.rOC {
+    animation-delay: 0.3s;
 }
 
 .oc-card:hover {
-    transform: translateY(-1rem);
+    transform: translateY(-1rem) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    /* transform: scale(1.1); */
-
 }
 
 .oc-card img {
@@ -1356,6 +1590,8 @@ body {
 
 }
 
+
+
 /* =============================== CARD =============================== */
 
 .catchy {
@@ -1372,6 +1608,8 @@ body {
 }
 
 .packs {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
     display: flex;
     justify-content: center;
 }
@@ -1467,8 +1705,8 @@ body {
 .pack2:hover,
 .pack3:hover {
     box-shadow: 0 0px 6px rgba(0, 0, 0, 1);
-
-    transform: scale(1.03);
+    transform: translateZ(20px);
+    /* transform: scale(1.03); */
 
 }
 
