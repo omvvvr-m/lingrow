@@ -1368,7 +1368,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 45%;
-    perspective: 40rem;
+    /* perspective: 40rem; */
 }
 
 @media (max-width: 768px) {
@@ -1389,7 +1389,7 @@ body {
 
     from {
 
-        transform: rotateX(40deg);
+        transform: rotateX(100deg);
 
     }
 
