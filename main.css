@@ -922,6 +922,82 @@ x .pros-section {
 
 /* ========================== Section Divider ========================== */
 
+/* ========================== Section Divider ========================== */
+
+.tablet-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin: 0.1rem;
+    margin-top: 50px;
+    color: var(--primary-color);
+    text-align: center;
+    align-items: center;
+    font-weight: 900;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "Poppins", sans-serif;
+}
+
+.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    perspective: 40rem;
+}
+
+@media (max-width: 768px) {
+    .tablet {
+        width: 80%;
+        perspective: 17rem;
+
+    }
+}
+
+.tablet-inner {
+    width: 100%;
+    max-width: 60rem;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablet-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+
+.anytime {
+    position: absolute;
+    top: 38%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: clamp(3rem, 6.5vw, 10rem);
+    background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+}
+
+/* ========================== Section Divider ========================== */
 .our-courses {
     display: flex;
     align-items: top;
@@ -1182,87 +1258,11 @@ x .pros-section {
 
 /* =============================== CARD =============================== */
 
-/* ========================== Section Divider ========================== */
+.catchy {
 
-.tablet-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
 
-.section-title {
     margin: 0.1rem;
-    margin-top: 50px;
-    color: var(--primary-color);
-    text-align: center;
-    align-items: center;
-    font-weight: 900;
-
-    font-size: clamp(3rem, 5vw, 5rem);
-    font-family: "Poppins", sans-serif;
-}
-
-.tablet {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    perspective: 40rem;
-}
-
-@media (max-width: 768px) {
-    .tablet {
-        width: 80%;
-        perspective: 17rem;
-
-    }
-}
-
-.tablet-inner {
-    width: 100%;
-    max-width: 60rem;
-    position: relative;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transition: transform 0.1s ease-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tablet-inner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    z-index: 1;
-}
-
-
-.anytime {
-    position: absolute;
-    top: 38%;
-    transform: translateX(-50%);
-    font-weight: 900;
-    width: 100%;
-    text-align: center;
-    font-family: 'Dancing Script', sans-serif;
-    font-size: clamp(3rem, 6.5vw, 10rem);
-    background: linear-gradient(135deg, var(--gradient-f), var(--gradient-s));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    pointer-events: none;
-}
-
-/* ========================== Section Divider ========================== */
-.catchy{
-
-
-   margin: 0.1rem;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     color: var(--primary-color);
     text-align: center;
     align-items: center;
@@ -1270,28 +1270,74 @@ x .pros-section {
     font-size: clamp(3rem, 5vw, 5rem);
     font-family: "Poppins", sans-serif;
 }
-
-
-
-
-
-
 
 .packs {
+    display: flex;
+    justify-content: center;
+}
 
-        
-display: flex;
-justify-content: center;
-gap: 3rem;
-    
+.pack {
+    margin: 2rem;
+    border-radius: var(--main-radius);
+    border: 2px solid var(--primary-color);
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    max-width: 30rem;
+    height: 40rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
+.pack-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: "Oswald", sans-serif;
+}
 
+.pack p {
+    margin: 0px;
+}
 
-.pack1{
+.pack-info {
+    margin: 2rem;
+}
 
+.pack-pros {
+    margin: 0rem 2rem;
+}
 
+.plan-title {
+    font-size: 2rem;
+    font-family: "poppins";
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+
+.pack-info .price {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    line-height: 1;
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 2rem;
+}
+
+.per-m {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pack1 {
     margin: 2rem;
     border-radius: var(--main-radius);
     border: 2px solid var(--primary-color);
@@ -1305,61 +1351,73 @@ gap: 3rem;
 
 
 .pack2 {
-
-
     margin: 2rem;
-    background-color: var(--primary-color);
-
-    
-
     border-radius: var(--main-radius);
-
+    /* border: 2px solid var(--primary-color); */
+    background-color: var(--primary-color);
+    color: white;
     width: 80%;
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
 }
 
+
 .pack1:hover,
-.pack2:hover {
-    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
+.pack2:hover,
+.pack3:hover {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 1);
 
     transform: scale(1.03);
 
 }
 
 .pack-container1 {
-    margin: 2rem;
     color: var(--primary-dark-card-color);
     font-family: "oswald";
 
 }
 
+.pack2 button {
+    background-color: white;
+    color: var(--primary-color);
+
+}
 
 .pack-container2 {
-    margin-left: 2rem;
+    margin: 2rem;
     color: var(--forth-color);
     font-family: "oswald";
 
 }
 
 
-.old-price {
-    text-decoration: line-through;
+.Popular {
+    background-color: #ff0055;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    margin-left: 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
+
 .pack-p {
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
     width: 25rem;
     height: 4rem;
     align-items: center;
-    transition: transform 0.2 ease;
+
+
+    transition: transform 0.2s ease;
     border-radius: var(--main-radius);
     font-family: "oswald", sans-serif;
-    font-size: larger;
-
-
+    font-weight: 200;
+    font-size: 2rem;
+    z-index: 0;
 }
 
 
@@ -1372,18 +1430,29 @@ gap: 3rem;
 .pack-p:hover {
     cursor: pointer;
     transform: scale(1.03);
-    background-color: var(--gradient-f);
 }
 
-@media screen and (width:700px){
-.packs{
-    
+.pack3 .plan-title {
+
+    background: linear-gradient(135deg, var(--primary-color), #a400aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.pack3 {}
+
+
+@media screen and (width:700px) {
+    .packs {
+
         justify-content: flex-start;
         flex-direction: column;
         width: 100%;
         height: auto;
-        
-}}
+
+    }
+}
 
 
 /* ========================== Section Divider ========================== */
