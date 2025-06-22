@@ -1984,7 +1984,7 @@ body {
 
 .stats-section {
     text-align: center;
-    background-color: var(--gradient-s);
+    background-color: var(--primary-color);
 
     margin: 30px 0;
 }
@@ -2090,7 +2090,7 @@ body {
 
 footer {
 
-    background-color: var(--gradient-s);
+    background-color: var(--primary-color);
     width: 100%;
 
 }
@@ -2111,7 +2111,7 @@ footer {
 
 
 .footer-links li :hover {
-    color: purple;
+    color: black;
 }
 
 footer li {
@@ -2147,8 +2147,8 @@ footer ul {
 }
 
 .social-icons a {
-    color: white;
-    background-color: purple;
+    color: var(--primary-dark-card-color);
+    background-color: var(--forth-color);
     border-radius: 50px;
     font-size: 30px;
     text-decoration: none;
@@ -2163,7 +2163,7 @@ footer ul {
 
 .social-icons a:hover {
     color: var(--forth-color);
-    background-color: var(--gradient-s);
+    background-color: var(--primary-color);
     transform: scale(1.01);
     box-shadow: rgb(197, 191, 185);
     transition-duration: 0.5s;
