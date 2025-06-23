@@ -14,7 +14,7 @@
 
 }
 
-html {}
+
 
 body {
     margin: 0px;
@@ -1941,11 +1941,19 @@ body {
     }
 
 
-
-
+.btns-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    
 }
 
-
+}
 
 
 @media screen and (max-width:1130px) {
@@ -1969,6 +1977,7 @@ body {
     }
 
 }
+
 
 
 
