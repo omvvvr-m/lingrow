@@ -1118,7 +1118,7 @@ body {
 
     .pros-card {
         display: flex;
-        width: 100vw;
+        width: 93vw;
         height: 100%;
         flex-direction: column;
         justify-content: center;
@@ -1368,7 +1368,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 45%;
-    /* perspective: 40rem; */
+    perspective: 40rem;
 }
 
 @media (max-width: 768px) {
@@ -1438,6 +1438,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     pointer-events: none;
+    z-index: 2;
 }
 
 /* ========================== Section Divider ========================== */
