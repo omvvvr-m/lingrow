@@ -18,27 +18,27 @@
   
   body{
 
-    background-color: var(--gradient-s);
+    background-color: var(--forth-color);
   }
   
   
   .fa-user-circle{
 
 font-size: 10rem;
-color: var(--forth-color);
+color: var(--primary-dark-card-color);
 
 }
 .first-name{
 font-family: "oswald";
 font-weight: 500;
 font-size: 2rem;
-color: var(--forth-color);
+color: var(--primary-dark-card-color);
 }
 .gmail{
 font-family: "oswald";
 font-weight: 250;
 font-size: 1.75rem;
-color: var(--forth-color);
+color: var(--primary-dark-card-color);
 }
 .profile-details{
 
@@ -142,12 +142,12 @@ font-size: 2rem;
 .done{
 
     font-size: 2rem;
-    color: var(--forth-color);
+    color: var(--primary-dark-card-color);
 }
 
 .percentag{
     font-size: 2rem;
-    color: var(--forth-color);
+    color: var(--primary-dark-card-color);
 }
 .title{
 
@@ -245,3 +245,14 @@ font-size: 1.3rem;
 text-align: center;
 
 }
+
+.card {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  
+  margin: 20px auto;
+}
+
+
+

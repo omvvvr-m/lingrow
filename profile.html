@@ -41,16 +41,16 @@
 <button class="EPB" onclick="toggleForm()"> Edit profile</button>
 <!-- <hidden form></hidden> -->
 
-<div id="hidden-form">
+<form id="hidden-form"  onsubmit="updateProfile(event)" >
 <label>Full Name</label>
-<input type="  text"  placeholder="Your name">
+<input type="  text"  placeholder="Your name"  id="nameinput" required>
 <label>Gmail</label>
-<input type="text" placeholder=" @gmail.com ">
+<input type="text" placeholder=" @gmail.com "  id="gmailinput" required>
 <label>Phone number</label>
-<input type="text"   placeholder="+02 ">
+<input type="text"   placeholder="+02 " id="phoneinput">
 
 <label>Your level</label>
-<select>
+<select name="level" id="levelinput">
 <option> A1 LEVEL</option>
 <option> A2 LEVEL</option>
 <option> B1 LEVEL</option>
@@ -61,17 +61,16 @@
 
 <label>Country</label>
 <input  type="text"   placeholder="Your country">
+<button class="EPB" type="submit">Save changes</button>
+
+</div>
+
+
+</div>
 </div>
 
 
-
-
-
-</div>
-</div>
-
-
-   </div>
+</form>
     <div class="progress-bar">  
                         
 <div  class="done">  
@@ -109,11 +108,27 @@
 
 <p class="title"> Track your progress</p>
 <div class="tracking">
-<div class="first-course"> </div>
-<div class="second-course"></div>
+<div class="first-course">
+    
+<div class="card">
+  <h3>Course Progress</h3>
+  <canvas id="myPieChart" width="200" height="200"></canvas>
+</div>
 </div>
 
 
+
+<div class="second-course">
+
+<div class="card">
+  <h3>Course Progress</h3>
+  <canvas id="Chart2" width="200" height="200"></canvas>
+</div>
+
+
+</div>
+
+</div>
 
 <p class="title">Certificates</p>
 <div class="nnn">
@@ -142,13 +157,61 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
 
  function toggleForm() {
       const form = document.getElementById('hidden-form');
+      
+
+
       form.style.display = form.style.display === 'block' ? 'none' : 'block';
+
+}
+
+
+
+  const ctx1 = document.getElementById('myPieChart').getContext('2d');
+  const myPieChart = new Chart(ctx1, {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Remaining'],
+      datasets: [{
+        data: [70, 30],
+        backgroundColor: ['#d13bff', '#080808'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+        }
+      }
     }
+  });
+
+
+
+  const ctx2 = document.getElementById('Chart2').getContext('2d');
+  new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Remaining'],
+      datasets: [{
+        data: [85, 15],
+        backgroundColor: ['#d13bff', '#080808'],
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom'}}
+
+          }
+  });
 
 
 </script>
