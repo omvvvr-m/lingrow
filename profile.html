@@ -26,20 +26,54 @@
 
 </head>
 <body>
+
+
    <div class="profile-details">
-
-
-
 <i class="fa fa-user-circle" aria-hidden="true"></i>
 <div class="info">
 <div class="first-name">MOSTAFA EMAD</div>
 <div class="gmail"> mostafaemad@gmail.com</div>
 
-
-
 <div class="edit-profile">
 <button class="EPB" onclick="toggleForm()"> Edit profile</button>
 <!-- <hidden form></hidden> -->
+</div>
+</div>
+
+
+
+   </div>
+
+
+<div class="tracking">
+<div class="first-course">
+<div class="card">
+  <canvas id="myPieChart" width="200" height="200"></canvas>
+</div>
+<div class="progress-card">
+  
+    <p>📝<strong>  Last Activity:</strong> June 21</p>
+    <p>🎯 <strong>Goal:</strong> Finishing by July 1 </p>
+  <button class="btn-container">🔗 Continue Course</button>
+
+</div>
+</div>
+</div>
+
+<div class="client-details">
+
+  <h2>Client Details</h2>
+  <div class="client-info">
+    <p><strong>Name:</strong> MOSTAFA EMAD</p>
+    <p><strong>Gmail:</strong> mostafaemad@gmail.com</p>
+    <p><strong>Phone:</strong> +01 01115557777</p>
+    <p><strong>Level: </strong> B1</p>
+    <p><strong>Country: </strong> USA </p>
+    
+  
+</div>
+
+
 
 <form id="hidden-form"  onsubmit="updateProfile(event)" >
 <label>Full Name</label>
@@ -48,6 +82,7 @@
 <input type="text" placeholder=" @gmail.com "  id="gmailinput" required>
 <label>Phone number</label>
 <input type="text"   placeholder="+02 " id="phoneinput">
+
 
 <label>Your level</label>
 <select name="level" id="levelinput">
@@ -58,6 +93,7 @@
 <option> C1 LEVEL</option>
 <option> C2 LEVEL</option>
 </select>
+
 
 <label>Country</label>
 <input  type="text"   placeholder="Your country">
@@ -71,103 +107,6 @@
 
 
 </form>
-    <div class="progress-bar">  
-                        
-<div  class="done">  
-    
-                        <p> <i class="fa fa-check-square" aria-hidden="true"></i>
-
-
-</div>
-                        
-<div class="done"> 
-
-
-                        <p> <i class="fa fa-check-square" aria-hidden="true"></i>
-
-
-
-
-
-</div>
-<div class="on">3</div>
-
-<div class="on">4</div>
-
-
-    </div>
-
-<div class="progress-bar">
-<span class="percentag"> 25%</span>
-<span class="percentag"> 50%</span>
-<span class="percentag"> 75%</span>
-
-<span class="percentag"> 100%</span>
-
-</div>
-
-<p class="title"> Track your progress</p>
-<div class="tracking">
-<div class="first-course">
-    
-<div class="card">
-  <h3   class="pre">Course Progress is 60%</h3>
-  <canvas id="myPieChart" width="200" height="200"></canvas>
-</div>
-
-
-
-<div class="progress-card">
-  <h3>📖 Reading Course</h3>
-  
-    <p>📚 <strong >Modules Completed:</strong> 7 / 10</p>
-    <p>📝<strong>  Last Activity:</strong> June 21</p>
-    <p>📅  <strong>  Enrolled:</strong> May 10, 2025</p>
-    <p>⏱<strong>Estimated Time Left:</strong> 1 week</p>
-    <p>🎯 <strong>Goal:</strong> Finish by July 1 </p>
-    
-  
-
-  <button class="btn-container">🔗 Continue Course</button>
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-<div class="second-course">
-
-<div class="card">
-  <h3 class="pre">Course Progress is 85%</h3>
-  <canvas id="Chart2" width="200" height="200"></canvas>
-</div>
-
-
-<div class="progress-card">
-
-
-
-  <h3 >🗣️ TOEFL Preparation Course</h3>
-  <p>📘 <strong>Modules Completed:</strong> 17 / 20</p>
-  <p>📅 <strong>Enrolled:</strong> May 1, 2025</p>
-  <p>📝 <strong>Last Activity:</strong> June 22</p>
-  
-  <p>⏱ <strong>Time Left:</strong> 3 Days</p>
-  <p>🎯 <strong>Goal:</strong> Finish before June 30</p>
-  
-
-  <button class="btn-container">  🔗 Continue Course     </button>
-</div>
-
-
-</div>
-
-</div>
 
 <p class="title">Certificates</p>
 <div class="nnn">
@@ -247,8 +186,6 @@
 
           }
   });
-
-
 </script>
 </body>
 </html>

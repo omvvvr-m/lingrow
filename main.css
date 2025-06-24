@@ -2044,12 +2044,10 @@ body {
 
         width: 100%;
         margin: 15px 0;
+        padding: 2rem;
     }
 
-    .ppp {
-
-        gap: 20px;
-    }
+   
 
     .stat-box h3 {
         font-size: 10px;
@@ -2057,16 +2055,20 @@ body {
     }
 
     .stat-box p.stat-detailed {
-        font-size: 10px;
+        font-size:15px ;
 
         gap: 15px;
 
     }
 
+
+
+
+.stat-box p.icons {
+    font-size: 15px;
+   
 }
-
-
-
+}
 
 @media screen and (max-width:1130px) {
 
