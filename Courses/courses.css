@@ -60,6 +60,18 @@ html {
     flex-direction: row;
     background-color: #0071e3;
     width: 954px;
-    height: auto;
+    height: 18rem;
     border: 2px solid --primary-color;
+}
+
+.img-container {
+    width: 100rem;
+    height: 100%;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
