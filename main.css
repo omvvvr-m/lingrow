@@ -205,9 +205,6 @@ html {
         text-align: center;
     }
 
-
-
-
     .navlist {
         flex-direction: column;
         position: fixed;
@@ -222,7 +219,6 @@ html {
         display: flex;
         align-items: center;
     }
-
 
     .navlist.open {
         right: 0;
