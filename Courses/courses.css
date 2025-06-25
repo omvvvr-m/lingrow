@@ -1,4 +1,5 @@
-html {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -18,6 +19,41 @@ html {
 }
 
 
+.right-vectors {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+
+.right-vectors>* {
+    transform: scale(1);
+}
+
+.left-vectors {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+}
+
+.left-vectors .v2 {
+    position: relative;
+    top: 50rem;
+}
+
+.right-vectors .v1 {
+    position: relative;
+
+    top: 15rem;
+}
+
+.right-vectors .v3 {
+    position: relative;
+    top: 100rem;
+}
+
 .slogan {
     width: 100%;
     height: auto;
@@ -34,7 +70,8 @@ html {
     text-align: center;
 }
 
-.slogan .slogan-p {
+.slogan .slogan-p,
+.divider .slogan-p {
 
     font-weight: 700;
     font-size: 4rem;
@@ -48,6 +85,8 @@ html {
 }
 
 .cards-container {
+    transform-style: preserve-3d;
+    perspective: 40rem;
     width: 100%;
     display: flex;
     justify-content: top;
@@ -56,22 +95,205 @@ html {
 }
 
 .card {
+    transition: 0.5s ease;
+
+    transform: scale(1.1);
+    box-shadow: 0 3px 1rem 0 rgb(0, 0, 0, 0.35);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    background-color: #0071e3;
-    width: 954px;
-    height: 18rem;
-    border: 2px solid --primary-color;
+    background-color: white;
+    width: clamp(43rem, 50vw, 55rem);
+    height: 23rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--main-radius);
+    overflow: hidden;
+}
+
+
+.card:hover+.card {
+    filter: blur(0.1rem);
+    transform: rotateX(-10deg);
+}
+
+.card:hover+.card+.card {
+    filter: blur(0.2rem);
+    transform: rotateX(-20deg) translateZ(-9rem);
+}
+
+.card:has(+ .card:hover) {
+    filter: blur(0.1rem);
+    transform: rotateX(10deg);
+
+}
+
+.card:has(+ .card + .card:hover) {
+    filter: blur(0.2rem);
+    transform: rotateX(20deg) translateZ(-9rem);
+
+}
+
+.card.dark {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    width: clamp(43rem, 50vw, 55rem);
+    height: 23rem;
+    border: none;
+    border-radius: var(--main-radius);
+    overflow: hidden;
 }
 
 .img-container {
-    width: 100rem;
+    width: 50%;
     height: 100%;
+    border-bottom-right-radius: 6rem;
+    overflow: hidden;
 }
 
 .img-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* height: 100%; */
+    margin: 1.2rem;
+
+}
+
+
+.card-title {
+    margin: 0.1rem;
+    font-size: 2.7rem;
+    font-weight: 700;
+    font-family: "Poppins";
+    line-height: 0.98;
+}
+
+.card.dark .card-title {
+    color: white;
+    margin: 0.1rem;
+    font-size: 2.7rem;
+    font-weight: 700;
+    font-family: "Poppins";
+    line-height: 0.98;
+}
+
+.card-description {
+    line-height: 1.2;
+    margin: 0rem;
+    font-size: 0.9rem;
+    color: #535353;
+    font-family: "Oswald";
+    font-weight: 400;
+}
+
+.card.dark .card-description {
+    line-height: 1.2;
+    margin: 0rem;
+    font-size: 0.9rem;
+    color: #b8b8b8;
+    font-family: "Oswald";
+    font-weight: 400;
+}
+
+
+.card-footer {
+    margin: 0.2px;
+    margin-top: auto;
+    width: 100%;
+    /* height: 20%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.card-footer .card-prop-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Oswald";
+    color: #535353;
+
+}
+
+.card.dark .card-footer .card-prop-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Oswald";
+    color: #b8b8b8;
+
+}
+
+.card-footer .card-prop-container>* {
+    margin: 0;
+}
+
+
+.card-footer .card-button {
+    margin-left: auto;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    width: 10rem;
+    height: 3.2rem;
+    align-items: center;
+    font-weight: 300;
+
+    transition: transform 0.2s ease;
+    border-radius: var(--main-radius);
+    font-family: "oswald", sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.card-footer .card-button:hover {
+    transform: scale(1.05);
+}
+
+.card.dark .card-footer .card-button {
+    margin-left: auto;
+    color: var(--primary-color);
+    background-color: white;
+    border: none;
+    width: 10rem;
+    height: 3.2rem;
+    align-items: center;
+
+    transition: transform 0.2s ease;
+    border-radius: var(--main-radius);
+    font-family: "oswald", sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.divider {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 14rem;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: white;
+    font-family: "Poppins";
 }
