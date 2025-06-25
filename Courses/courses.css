@@ -454,6 +454,8 @@ body {
     font-size: 1.4rem;
     z-index: 0;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 
 .card-footer .card-button:hover {
