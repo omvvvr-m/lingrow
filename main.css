@@ -1919,7 +1919,18 @@ body {
 
 }
 
+@media  screen and (max-width:490px) and (min-width:320px){
+   
+    .pack-p{
 
+        width: 15rem;
+    }
+    .pack2 button{
+width: 15rem;
+    }
+
+
+}
 
 @media screen and (width:768px)and (min-width: 500px) {
     .packs {
@@ -2038,37 +2049,26 @@ body {
 
 }
 
-@media screen and (max-width:768px) and (min-width:500px) {
+@media screen and (max-width:490px) and (min-width:320px) {
 
-    .stats-section {
 
-        width: 100%;
-        margin: 15px 0;
-        padding: 2rem;
-    }
 
-   
+.stats-section span {
 
-    .stat-box h3 {
-        font-size: 10px;
 
-    }
+    margin-left: 1rem;
+
+}
+
+.stat-box h3{
+    font-size: 19rem;
+}
 
     .stat-box p.stat-detailed {
-        font-size:15px ;
+        font-size: 5rem;
 
-        gap: 15px;
-
-    }
-
-
-
-
-.stat-box p.icons {
-    font-size: 15px;
-   
-}
-}
+        
+    }}
 
 @media screen and (max-width:1130px) {
 
@@ -2081,16 +2081,16 @@ body {
     .ppp {
 
         gap: 20px;
+        flex-direction: column;
     }
 
     .stat-box h3 {
-        font-size: 10px;
+        font-size: 17px;
 
     }
 
     .stat-box p.stat-detailed {
-        font-size: 1px;
-
+        font-size: small;
         gap: 15px;
     }
 }
@@ -2109,7 +2109,7 @@ footer {
 
 .footer-links {
     font-family: "oswald";
-    font-size: 20px;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
 
@@ -2153,7 +2153,7 @@ footer ul {
 .social-icons {
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     display: flex;
     padding: 20px;
 }
@@ -2165,7 +2165,7 @@ footer ul {
     font-size: 30px;
     text-decoration: none;
     padding: 26px;
-    margin: 4px;
+    margin: 7px;
     transition: 0.3 ease-out;
 
 }
@@ -2183,55 +2183,10 @@ footer ul {
 
 
 
-@media screen and (max-width:768px) {
-
-    footer li {
-        margin: 60px;
-        padding: 15px;
-
-
-    }
-
-
-    footer {
-        width: 100%px;
-    }
-
-
-    footer li {
-        margin: 60px;
-        padding: 15px;
-        list-style: none;
-
-    }
-
-    .footer-links li {
-        /* margin-inline-start: -5px; */
-    }
-
-
-    footer {
-        width: 100%;
-        padding: 3%;
-
-    }
-
-    .footer-links {
-        font-size: 14px;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-    }
+@media screen and (max-width:768px)and (min-width:500px) {
 
 
 
-    footer li {
-        margin: 40px;
-        padding: 5px;
-
-
-    }
 
 
 }
@@ -2239,68 +2194,37 @@ footer ul {
 
 
 
-@media screen and (max-width:1130px) {
+
+    
+
+
+
+
+@media  screen and (max-width:490) and (min-width:320) {
+
+
+.social-icons {
+    
+    padding: 10px;
+font-size: smaller;
+    margin: 6rem;
+}
+.social-icons a{
+
+margin: -20 px;
+    gap: 0;
+
+}
+
+
+
+
 
     footer li {
-        margin: 60px;
-        padding: 15px;
-
-
-    }
-
-
-
-
-    footer {
-        width: 100%px;
-    }
-
-
-    footer li {
-        margin: 60px;
-        padding: 15px;
-        list-style: none;
-
-    }
-
-
-
-
-    footer {
-        width: 100%;
-        padding: 3%;
-
-    }
-
-    .footer-links {
-        font-size: 14px;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-    }
-
-    footer li {
-        margin: 40px;
+        margin: 10px;
         padding: 5px;
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
