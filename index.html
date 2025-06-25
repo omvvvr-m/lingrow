@@ -668,8 +668,18 @@
                 lenis.raf(time)
                 requestAnimationFrame(raf)
             }
-
             requestAnimationFrame(raf)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        e.preventDefault();
+                        lenis.scrollTo(targetElement);
+                    }
+                });
+            });
         </script>
         <!-- Smooth Scroll -->
 

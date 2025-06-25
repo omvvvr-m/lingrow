@@ -205,9 +205,6 @@ html {
         text-align: center;
     }
 
-
-
-
     .navlist {
         flex-direction: column;
         position: fixed;
@@ -222,7 +219,6 @@ html {
         display: flex;
         align-items: center;
     }
-
 
     .navlist.open {
         right: 0;
@@ -1952,17 +1948,17 @@ width: 15rem;
     }
 
 
-.btns-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    
-}
+    .btns-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+
+    }
 
 }
 
@@ -2053,7 +2049,9 @@ width: 15rem;
 
 
 
+
 .stats-section span {
+
 
 
     margin-left: 1rem;
@@ -2065,10 +2063,27 @@ width: 15rem;
 }
 
     .stat-box p.stat-detailed {
+
         font-size: 5rem;
 
         
     }}
+
+        font-size: 15px;
+
+        gap: 15px;
+
+    }
+
+
+
+
+    .stat-box p.icons {
+        font-size: 15px;
+
+    }
+}
+
 
 @media screen and (max-width:1130px) {
 
