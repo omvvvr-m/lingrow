@@ -12,144 +12,105 @@
     --main-radius: 0.8rem;
 }
 
-
 body {
   margin: 0;
+  line-height: 1.6;
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  /* background-color: rgb(151, 151, 236); */
+  color:var(--primary-color-light);
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: white;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 2px solid var(--secondary-color);
-    border-radius: 2rem;
-    background-color: var(--secondary-color);
-}
-
-/* .details-container {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
+  font-size: 2.7rem;
+  color: white;
   text-align: center;
-} */
-
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-color-light));
+  border-radius: var(--main-radius);
+  box-shadow: 0 4px 12px var(--primary-color);
+  width: fit-content;
+}
 
 .details-container {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  margin: 2rem auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  /* color: var(--primary-color-light); */
+  color: var(--primary-color);
+  /* background-color:rgb(143, 143, 247); */
 }
-
-/* .box {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-} */
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.left-box {
+.left-box, 
+.right-box,
+.instbox,
+.details {
   flex: 1;
-  /* width: 45%; */
-  border: 2px solid black;
-  border-radius: 15px;
-  /* padding: 1rem; */
-  /* margin-left: 2rem;
-  margin-right: auto; */
-  padding: 1.5rem;
+  background: var(--primary-color-light);
+  border: 1px solid var(--primary-color-light);
+  border-radius: var(--main-radius);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px var(--secondary-color);
+  transition: transform 0.3s ease;
 }
 
-.right-box {
-  flex: 1;
-  /* width: 45%; */
-  border: 2px solid black;
-  border-radius: 15px;
-  /* padding: 1rem; */
-  /* margin-left: auto;
-  margin-right: 2rem; */
-  /* text-align: center; */
-  padding: 1.5rem;
-  text-align: left;
-
+.left-box:hover,
+.right-box:hover,
+.instbox:hover,
+.details:hover {
+  transform: translateY(-6px);
 }
 
 .desc {
-    color: white;
-    background-color: var(--primary-color-light);
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--primary-color-light);
-    width: 100%;
-    max-width: 500px;
-    margin: 1rem auto;   
-    text-align: left;             
-    box-shadow: 0 0 10px var(--primary-color-light);
-    font-size: 2rem;
-}
-
-/* video {
- padding: 1rem;
- margin: 1.5rem;
-} */
-
-#course-video {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.details {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  /* max-width: 600px;
-  margin-left: auto;
-  margin-right: 2rem; */
+  font-size: 1.8rem;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--primary-color-light), var(--accent-color));
+  box-shadow: 0 0 12px var(--primary-color-light);
+  border-radius: var(--main-radius);
   text-align: left;
-  border-left: 6px solid var(--secondary-color);
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  max-width: 500px;
 }
 
-.instbox {
-  /* margin-top: 3rem; */
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  /* max-width: 600px;
-  margin-left: 2rem;
-  margin-right: auto; */
-  /* text-align: center; */
-  text-align: left;
-
-  border-left: 6px solid var(--primary-color);
+#course-video iframe {
+  width: 450px;
+  height: 310px;
+  border-radius: var(--main-radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 #course-instructor-name {
   font-size: 1.6rem;
   font-weight: bold;
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
-  color: #222;
 }
 
 #course-instructor-bio {
   font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+  color:var(--primary-color-light);
+}
+
+.details {
+  color: var(--primary-dark-card-color);
+  border-left: 6px solid var(--secondary-color);
+  background: #fff;
+}
+
+.instbox {
+  border-left: 6px solid var(--primary-color);
+  background: #fff;
 }
 
