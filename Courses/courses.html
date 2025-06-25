@@ -22,6 +22,13 @@
 
 <body>
 
+    <div class="search-bar">
+        <div class="search-bar-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" data-search placeholder="What you're looking for?">
+        </div>
+    </div>
+
 
     <div class="right-vectors">
         <img class="v1" src="/imgs/Vector 1.svg">
@@ -207,11 +214,26 @@
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
-
         requestAnimationFrame(raf)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    e.preventDefault();
+                    lenis.scrollTo(targetElement, {
+                        offset: -(window.innerHeight / 2) + (element.offsetHeight / 2),
+                        duration: 1
+                    });
+                }
+            });
+        });
     </script>
     <!-- Smooth Scroll -->
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="searchbar.js"></script>
 
 </html>
