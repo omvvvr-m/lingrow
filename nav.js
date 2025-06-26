@@ -49,7 +49,7 @@ waitForElement("#toggleBtn", function (toggleBtn) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const joinForm = document.querySelector(".joinForm");
-  const signForm = document.querySelector(".signForm");
+  const signForm = document.querySelector(".signinForm");
 
   const firstNameInput = document.getElementById("firstName");
   const lastNameInput = document.getElementById("lastName");
@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const confInput = document.getElementById("conf");
   const phoneInput = document.getElementById("phone");
 
-  const signEmailInput = document.getElementById("signEmail");
-  const signPasswordInput = document.getElementById("signPassword");
+  const signEmailInput = document.getElementById("signinEmail");
+  const signPasswordInput = document.getElementById("signinPassword");
 
   const alreadyMemberLink = document.querySelector(".alreadyMember");
-  const notMemberLink = document.querySelector(".notMember");
+  const notMemberLink = document.querySelector(".notmember");
 
   let currentUser = sessionStorage.getItem("currentUser");
   let currentUserFname = sessionStorage.getItem("currentUserFname");
