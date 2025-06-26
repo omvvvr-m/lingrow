@@ -1,0 +1,160 @@
+:root {
+    /* --primary-color: #78B3CE; */
+    /* --primary-color: #0e0e0e; */
+    --primary-color: #3e008f;
+    --primary-dark-card-color: #080808;
+    --primary-color-light: #6f00ff;
+    --secondary-color: #0071e3;
+    --gradient-f: #3e008f;
+    --gradient-s: #d13bff;
+    --forth-color: #FBF8EF;
+    --fifth-color: #F96E2A;
+    --main-radius: 0.8rem;
+
+
+}
+
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif ;
+}
+
+.banner-section {
+  background: url('imgs/2019_09_english.jpg') no-repeat center center / cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:lavender;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.contact-section {
+  /* background: url('imgs/download.webp') no-repeat center/cover; */
+  /* background-image: url('imgs/download.webp'); */
+  /* padding: 3rem 1rem; */
+  color: lavender;
+  /* position: relative; */
+  /* min-height: 20vh; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: var(--primary-color);
+  padding: 4rem 2rem;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.top {
+  background-color: var(--primary-color);
+  padding: 2rem;
+}
+
+.contact-container {
+  max-width: 1250px;
+  margin: auto;
+  background-color: var(--primary-color);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.box {
+  background: lavender;
+  color:var(--primary-dark-card-color);
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 22%;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.box h4 {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--primary-color-light);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-bottom: 2px solid var(--primary-color-light);
+  background: transparent;
+  color: lavender;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  background: var(--secondary-color);
+  color: lavender;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact-form,
+.msg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.msg {
+  flex: 1;
+}
+
+.msg h3 {
+  font-size: 1.8rem;
+}
+
+.msg p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.social {
+  margin-top: 1rem;
+}
+
+.social a {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: lavender;
+  text-decoration: none;
+}
+
