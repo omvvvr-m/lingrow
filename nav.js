@@ -46,7 +46,6 @@ waitForElement("#toggleBtn", function (toggleBtn) {
 /* ================= section divider=======================*/
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
@@ -61,13 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const signEmailInput = document.getElementById("signinEmail");
   const signPasswordInput = document.getElementById("signinPassword");
 
-  const alreadyMemberLink = document.querySelector(".alreadyMember");
-  const notMemberLink = document.querySelector(".notmember");
+  const alreadyMemberLink = document.querySelector(".alreadymember a");
+  const notMemberLink = document.querySelector(".notamember a");
+  // hna tl3t amember m4 member bs :|
+  // w kman zwdna a 3l4qn homa mktobeen gwa <a></a>
 
-  let currentUser = sessionStorage.getItem("currentUser");
-  let currentUserFname = sessionStorage.getItem("currentUserFname");
+  const joinWindow = document.querySelector(".join");
+  const homeWindow = document.querySelector(".home");
+  const logoutBtn = document.getElementById("logoutBtn");
 
-  
   alreadyMemberLink.addEventListener("click", (e) => {
     e.preventDefault();
     joinForm.style.display = "none";
@@ -80,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     joinForm.style.display = "block";
   });
 
-  
   function registerUser(firstName, lastName, email, password, phone) {
     if (localStorage.getItem(email)) {
       alert("Email already exists!");
@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     signForm.style.display = "block";
   }
 
-
   function loginUser(email, password) {
     const user = localStorage.getItem(email);
     if (!user) {
@@ -119,13 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("isLoggedIn", "true");
     sessionStorage.setItem("currentUser", email);
     sessionStorage.setItem("currentUserFname", userData.firstName);
+
     alert(`Welcome, ${userData.firstName}`);
     signForm.reset();
-    
-    location.reload();
+
+    joinWindow.style.display = "none";
+    homeWindow.style.display = "block";
+    // hna 5lnaha window 3l4an n4eel L window kolh m4 L form bs
+
   }
 
-  
   joinForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -144,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
     registerUser(firstName, lastName, email, password, phone);
   });
 
-  
   signForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -156,14 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   if (sessionStorage.getItem("isLoggedIn") === "true") {
-    alert(`Welcome back, ${sessionStorage.getItem("currentUserFname")}`);
-    joinForm.style.display = "none";
-    signForm.style.display = "none";
+    joinWindow.style.display = "none";
+    homeWindow.style.display = "block";
+    // hna 5lnaha window 3l4an n4eel L window kolh m4 L form bs
   } else {
     signForm.style.display = "none";
+    joinForm.style.display = "block";
   }
 });
-
 
 
 
