@@ -218,7 +218,7 @@ max-width: 30rem;
 
 .btn{
 
-margin-top: 2rem 0 ;
+margin-top: 2rem  ;
 margin-left: 7rem;
 border-radius: var(--main-radius);
 width: 15rem;
@@ -295,15 +295,167 @@ font-size: 2rem;
 
 
 @media  screen and (max-width:490px) and (min-width:320px) {
-  
 
+
+.nnn{
+
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 5rem;
+
+
+  
+}
+.btn{
+
+margin-top: -25rem ;
+margin-left: 3rem;
+border-radius: var(--main-radius);
+width: 12rem;
+height: 2rem;
+}
+
+.Certificate1, .Certificate2 {
+    width: 100%;
+     height: 20rem; 
+    /* max-width: 30rem;} */}
+
+.nnn p{
+
+font-size: 1.2rem;
+
+}
+
+
+.first-course {
+
+min-width: 17rem;
+}
+
+.client-details {
+    font-weight: 400;
+    margin-left: 4rem;
+     margin-top: 0rem; 
+
+}
+
+.ph1,.ph2{
+
+height: 30rem;
+}
+
+
+  
+  .fa-user-circle{
+
+font-size: 6rem;
+}
+.first-name{
+font-size: 1rem;
+}
+.gmail{
+font-size: 1rem
+
+}
+
+
+.EPB{
+margin: 2rem 0;
+padding: 0.2rem;
+
+}
 
 
 .tracking{
 
-justify-content:center;
+display: flex;
+margin-top: 3rem;
+margin-right: 1rem;
+}
+
+
+.btn-container {
+    margin-left: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+}
+
+
+.client-details p {
+
+line-height: 1rem;
+font-size: 1rem;
+}
 
 
 }
+@media screen and (width:768px)and (min-width: 500px) {
+
+.nnn{
+
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 5rem;
+margin-left: 9rem;
+
+}
+
+
+.first-course {
+
+max-width: 15rem;
+
+}
+
+
+
+
+  .fa-user-circle{
+
+font-size: 8rem;
+}
+.first-name{
+font-size: 1.5rem;
+}
+.gmail{
+font-size: 1.5rem
+}  
+
+.btn-container {
+    margin-left: 0.4rem;
+    width: 13rem;
+    height: 2rem;
+}
+}
+@media  screen and (max-width:1130) and (min-width:769) {
+  
+
+
+
+.nnn{
+
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 5rem;
+margin-left: 9rem;
+
+
+
+}
+.ph1,.ph2{
+
+width: 100%;
+height: 50rem;
+max-width: 20rem;
+
+
+}
+.btn{
+margin-left: 6rem;
+}
+
 
 }
