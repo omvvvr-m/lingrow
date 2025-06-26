@@ -71,6 +71,8 @@ h1 {
   transform: translateY(-6px);
 }
 
+
+
 .desc {
   font-size: 1.8rem;
   color: var(--text-light);
@@ -82,6 +84,31 @@ h1 {
   margin: 1rem auto;
   max-width: 500px;
 }
+
+.course-btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color:lavender;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px var(--primary-dark-card-color);
+}
+
+.course-btn:hover {
+  background-color: var(--primary-color-light);
+  transform: scale(1.05);
+}
+
+#course-playlist-button {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 
 #course-video iframe {
   width: 450px;
