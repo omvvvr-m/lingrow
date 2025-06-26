@@ -193,6 +193,7 @@
 <body>
 
     <body>
+        <div id="navbar"></div>
         <!----------------------------- Section Divider ----------------------------->
         <section class="main-blanket" id="home">
             <div class="main-blanket-background">
@@ -782,6 +783,14 @@
             });
         </script>
         <!-- Smooth Scroll -->
+
+         <script>
+         fetch("../nav.html")
+         .then(res => res.text())
+         .then(data => {
+         document.getElementById("navbar").innerHTML = data;
+         });
+        </script>
 
     </body>
 

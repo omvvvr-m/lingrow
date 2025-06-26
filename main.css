@@ -448,8 +448,8 @@ html {
 /* ================================ Login ================================ */
 
 .join {
-    /* display: none; */
-    touch-action: none;
+    display: none;
+    /* touch-action: none; */
 
 }
 
