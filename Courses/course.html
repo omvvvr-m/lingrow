@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>COURSE</title>
 
+        <link rel="stylesheet" href="../main.css">
         <link rel="stylesheet" href="course.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,12 @@
 
     </head>
 
+   
+
     <body>
+
+        <div id="navbar"></div>
+
         <div class="details-container">
             <h1 id="course-title"></h1>
             <div class="row">
@@ -54,6 +60,14 @@
 
 
         <script src="data.js"></script>
+
+        <script>
+         fetch("../nav.html")
+         .then(res => res.text())
+         .then(data => {
+         document.getElementById("navbar").innerHTML = data;
+         });
+        </script>
 
     </body>
 </html>

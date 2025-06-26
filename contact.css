@@ -21,7 +21,7 @@ body {
 
 .banner-section {
   background: url('imgs/2019_09_english.jpg') no-repeat center center / cover;
-  height: 30vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
