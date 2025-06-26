@@ -1,8 +1,5 @@
 const searchInput = document.querySelector("[data-search]");
-
 const courses = Array.from(document.querySelectorAll(".card"));
-
-
 
 const courseData = courses.map(card => ({
     element: card,
@@ -16,12 +13,10 @@ searchInput.addEventListener("search", e => {
     console.log(result[0]);
     let match = result[0]?.item;
     e.preventDefault();
-
     if (match) {
         lenis.scrollTo(match.element, {
             offset: -(window.innerHeight / 2) + (match.element.offsetHeight / 2),
             duration: 1
-
         });
         setTimeout(() => {
             match.element.classList.add("found")
@@ -38,6 +33,5 @@ searchInput.addEventListener("search", e => {
             searchbarcircle.classList.remove("wrong")
         }, 400);
     }
-
 });
 searchInput.addEventListener('')

@@ -83,64 +83,51 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    var num1 = document.getElementById("session-completed");
+    var num2 = document.getElementById("clients");
 
+    function animatedCounter(element, start, end, duration, holdTime) {
+        if (element.isCounting) return;
+        element.isCounting = true;
 
-var num1 = document.getElementById("session-completed");
-var num2 = document.getElementById("clients");
+        const range = end - start;
+        let current = start;
+        const increment = 1;
+        const stepTime = Math.max(Math.floor(duration / range), 10);
 
-function animatedCounter(element, start, end, duration, holdTime ) {
-    if (element.isCounting) return;
-    element.isCounting = true;
-
-    const range = end - start;
-    let current = start;
-    const increment = 1;
-    const stepTime = Math.max(Math.floor(duration / range), 10);
-
-    element.innerText = "+" + current;
-
-    const timer = setInterval(() => {
-        current += increment;
         element.innerText = "+" + current;
 
-        if (current >= end) {
-            clearInterval(timer);
-            setTimeout(() => {
-                element.isCounting = false;
-            }, holdTime); // الرقم يثبت بعد ما يخلص
+        const timer = setInterval(() => {
+            current += increment;
+            element.innerText = "+" + current;
+
+            if (current >= end) {
+                clearInterval(timer);
+                setTimeout(() => {
+                    element.isCounting = false;
+                }, holdTime); // الرقم يثبت بعد ما يخلص
+            }
+        }, stepTime);
+    }
+
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    function checkCountersRepeat() {
+        if (isInViewport(num1)) {
+            animatedCounter(num1, 0, 800, 2000, 3000);
         }
-    }, stepTime);
-}
-
-function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-}
-
-function checkCountersRepeat() {
-    if (isInViewport(num1)) {
-        animatedCounter(num1, 0, 800, 2000, 3000);
+        if (isInViewport(num2)) {
+            animatedCounter(num2, 0, 1000, 6000, 2000);
+        }
     }
-    if (isInViewport(num2)) {
-        animatedCounter(num2, 0, 1000, 6000, 2000);
-    }
-}
 
-// without referesh or scroll
-setInterval(checkCountersRepeat, 300);
-window.addEventListener("DOMContentLoaded", checkCountersRepeat);
-window.addEventListener("scroll", checkCountersRepeat);
-
-
-
-
-
-
-
-
-
-
-
+    // without referesh or scroll
+    setInterval(checkCountersRepeat, 300);
+    window.addEventListener("DOMContentLoaded", checkCountersRepeat);
+    window.addEventListener("scroll", checkCountersRepeat);
     let current = 0;
     const cards = document.querySelectorAll('.reviews');
 
@@ -148,7 +135,7 @@ window.addEventListener("scroll", checkCountersRepeat);
         cards.forEach((card, i) => {
             card.classList.toggle('active', i === index);
         });
-    }num2
+    } num2
 
     function nextReview() {
         current = (current + 1) % cards.length;
@@ -173,26 +160,27 @@ window.onload = function () {
 
 
 //Animating
+const cards = document.querySelectorAll('.oc-card');
+const options = {
+    rootMargin: "-40% 0px -40% 0px"
+};
+const cardObserver = new IntersectionObserver((entries) => {
 
-var shown = 0;
-const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (shown <= 2) {
-                shown++;
-                entry.target.classList.add('dShow');
-                console.log("Should Be Shown");
+    entries.forEach((card) => {
+        let shown = false;
+        if (card.isIntersecting) {
+            if (!shown) {
+                console.log('Shown!');
+                card.target.classList.add('dShow');
+                shown = true;
             }
         }
-    });
-}, {
-    root: null,
-    rootMargin: "-40% 0px -40% 0px",
-    threshold: 0
-});
-const hiddenElements = document.querySelectorAll('.oc-card');
-hiddenElements.forEach(el => obs.observe(el));
-document.querySelectorAll('.oc-card').forEach(card => {
+    })
+
+}, options);
+
+cards.forEach((card) => {
+    cardObserver.observe(card);
     card.addEventListener('animationend', () => {
         card.style.opacity = '1';
         card.style.filter = 'blur(0)';
@@ -200,3 +188,4 @@ document.querySelectorAll('.oc-card').forEach(card => {
         card.classList.remove('dShow');
     });
 });
+
