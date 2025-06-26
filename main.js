@@ -84,25 +84,59 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    var num1 = document.getElementById("session-completed");
-    var num2 = document.getElementById("clients");
-    function animatedCounter(element, start, end, duration) {
-        var range = end - start;
-        var current = start;
-        var increment = end > start ? 1 : -1;
-        let stepTime = Math.max(Math.floor(duration / range), 1); // prevent zero ms
 
-        var timer = setInterval(function () {
-            current += increment;
-            element.innerText = "+" + current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
+var num1 = document.getElementById("session-completed");
+var num2 = document.getElementById("clients");
+
+function animatedCounter(element, start, end, duration, holdTime ) {
+    if (element.isCounting) return;
+    element.isCounting = true;
+
+    const range = end - start;
+    let current = start;
+    const increment = 1;
+    const stepTime = Math.max(Math.floor(duration / range), 10);
+
+    element.innerText = "+" + current;
+
+    const timer = setInterval(() => {
+        current += increment;
+        element.innerText = "+" + current;
+
+        if (current >= end) {
+            clearInterval(timer);
+            setTimeout(() => {
+                element.isCounting = false;
+            }, holdTime); // الرقم يثبت بعد ما يخلص
+        }
+    }, stepTime);
+}
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+}
+
+function checkCountersRepeat() {
+    if (isInViewport(num1)) {
+        animatedCounter(num1, 0, 800, 2000, 3000);
     }
+    if (isInViewport(num2)) {
+        animatedCounter(num2, 0, 1000, 6000, 2000);
+    }
+}
 
-    animatedCounter(num1, 0, 500, 1000);
-    animatedCounter(num2, 0, 1200, 1500);
+// without referesh or scroll
+setInterval(checkCountersRepeat, 300);
+window.addEventListener("DOMContentLoaded", checkCountersRepeat);
+window.addEventListener("scroll", checkCountersRepeat);
+
+
+
+
+
+
+
 
 
 
@@ -114,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cards.forEach((card, i) => {
             card.classList.toggle('active', i === index);
         });
-    }
+    }num2
 
     function nextReview() {
         current = (current + 1) % cards.length;

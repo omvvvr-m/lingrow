@@ -1925,6 +1925,10 @@ body {
 width: 15rem;
     }
 
+.per-m {
+    font-size: 0.7rem;
+    
+}
 
 }
 
@@ -1959,6 +1963,33 @@ width: 15rem;
         padding: 0;
 
     }
+
+
+.footer li{
+padding: 0px;
+margin:25px
+}
+
+.footer-links {
+font-size: 1rem;
+}
+
+
+
+.stats-section span {
+    margin-left: 1rem;
+
+}
+
+.stat-box h3{
+    font-size: 3rem;
+}
+
+    .stat-box p.stat-detailed {
+
+        font-size: 2rem;}
+
+
 
 }
 
@@ -2012,11 +2043,6 @@ width: 15rem;
     display: inline-flex;
     margin: 0;
 }
-
-
-
-
-
 .stats-section span {
 
     display: inline-block;
@@ -2047,34 +2073,56 @@ width: 15rem;
 
 @media screen and (max-width:490px) and (min-width:320px) {
 
+.footer{
+    flex-direction: column;
+    display: flex;
+    gap: 2px;
+    padding:10px
+}
+.social-icons{
+    
+    flex-direction: column;
+    font-size: 12px;
+    gap:0;
+}
+.footer ul{
+flex-direction: column;
 
 
+}
+.footer li{
+padding: 5px;
+margin:5px
+}
+
+.footer-links {
+font-size: .12rem;
+}
 
 .stats-section span {
-
-
-
     margin-left: 1rem;
 
 }
 
 .stat-box h3{
-    font-size: 19rem;
+    font-size: 1rem;
 }
 
     .stat-box p.stat-detailed {
 
-        font-size: 5rem;
+        font-size: rem;
 
         
-    }}
+    
 
         font-size: 15px;
 
         gap: 15px;
 
     }
-
+.ppp{
+    flex-direction: column;
+}
 
 
 
@@ -2083,9 +2131,7 @@ width: 15rem;
 
     }
 }
-
-
-@media screen and (max-width:1130px) {
+@media screen and (max-width:1130px)and (min-width:767px) {
 
     .stats-section {
 
@@ -2096,7 +2142,7 @@ width: 15rem;
     .ppp {
 
         gap: 20px;
-        flex-direction: column;
+        
     }
 
     .stat-box h3 {
@@ -2108,6 +2154,21 @@ width: 15rem;
         font-size: small;
         gap: 15px;
     }
+
+
+
+
+
+.footer li{
+padding: 3px;
+margin:28px
+}
+
+.footer-links {
+font-size: 1rem;
+}
+
+
 }
 
 
@@ -2196,51 +2257,11 @@ footer ul {
     transition-duration: 0.5s;
 }
 
-
-
-@media screen and (max-width:768px)and (min-width:500px) {
-
-
-
-
-
-}
-
-
-
-
-
     
 
 
 
 
-@media  screen and (max-width:490) and (min-width:320) {
-
-
-.social-icons {
-    
-    padding: 10px;
-font-size: smaller;
-    margin: 6rem;
-}
-.social-icons a{
-
-margin: -20 px;
-    gap: 0;
-
-}
-
-
-
-
-
-    footer li {
-        margin: 10px;
-        padding: 5px;
-
-    }
-}
 
 
 /* ========================== Section Divider ========================== */
