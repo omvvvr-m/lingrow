@@ -17,7 +17,7 @@ const courses = [
   {
     id: 2,
     title: "Say It Right",
-    description: "Master the art of clear and confident English speaking. SayIt Right helps you improve pronunciation, fluency, and speaking skills for real-life conversations, interviews, and exams like IELTS — all in a fun, supportive environment.",
+    description: "Master a clear and confident English speaking.SayIt Right helps you improve pronunciation, fluency, and speaking skills for real-life conversations, interviews,and exams.",
     intro: "https://www.youtube.com/embed/Wn-SL1a85Ic",
     instructor: "Youssif Mohamed",
     info: "Youssif Mohamed is a passionate and skilled English Speaking Instructor with over 7 years of experience helping learners improve their spoken communication. He specializes in building fluency, expanding vocabulary, correcting pronunciation, and boosting students’ confidence in real-life conversations. Youssif creates a friendly and supportive classroom environment where students feel comfortable expressing themselves. Through interactive activities, discussions, and role-plays, he helps learners speak English naturally and effectively in both academic and everyday situations.",
@@ -32,7 +32,7 @@ const courses = [
   {
     id: 3,
     title: "TOFEL Preparation",
-    description: "Sharpen your English skills and get ready for the TOEFL test. This course covers Reading,Listening, Speaking, and Writing with strategies, practice tests, and expert tips to help you reach your target score.",
+    description: 'Sharpen your English skills and <br>get ready for the TOEFL test. This course covers Reading,Listening, Speaking, and Writing with strategies, practice tests that help you reach your target score.',
     intro: "https://www.youtube.com/embed/r1Ahe9Bk1oI",
     instructor: "Eman Mahmoud",
     info: "Eman Mahmoud is a qualified TOEFL instructor with extensive experience helping students succeed in the TOEFL iBT exam. With over 6 years of teaching academic English, she focuses on all four TOEFL sections — Reading, Listening, Speaking, and Writing. Eman’s teaching style blends clear explanations, proven strategies, and personalized support to help learners build the language skills and test techniques needed to achieve high scores. She also offers detailed feedback on speaking and writing tasks, helping students improve coherence, structure, and vocabulary for academic success.",
@@ -47,7 +47,7 @@ const courses = [
   {
     id: 4,
     title: "Grammar Course",
-    description: "Build a strong foundation in English grammar for clear and correct communication.This course helps you master essential grammar rules, sentence structure, and common mistakes with practical examples and easy-to-follow lessons.",
+    description: "Build a strong foundation in English grammar for clear and correct communication.This course helps you master essential grammar rules, sentence structure, and common mistakes.",
     intro: "https://www.youtube.com/embed/AVYfyTvc9KY",
     instructor: "Jody Mohamed",
     info: "Jody Mohamed is a dedicated English Grammar instructor with over 8 years of experience helping learners master the rules and patterns of the English language. She specializes in making grammar clear, practical, and easy to understand for students at all levels. Jody uses interactive lessons, real-life examples, and targeted exercises to strengthen students’ grammar skills in writing and speaking. Her patient and structured approach helps learners build a strong foundation in sentence structure, tenses, articles, prepositions, and more — making grammar not just understandable, but enjoyable.",
@@ -62,7 +62,7 @@ const courses = [
   {
     id: 5,
     title: "Vocab Course",
-    description: "Expand your English vocabulary for everyday use, exams, and fluent conversations.This course helps you learn and remember essential words through themed lessons,context-based learning, and practical exercises.",
+    description: "Expand your English vocabulary for everyday use.This course helps you learn and remember essential words through themed lessons,context-based learning, and practical exercises.",
     intro: "https://www.youtube.com/embed/VBSbbgiXc9s",
     instructor: "Tarek Ahmed",
     info: "Tarek Ahmed is an experienced English Vocabulary instructor who specializes in helping learners expand their word knowledge and express themselves more clearly and confidently. With over 6 years of teaching experience, Tarek uses engaging methods such as context-based learning, word maps, and themed vocabulary lessons to make learning new words both effective and fun. His approach focuses on understanding word meanings, usage, collocations, and pronunciation — empowering students to speak and write with precision and variety in academic, professional, and everyday settings.",
@@ -77,7 +77,7 @@ const courses = [
   {
     id: 6,
     title: "Reading Course",
-    description: "Improve your English reading skills for exams, study, and everyday understanding. This course builds your ability to read faster, understand better, and analyze texts through guided practice and strategies.",
+    description: "Improve your English reading skills for exams, study. This course builds your ability to read faster, understand better, and analyze texts through guided practice and strategies.",
     intro: "https://www.youtube.com/embed/mC0D_8L4DYA",
     instructor: "Mahmoud Mostafa",
     info: "Mahmoud Mostafa is a skilled English Reading instructor with over 7 years of experience helping learners develop strong reading comprehension skills. He specializes in teaching strategies for understanding main ideas, identifying details, making inferences, and analyzing texts across various genres. Mahmoud’s lessons focus on improving reading speed, vocabulary in context, and critical thinking — essential for academic success and standardized tests like TOEFL and IELTS. His interactive approach helps students become more confident, efficient, and thoughtful readers.",
@@ -97,7 +97,7 @@ const course = courses.find(c => c.id === id);
 
 if (course) {
   document.getElementById("course-title").textContent = course.title;
-  document.getElementById("course-description").textContent = course.description;
+  document.getElementById("course-description").innerHTML = course.description;
   // document.getElementById("course-video").innerHTML = `
   //   <iframe width="100%" height="315" src="${course.intro}" 
   //    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
