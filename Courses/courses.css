@@ -539,10 +539,9 @@ body {
     .search-bar .search-bar-circle:hover {
 
         /* transform: scale(1.4) translateY(-2rem); */
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
         width: 70vw;
         justify-content: left;
-        font-size: clamp(0.1rem, 2vw, 1rem);
 
         /* transform: scale(1);
         width: 90vw;
@@ -636,7 +635,7 @@ body {
     .card.dark .card-description.pdesc {
         line-height: 1.2;
         margin: 0rem;
-        font-size: clamp(0.7rem, 3.2vw, 2rem);
+        font-size: clamp(0.7rem, 3.2vw, 1.7rem);
         font-family: "Oswald";
         font-weight: 400;
     }
@@ -655,7 +654,7 @@ body {
     .card-title,
     .card.dark .card-title {
         margin: 0.5rem;
-        font-size: clamp(1.4rem, 12vw, 2.3rem);
+        font-size: clamp(1.2rem, 6.5vw, 2.1rem);
         font-weight: 700;
         font-family: "Poppins";
         line-height: 0.98;
