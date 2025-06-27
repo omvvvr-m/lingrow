@@ -76,9 +76,9 @@
             <li> <a href="contact.html">CONTACT US</a></li>
             <li><button id="loginbtn">JOIN</button></li>
         </ul>
-        <!-- <button id="loginbtn">JOIN</button> -->
-    <!-- </div>
-</nav> --> -->
+        <button id="loginbtn">JOIN</button> -->
+<!-- </div>
+</nav> -->
 
 
 <!----------------------------- Section Divider ----------------------------->
@@ -184,8 +184,8 @@
     </div>
 </div>
 <div class="home" style="display: none;">
-  <!-- <h1>Welcome to Lingrow!</h1> -->
-  <!-- <button id="logoutBtn">Logout</button> -->
+    <!-- <h1>Welcome to Lingrow!</h1> -->
+    <!-- <button id="logoutBtn">Logout</button> -->
 </div>
 
 <!----------------------------- Section Divider ----------------------------->
@@ -756,42 +756,47 @@
         <script src="nav.js"></script>
 
 
-        <!-- Smooth Scroll -->
-        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
         <script>
-            const lenis = new Lenis({
-                duration: 1,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                smooth: true
-            })
+            // Smooth Scroll
+            const script = document.createElement('script');
+            script.src = './lenis.min.js';
+            script.onload = () => {
+                const lenis = new Lenis({
+                    duration: 1,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smooth: true
+                })
 
-            function raf(time) {
-                lenis.raf(time)
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
                 requestAnimationFrame(raf)
-            }
-            requestAnimationFrame(raf)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
 
-                    if (targetElement) {
-                        e.preventDefault();
-                        lenis.scrollTo(targetElement);
-                    }
+                        if (targetElement) {
+                            e.preventDefault();
+                            lenis.scrollTo(targetElement);
+                        }
+                    });
                 });
-            });
-        </script>
-        <!-- Smooth Scroll -->
+            };
+            document.head.appendChild(script);
 
-         <script>
-         fetch("../nav.html")
-         .then(res => res.text())
-         .then(data => {
-         document.getElementById("navbar").innerHTML = data;
-         });
         </script>
 
+
+        <script>
+            fetch("../nav.html")
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById("navbar").innerHTML = data;
+                });
+        </script>
     </body>
 
 </html>

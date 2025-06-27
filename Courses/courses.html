@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
 " crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<div id="navbar"></div>
 
 <body>
 
@@ -55,11 +56,13 @@
             </div>
             <div class="text-container">
                 <p class="card-title">ILETS Preparation</p>
-                <p class="card-description">Prepare effectively for the IELTS test with targeted practice in all four
-                    key areas: Listening, Reading, Writing, and Speaking. Gain access to expert tips, proven strategies,
-                    and practical exercises designed to strengthen your skills and boost your confidence. Whether you're
-                    aiming for academic or general training, this comprehensive preparation will help you achieve your
-                    desired band score and succeed on test day.</p>
+                <p class="card-description">Prepare for the IELTS with targeted practice in Listening, Reading, Writing,
+                    and Speaking. Access expert tips, proven strategies, and practical exercises to build your skills
+                    and confidence for academic or general training.</p>
+
+                <p class="card-description pdesc">Master all four IELTS skills with expert tips, strategies, and
+                    practice to boost your confidence and band score.</p>
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">🎧 +20 hrs of guided content</p>
@@ -89,6 +92,9 @@
                     for real-life conversations, job interviews, presentations, and language exams like IELTS.
                     With engaging lessons and interactive practice, SayIt Right creates a fun, supportive environment
                     where you can build confidence, speak naturally, and express yourself with clarity and ease.</p>
+                <p class="card-description pdesc">Improve your pronunciation, fluency, and confidence in real-life
+                    conversations and exams with SayIt Right.</p>
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">🎧 +50 hrs of practice</p>
@@ -114,6 +120,9 @@
                     course guides you through all four sections — Reading, Listening, Speaking, and Writing — with
                     effective strategies, realistic practice tests, and expert tips to help you build confidence and
                     achieve your target score.</p>
+                <p class="card-description pdesc">Build confidence and master all TOEFL sections with expert tips,
+                    strategies, and realistic practice.</p>
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">🎧 +5 hrs of focused content</p>
@@ -144,6 +153,10 @@
                 <p class="card-description">Build a strong foundation in English grammar for clear and correct
                     communication.  This course helps you master essential grammar rules, sentence structure, and common
                     mistakes with practical examples and easy-to-follow lessons.</p>
+                <p class="card-description pdesc">Master essential grammar for clear, correct English with simple
+                    lessons and examples.</p>
+
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">📘 +6 hrs of step-by-step lessons</p>
@@ -151,7 +164,7 @@
                         <p class="card-prop">✅ Practice exercises to reinforce skills</p>
                     </div>
                     <!-- <button class="card-button">Explore</button> -->
-                     <a class="card-button" href="course.html?id=4">Explore</a>
+                    <a class="card-button" href="course.html?id=4">Explore</a>
                 </div>
 
             </div>
@@ -168,6 +181,10 @@
                 <p class="card-description">Expand your English vocabulary for everyday use, exams, and fluent
                     conversations.  This course helps you learn and remember essential words through themed lessons,
                     context-based learning, and practical exercises.</p>
+                <p class="card-description pdesc">Learn essential English words through themed lessons and practical
+                    exercises for fluent everyday use.</p>
+
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">📘 +7 hrs of interactive content</p>
@@ -193,6 +210,10 @@
                     understanding.
                     This course builds your ability to read faster, understand better, and analyze texts through
                     guided practice and strategies.</p>
+                <p class="card-description pdesc">Boost reading comprehension with strategies and practice for
+                    exams and daily use.</p>
+
+
                 <div class="card-footer">
                     <div class="card-prop-container">
                         <p class="card-prop">📖 +4 hrs of focused reading lessons
@@ -248,5 +269,12 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script src="searchbar.js"></script>
+<script>
+    fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+</script>
 
 </html>

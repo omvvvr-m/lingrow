@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loginUser(email, password);
   });
 
-  
+
   if (sessionStorage.getItem("isLoggedIn") === "true") {
     joinWindow.style.display = "none";
     homeWindow.style.display = "block";
@@ -165,6 +165,3 @@ document.addEventListener("DOMContentLoaded", function () {
     joinForm.style.display = "block";
   }
 });
-
-
-

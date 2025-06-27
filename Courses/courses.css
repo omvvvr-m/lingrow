@@ -27,7 +27,7 @@ body {
     width: 100%;
     height: auto;
     position: fixed;
-    z-index: 99;
+    z-index: 99999;
     bottom: 2rem;
 }
 
@@ -77,7 +77,6 @@ body {
 
 
 }
-
 
 .search-bar .search-bar-circle:hover input {
 
@@ -198,6 +197,7 @@ body {
 
 .right-vectors>* {
     transform: scale(1);
+    z-index: -5;
 }
 
 .left-vectors {
@@ -225,15 +225,15 @@ body {
 
 .slogan {
     width: 100%;
-    height: auto;
+    height: 20REM;
     margin: 0;
     padding: 0;
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     padding-bottom: 3rem;
     padding-top: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     font-family: "Poppins";
     text-align: center;
@@ -266,7 +266,7 @@ body {
 .card {
     transition: 0.5s ease;
 
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     box-shadow: 0 3px 1rem 0 rgb(0, 0, 0, 0.35);
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -287,7 +287,7 @@ body {
 
 @keyframes found-animation {
     0% {
-        transform: scale(1.1);
+        transform: scale(1);
         z-index: 5;
 
     }
@@ -298,36 +298,38 @@ body {
     }
 
     100% {
-        transform: scale(1.1);
+        transform: scale(1);
 
     }
 
 }
 
-.card:hover {
-    transform: scale(1.2);
-}
+@media (min-width:1120px) {
+    .card:not(.searching):hover {
+        transform: scale(1.2);
+    }
 
+    .card:not(.searching):hover+.card {
+        filter: blur(0.1rem);
+        transform: rotateX(-10deg);
+    }
 
-.card:hover+.card {
-    filter: blur(0.1rem);
-    transform: rotateX(-10deg);
-}
+    .card:not(.searching):hover+.card+.card {
+        filter: blur(0.2rem);
+        transform: rotateX(-20deg) translateZ(-9rem);
+    }
 
-.card:hover+.card+.card {
-    filter: blur(0.2rem);
-    transform: rotateX(-20deg) translateZ(-9rem);
-}
+    .card:not(.searching):has(+ .card:hover) {
+        filter: blur(0.1rem);
+        transform: rotateX(10deg);
 
-.card:has(+ .card:hover) {
-    filter: blur(0.1rem);
-    transform: rotateX(10deg);
+    }
 
-}
+    .card:not(.searching):has(+ .card + .card:hover) {
+        filter: blur(0.2rem);
+        transform: rotateX(20deg) translateZ(-9rem);
 
-.card:has(+ .card + .card:hover) {
-    filter: blur(0.2rem);
-    transform: rotateX(20deg) translateZ(-9rem);
+    }
 
 }
 
@@ -382,7 +384,8 @@ body {
     line-height: 0.98;
 }
 
-.card-description {
+.card-description,
+.card-description.pdesc {
     line-height: 1.2;
     margin: 0rem;
     font-size: 0.9rem;
@@ -391,13 +394,18 @@ body {
     font-weight: 400;
 }
 
-.card.dark .card-description {
+.card.dark .card-description,
+.card.dark .card-description.pdesc {
     line-height: 1.2;
     margin: 0rem;
     font-size: 0.9rem;
     color: #b8b8b8;
     font-family: "Oswald";
     font-weight: 400;
+}
+
+.card-description.pdesk {
+    display: none;
 }
 
 
@@ -495,4 +503,231 @@ body {
     margin-bottom: 3rem;
     color: white;
     font-family: "Poppins";
+}
+
+@media (max-width: 786px) {
+
+    .search-bar .search-bar-circle:hover input {
+
+        z-index: 600;
+        opacity: 1;
+        color: white;
+
+        background-color: transparent;
+
+        width: auto;
+        margin: 1rem;
+        width: 100%;
+        /* margin-left: auto; */
+        display: flex;
+        height: 70%;
+        justify-content: left;
+
+
+    }
+
+    .search-bar .search-bar-circle:hover {
+
+        transform: scale(1.4) translateY(-2rem);
+        width: 50vw;
+        justify-content: left;
+
+        /* transform: scale(1);
+        width: 90vw;
+        justify-content: left; */
+
+
+    }
+
+    .search-bar:has(input:focus) .search-bar-circle {}
+
+    .search-bar:has(input:focus) .search-bar-circle input {
+        font-size: clamp(0.1rem, 2vw, 1rem);
+
+
+
+    }
+
+    .slogan {
+        z-index: 999;
+        width: 100%;
+        height: 40vh;
+        margin: 0;
+        padding: 0;
+        /* margin-top: 6rem; */
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        font-family: "Poppins";
+        text-align: center;
+    }
+
+    .slogan .slogan-p,
+    .divider .slogan-p {
+        z-index: 10;
+
+        font-weight: 700;
+        font-size: clamp(1rem, 12vw, 4rem);
+        line-height: clamp(1rem, 11vw, 4.5rem);
+        margin: 0;
+    }
+
+    .slogan .mini-slogan {
+        z-index: 10;
+
+        font-size: clamp(0.6rem, 7vw, 1.3rem);
+
+        margin: 0.3rem;
+        font-size: 1.3rem;
+    }
+
+
+    .card {
+        z-index: 999;
+
+        transition: 0.5s ease;
+        /* transform: scale(1.1); */
+        box-shadow: 0 3px 1rem 0 rgb(0, 0, 0, 0.35);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: clamp(15rem, 69vw, 40rem);
+        height: clamp(23rem, 60vh, 40rem);
+        border: 2px solid var(--primary-color);
+        border-radius: var(--main-radius);
+        overflow: hidden;
+
+    }
+
+
+    .card.dark {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 3px 1rem 0 rgb(0, 0, 0, 0.35);
+        background-color: var(--primary-color);
+        border: none;
+        width: clamp(15rem, 69vw, 40rem);
+        height: clamp(23rem, 60vh, 40rem);
+
+    }
+
+    .card .card-description.pdesc,
+    .card.dark .card-description.pdesc {
+        line-height: 1.2;
+        margin: 0rem;
+        font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+        font-family: "Oswald";
+        font-weight: 400;
+    }
+
+
+
+
+    .card-description {
+        display: none;
+    }
+
+    .card-description.pdesc {
+        display: flex;
+    }
+
+    .card-title,
+    .card.dark .card-title {
+        margin: 0.5rem;
+        font-size: clamp(1.4rem, 3.5vw, 3rem);
+        font-weight: 700;
+        font-family: "Poppins";
+        line-height: 0.98;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 50%;
+        border-bottom-right-radius: 6rem;
+        overflow: hidden;
+    }
+
+    .img-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .text-container {
+
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 50%;
+        /* height: 100%; */
+        margin: 0rem;
+        /* margin: 0rem 2rem; */
+
+    }
+
+    .card-footer {
+        margin: 0px;
+        margin-top: auto;
+        width: 100%;
+        /* height: 20%; */
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+
+
+    .card-footer .card-prop-container,
+    .card.dark.card-footer .card-prop-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-size: clamp(0.5rem, 2.5vw, 1rem);
+        font-family: "Oswald";
+        color: #535353;
+
+    }
+
+    .card-footer .card-button,
+    .card.dark .card-footer .card-button {
+        margin: 0.3REM;
+        color: white;
+        background-color: var(--primary-color);
+        border: none;
+        width: clamp(3rem, 25vw, 15rem);
+        height: clamp(3rem, 8vh, 5rem);
+
+        align-items: center;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s ease;
+        border-radius: var(--main-radius);
+        font-family: "oswald", sans-serif;
+        font-weight: 200;
+        font-size: 1.4rem;
+        z-index: 0;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .card.dark .card-footer .card-button {
+        color: var(--primary-color);
+        background-color: white;
+    }
+
 }

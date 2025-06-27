@@ -14,6 +14,13 @@ searchInput.addEventListener("search", e => {
     let match = result[0]?.item;
     e.preventDefault();
     if (match) {
+        let searching = true;
+        courses.forEach(e => {
+
+            e.classList.add("searching");
+        });
+
+
         lenis.scrollTo(match.element, {
             offset: -(window.innerHeight / 2) + (match.element.offsetHeight / 2),
             duration: 1
@@ -21,8 +28,12 @@ searchInput.addEventListener("search", e => {
         setTimeout(() => {
             match.element.classList.add("found")
             setTimeout(() => {
+                searching = false;
                 match.element.classList.remove("found")
+                courses.forEach(e => {
 
+                    e.classList.remove("searching");
+                });
             }, 800);
         }, 500);
     } else if (searchInput.value != "") {

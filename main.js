@@ -159,23 +159,25 @@ window.onload = function () {
 };
 
 
+
 //Animating
 const cards = document.querySelectorAll('.oc-card');
 const options = {
     rootMargin: "-40% 0px -40% 0px"
 };
+let shown = false;
 const cardObserver = new IntersectionObserver((entries) => {
+    if (!shown) {
+        entries.forEach((card) => {
+            if (card.isIntersecting) {
 
-    entries.forEach((card) => {
-        let shown = false;
-        if (card.isIntersecting) {
-            if (!shown) {
                 console.log('Shown!');
                 card.target.classList.add('dShow');
                 shown = true;
+
             }
-        }
-    })
+        })
+    }
 
 }, options);
 
