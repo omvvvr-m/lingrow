@@ -730,27 +730,39 @@
         <!----------------------------- Section Divider ----------------------------->
 
         <footer class="footer">
-            <div class="social-icons">
-                <a href="#" title="facebook"><i class="fa-brands fa-facebook"> </i></a>
-                <a href="# " title="instgram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="+google"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" title="youtube"><i class="fab fa-youtube"></i></a>
-            </div>
+        
+        <div class="footer-des">
+
+            <p>Lingrow</p>
+            <p>Bulit by passionates and dreamers computer science students </p>
+        </div>
 
 
 
             <div class="footer-links">
                 <ul>
-                    <li> <a href=""> HOME</a></li>
-                    <li> <a href=""> About us</a></li>
-                    <li> <a href=""> Contact us</a></li>
-                    <li> <a href=""> Features </a></li>
-                    <li> <a href=""> OUR team </a></li>
+                    <li> <a href="#"> HOME</a></li>
+                    <li> <a href="#"> About us</a></li>
+                    <li> <a href="#"> Contact us</a></li>
+                    <li> <a href=" #courses"> Features </a></li>
+                    <li> <a href="#" id="ourteam"> OUR team </a></li>
 
                 </ul>
             </div>
         </footer>
+
+ <div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h3>Our Team</h3>
+    <p> 
+  <p> Hello, guys  we are a group of passionate developers, designers,
+     and educators who work together to create high-quality educational
+      tools and resources for learners worldwide. 
+      We believe in innovation, collaboration, and making sucsses accessible to achieve  </p>
+  </div>
+</div>
+
         <!----------------------------- Section Divider ----------------------------->
 
 
@@ -800,7 +812,33 @@
                 .then(data => {
                     document.getElementById("navbar").innerHTML = data;
                 });
-        </script>
+
+</script>
+
+
+<script>
+  const ourTeam = document.getElementById("ourteam");
+  const popup = document.getElementById("popup");
+  const closeBtn = document.querySelector(".close-btn");
+
+  ourTeam.addEventListener("click", function (e) {
+    e.preventDefault();
+    popup.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    
+
+   popup.style.display = "none";
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+</script>
+
     </body>
 
 </html>
