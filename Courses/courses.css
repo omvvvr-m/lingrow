@@ -69,31 +69,46 @@ body {
     border-radius: 50rem;
 }
 
-.search-bar .search-bar-circle:hover {
-
-    transform: scale(1);
-    width: 24rem;
-    justify-content: left;
+@media (min-width: 1120px) {
 
 
-}
+    .search-bar .search-bar-circle:hover {
 
-.search-bar .search-bar-circle:hover input {
+        transform: scale(1);
+        width: 24rem;
+        justify-content: left;
 
-    z-index: 600;
-    opacity: 1;
-    color: white;
 
-    background-color: transparent;
+    }
 
-    width: auto;
-    margin: 1rem;
-    width: 100%;
-    /* margin-left: auto; */
-    display: flex;
-    height: 70%;
-    justify-content: left;
+    .search-bar .search-bar-circle:hover input {
 
+        z-index: 600;
+        opacity: 1;
+        color: white;
+
+        background-color: transparent;
+
+        width: auto;
+        margin: 1rem;
+        width: 100%;
+        /* margin-left: auto; */
+        display: flex;
+        height: 70%;
+        justify-content: left;
+
+
+    }
+
+
+
+    .search-bar:has(input:focus) .search-bar-circle {
+        transform: scale(1.4) translateY(-2rem);
+        width: 24rem;
+        justify-content: left;
+
+
+    }
 
 }
 
@@ -116,9 +131,6 @@ body {
 
 }
 
-
-
-
 .search-bar .search-bar-circle i {
     transition: 0.5s ease;
 
@@ -127,13 +139,7 @@ body {
     margin: 1rem;
 }
 
-.search-bar:has(input:focus) .search-bar-circle {
-    transform: scale(1.4) translateY(-2rem);
-    width: 24rem;
-    justify-content: left;
 
-
-}
 
 .search-bar-circle.wrong {
 
@@ -532,9 +538,11 @@ body {
 
     .search-bar .search-bar-circle:hover {
 
-        transform: scale(1.4) translateY(-2rem);
-        width: 50vw;
+        /* transform: scale(1.4) translateY(-2rem); */
+        transform: scale(1.2);
+        width: 70vw;
         justify-content: left;
+        font-size: clamp(0.1rem, 2vw, 1rem);
 
         /* transform: scale(1);
         width: 90vw;
@@ -543,6 +551,7 @@ body {
 
     }
 
+    /* 
     .search-bar:has(input:focus) .search-bar-circle {}
 
     .search-bar:has(input:focus) .search-bar-circle input {
@@ -550,7 +559,7 @@ body {
 
 
 
-    }
+    } */
 
     .slogan {
         z-index: 999;
@@ -627,7 +636,7 @@ body {
     .card.dark .card-description.pdesc {
         line-height: 1.2;
         margin: 0rem;
-        font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+        font-size: clamp(0.7rem, 3.2vw, 2rem);
         font-family: "Oswald";
         font-weight: 400;
     }
@@ -646,7 +655,7 @@ body {
     .card-title,
     .card.dark .card-title {
         margin: 0.5rem;
-        font-size: clamp(1.4rem, 3.5vw, 3rem);
+        font-size: clamp(1.4rem, 12vw, 2.3rem);
         font-weight: 700;
         font-family: "Poppins";
         line-height: 0.98;
