@@ -8,8 +8,13 @@ const courseData = courses.map(card => ({
 const fuseC = new Fuse(courseData, {
     keys: ['title']
 });
-searchInput.addEventListener("search", e => {
-    let result = fuseC.search(e.target.value);
+
+const searchIcon = document.getElementById('searchBut');
+
+function handleSearch(e) {
+    e.preventDefault();
+    const query = searchInput.value.trim();
+    let result = fuseC.search(query);
     console.log(result[0]);
     let match = result[0]?.item;
     e.preventDefault();
@@ -44,5 +49,13 @@ searchInput.addEventListener("search", e => {
             searchbarcircle.classList.remove("wrong")
         }, 400);
     }
+}
+
+searchIcon.addEventListener('click', function (e) {
+    handleSearch(e);
 });
-searchInput.addEventListener('')
+
+searchInput.addEventListener("search", e => {
+    handleSearch(e);
+
+});
