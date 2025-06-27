@@ -343,6 +343,7 @@ body {
     width: 50%;
     display: flex;
     position: relative;
+    justify-content: center;
     flex-direction: column;
     line-height: 0.8;
     letter-spacing: -0.3rem;
@@ -351,6 +352,54 @@ body {
     font-family: "Oswald", sans-serif;
     text-align: left;
 }
+
+.main-logo {
+    opacity: 0;
+    animation: logo-appear 0.4s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.first-line,
+.second-line {
+    opacity: 0;
+
+    animation: main-text-appear 0.4s ease-out forwards;
+    animation-delay: 0.2s;
+
+}
+
+@keyframes main-text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+        filter: blur(0.7rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+        filter: blur(0rem);
+    }
+
+}
+
+
+@keyframes logo-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-2rem);
+        filter: blur(0.6rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+        filter: blur(0);
+    }
+
+}
+
+
 
 .main-title>* {}
 
@@ -363,14 +412,21 @@ body {
 
 } */
 
+.main-title .second-line {
+    white-space: nowrap;
+
+}
+
 .main-title .fluent {
-    font-size: 13rem;
+    font-size: 14rem;
     font-weight: 900;
     font-family: 'Dancing Script', sans-serif, italic;
     background: linear-gradient(135deg, var(--primary-color), #a400aa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
 
 .main-logo {
     width: 50%;
@@ -476,11 +532,13 @@ body {
         justify-content: center;
     }
 
+
     .main-title {
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
+
     }
 
     .main-title>* {
@@ -490,9 +548,18 @@ body {
         font-size: 5rem;
         font-family: "Oswald", sans-serif;
         text-align: center;
+        width: 2rem;
     }
 
+    .first-line,
+    .second-line {
+        width: auto;
+    }
+
+    .second-line {}
+
     .main-title .fluent {
+
 
         display: flex;
         font-size: 8rem;
