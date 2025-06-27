@@ -1,31 +1,31 @@
 :root {
-    /* --primary-color: #78B3CE; */
-    /* --primary-color: #0e0e0e; */
-    --primary-color: #3e008f;
-    --primary-dark-card-color: #080808;
-    --primary-color-light: #6f00ff;
-    --secondary-color: #0071e3;
-    --gradient-f: #3e008f;
-    --gradient-s: #d13bff;
-    --forth-color: #FBF8EF;
-    --fifth-color: #F96E2A;
-    --main-radius: 0.8rem;
+  /* --primary-color: #78B3CE; */
+  /* --primary-color: #0e0e0e; */
+  --primary-color: #3e008f;
+  --primary-dark-card-color: #080808;
+  --primary-color-light: #6f00ff;
+  --secondary-color: #0071e3;
+  --gradient-f: #3e008f;
+  --gradient-s: #d13bff;
+  --forth-color: #FBF8EF;
+  --fifth-color: #F96E2A;
+  --main-radius: 0.8rem;
 
 
 }
 
 body {
   margin: 0;
-  font-family: "Oswald", sans-serif ;
+  font-family: "Oswald", sans-serif;
 }
 
 .banner-section {
-  background: url('imgs/2019_09_english.jpg') no-repeat center center / cover;
+  background: url('../imgs/2019_09_english.jpg') no-repeat center center / cover;
   height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color:lavender;
+  color: lavender;
   font-size: 2.5rem;
   position: relative;
 }
@@ -73,7 +73,7 @@ body {
 
 .box {
   background: lavender;
-  color:var(--primary-dark-card-color);
+  color: var(--primary-dark-card-color);
   border-radius: 10px;
   padding: 1rem;
   flex: 1 1 22%;
@@ -160,36 +160,35 @@ body {
 
 @media (max-width:768) {
 
- .contact-form,
- .msg {
-   flex: 1;
-   display: flex;
-   flex-direction: column;
+  .contact-form,
+  .msg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
- .msg {
-   flex: 1;
- }
+  .msg {
+    flex: 1;
+  }
 
- .msg h3 {
-   font-size: 1rem !important;
- }
+  .msg h3 {
+    font-size: 1rem !important;
+  }
 
- .msg p {
-   margin-top: 0;
-   line-height: 1 !important;
- }
+  .msg p {
+    margin-top: 0;
+    line-height: 1 !important;
+  }
 
- .social {
-   margin-top: 1rem;
- }
+  .social {
+    margin-top: 1rem;
+  }
 
- .social a {
-   margin-right: 0.2rem !important;
-   font-size: 1rem !important;
-   color: lavender;
-   text-decoration: none;
- }
- 
+  .social a {
+    margin-right: 0.2rem !important;
+    font-size: 1rem !important;
+    color: lavender;
+    text-decoration: none;
+  }
+
 }
-
