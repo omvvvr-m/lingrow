@@ -76,9 +76,10 @@ h1 {
 
 .desc {
   font-size: 1.8rem;
-  color: var(--text-light);
-  background: linear-gradient(135deg, var(--primary-color-light), var(--accent-color));
-  box-shadow: 0 0 12px var(--primary-color-light);
+  color: white;
+  background-color: var(--primary-color);
+  font-family: "Poppins";
+  /* background: linear-gradient(135deg, var(--primary-color-light), var(--accent-color)); */
   border-radius: var(--main-radius);
   text-align: left;
   padding: 1rem 1.5rem;
