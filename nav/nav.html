@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="../nav.css">
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link rel="stylesheet" href="../nav/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,7 +31,7 @@
             <a href="#"><span>Lingrow</span></a>
         </div>
         <ul class="navlist">
-            <li> <a href="index.html">HOME</a>
+            <li> <a href="../index.html">HOME</a>
                 <ul class="dropdown">
                     <li><a href="#why">RECEIVE</a></li>
                     <li><a href="#courses">COURSES</a></li>
@@ -40,16 +40,16 @@
                     <li><a href="#stats">ACHIEVED</a></li>
                 </ul>
             </li>
-            <li> <a href="Courses/courses.html">COURSES</a></li>
+            <li> <a href="../Courses/courses.html">COURSES</a></li>
             <li> <a href="#">ABOUT US</a></li>
-            <li> <a href="contact.html">CONTACT US</a></li>
+            <li> <a href="../contact.html">CONTACT US</a></li>
             <li><button id="loginbtn">JOIN</button></li>
         </ul>
 
         <script>
             // Smooth Scroll
             const script = document.createElement('script');
-            script.src = './lenis.min.js';
+            script.src = '../lenis.min.js';
             script.onload = () => {
                 const lenis = new Lenis({
                     duration: 1,

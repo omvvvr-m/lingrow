@@ -340,6 +340,7 @@ body {
 
 
 .main-title {
+    width: 50%;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -372,7 +373,7 @@ body {
 }
 
 .main-logo {
-    width: 40rem;
+    width: 50%;
     height: auto;
 }
 

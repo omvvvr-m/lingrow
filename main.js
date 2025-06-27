@@ -162,27 +162,35 @@ window.onload = function () {
 
 //Animating
 const cards = document.querySelectorAll('.oc-card');
+const ocElements = document.querySelector('.our-courses-elements');
 const options = {
     rootMargin: "-40% 0px -40% 0px"
 };
 let shown = false;
 const cardObserver = new IntersectionObserver((entries) => {
     if (!shown) {
-        entries.forEach((card) => {
-            if (card.isIntersecting) {
-
-                console.log('Shown!');
-                card.target.classList.add('dShow');
+        console.log('Shown!');
+        entries.forEach((e) => {
+            if (e.isIntersecting) {
+                cards.forEach((card) => {
+                    card.classList.add('dShow');
+                });
                 shown = true;
 
             }
-        })
+        });
     }
+}
 
-}, options);
+    , options);
+
+
+
+
+cardObserver.observe(ocElements);
 
 cards.forEach((card) => {
-    cardObserver.observe(card);
+    // cardObserver.observe(card);
     card.addEventListener('animationend', () => {
         card.style.opacity = '1';
         card.style.filter = 'blur(0)';
