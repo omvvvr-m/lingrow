@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
 
@@ -162,6 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!user) {
       alert("Email not found!");
       return;
+
+
     }
 
     const userData = JSON.parse(user);
@@ -175,6 +179,18 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("currentUserFname", userData.firstName);
 
     alert(`Welcome, ${userData.firstName}`);
+//  Update the join button to "Profile"
+const joinBtn = document.getElementById("joinBtn");
+if (joinBtn) {
+  joinBtn.textContent = "Profile";
+  joinBtn.addEventListener("click", () => {
+    //  Redirect to profile page
+    window.location.href = "profile.html"; // Change to your profile page path
+  });
+}
+
+
+
     signForm.reset();
 
     joinWindow.style.display = "none";

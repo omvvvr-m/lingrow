@@ -72,8 +72,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
 //Animating
 const cards = document.querySelectorAll('.oc-card');
 const ocElements = document.querySelector('.our-courses-elements');
