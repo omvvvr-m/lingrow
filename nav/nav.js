@@ -41,6 +41,16 @@ waitForElement("#toggleBtn", function (toggleBtn) {
   });
 });
 
+waitForElement("#loginbtn", function (loginBtn) {
+  loginBtn.addEventListener("click", function () {
+    const joinWindow = document.querySelector(".join");
+    if (joinWindow) {
+      joinWindow.style.display = "block";
+    }
+  });
+});
+
+
 // /////////////////////////////////////////////////////////
 
 // document.addEventListener("DOMContentLoaded", () => {
