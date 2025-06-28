@@ -216,6 +216,31 @@
                         </span>
                         <div class="btns-container">
                             <button class="CTA">Start</button>
+
+                            <script>
+                                
+                             document.querySelector(".CTA").addEventListener("click", function () {
+                             document.querySelector(".join").style.display = "block";
+                             });
+
+                             document.querySelector(".exit").addEventListener("click", function () {
+                             document.querySelector(".join").style.display = "none";
+                             });
+
+                             document.querySelector(".alreadymember a").addEventListener("click", function () {
+                             document.querySelector(".joinForm").style.display = "none";
+                             document.querySelector(".signinForm").style.display = "flex";
+                             });
+
+                             document.querySelector(".notamember a").addEventListener("click", function () {
+                             document.querySelector(".signinForm").style.display = "none";
+                             document.querySelector(".joinForm").style.display = "flex";
+                             });
+                            </script>
+
+
+
+                            
                             <button class="Plans" onclick="location.href='#plans'">Plans&nbsp;&nbsp;<i
                                     class="fa-solid fa-arrow-right"></i></button>
                         </div>
