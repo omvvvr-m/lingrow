@@ -22,14 +22,14 @@
   .first-name {
     font-family: "oswald";
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: var(--primary-dark-card-color);
   }
 
   .gmail {
     font-family: "oswald";
     font-weight: 250;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     color: var(--primary-dark-card-color);
   }
 
@@ -44,6 +44,10 @@
     margin: 2rem;
     gap: 2rem;
   }
+  .profile-details i{
+
+    font-size: 9rem;
+  }
 
   .info {
 
@@ -56,7 +60,7 @@
   .EPB {
     margin: 2rem 0;
     border-radius: var(--main-radius);
-    padding: .45rem;
+    padding: .3rem;
     font-family: "oswald";
   }
 
@@ -284,7 +288,7 @@ font-size: 2rem;
   .client-details p {
 
     line-height: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
 
