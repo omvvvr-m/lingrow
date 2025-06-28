@@ -628,14 +628,14 @@
 
                     <p class="icons"> <i class="fa fa-university" aria-hidden="true"></i>
                     </p>
-                    <h3>+50.000</h3>
-                    <p class="stat-detailed">Expert instructors </p>
+                    <h3>+50,000</h3>
+                    <p class="stat-detailed">Expert Instructors</p>
                 </span>
                 <span class="stat-box">
                     <p class="icons"> <i class="fa fa-check-square" aria-hidden="true"></i>
                     </p>
-                    <h3 id="session-completed">+30.000</h3>
-                    <p class="stat-detailed">Sessions explained</p>
+                    <h3 id="session-completed">+30,000</h3>
+                    <p class="stat-detailed">Sessions Explained</p>
                 </span>
                 <span class="stat-box">
                     <p class="icons"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -650,7 +650,7 @@
                     <p class="icons"> <i class="fa fa-check" aria-hidden="true"></i>
                     </p>
                     <h3> +60</h3>
-                    <p class="stat-detailed"> completed courses</p>
+                    <p class="stat-detailed"> Completed Courses</p>
                 </span>
 
                 <span class="stat-box">
@@ -659,7 +659,7 @@
 
                     </p>
                     <h3>+20</h3>
-                    <p class="stat-detailed"> Experience years</p>
+                    <p class="stat-detailed">Experience Years</p>
                 </span>
 
             </div>
@@ -824,37 +824,6 @@
 
 
 
-        <script>
-            // Smooth Scroll
-            const script = document.createElement('script');
-            script.src = '../lenis.min.js';
-            script.onload = () => {
-                const lenis = new Lenis({
-                    duration: 1,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    smooth: true
-                })
-
-                function raf(time) {
-                    lenis.raf(time)
-                    requestAnimationFrame(raf)
-                }
-                requestAnimationFrame(raf)
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-
-                        if (targetElement) {
-                            e.preventDefault();
-                            lenis.scrollTo(targetElement);
-                        }
-                    });
-                });
-            };
-            document.head.appendChild(script);
-
-        </script>
 
 
         <script>
@@ -890,7 +859,39 @@
                 }
             });
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
+        <script>
+            // Smooth Scroll
+            const ease = BezierEasing(0.19, 1, 0.22, 1);;
+            const script = document.createElement('script');
+            script.src = '../lenis.min.js';
+            script.onload = () => {
+                const lenis = new Lenis({
+                    duration: 1,
+                    easing: ease,
+                    smooth: true
+                })
 
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
+                requestAnimationFrame(raf)
+
+            };
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        lenis.scrollTo(target);
+                    }
+                })
+            });
+            document.head.appendChild(script);
+
+        </script>
     </body>
 
 </html>
