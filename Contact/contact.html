@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
 
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="../nav/nav.css">
@@ -18,23 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
-" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <title>Contact Us</title>
-  <script>
-    fetch('../nav/nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-
-        const script = document.createElement('script');
-        script.src = '../nav/nav.js';
-        document.body.appendChild(script);
-      });
-  </script>
-  <script src="../nav/nav.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -43,11 +30,11 @@
   <section class="banner-section">
     <!-- <h1>Contact Us</h1> -->
   </section>
+
   <section class="contact-section">
     <div class="form-wrapper">
       <div class="top">
         <div class="contact-container">
-
           <div class="boxes">
             <div class="box">
               <i class="icon"><i class="fa-solid fa-phone"></i></i>
@@ -92,22 +79,26 @@
         </div>
       </div>
     </div>
-
   </section>
-  <!-- 
-  <script>
-    fetch("../nav/nav.html")
 
+  <script>
+
+
+
+
+    fetch('../nav/nav.html')
       .then(res => res.text())
       .then(data => {
-        document.getElementById("navbar").innerHTML = data;
+        document.getElementById('navbar').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = '../nav/nav.js';
+        document.body.appendChild(script);
       });
-  </script> -->
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
   <script>
-    // Smooth Scroll
-    const ease = BezierEasing(0.19, 1, 0.22, 1);;
+    const ease = BezierEasing(0.19, 1, 0.22, 1);
     const script = document.createElement('script');
     script.src = '../lenis.min.js';
     script.onload = () => {
@@ -115,30 +106,233 @@
         duration: 1,
         easing: ease,
         smooth: true
-      })
+      });
 
       function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+        lenis.raf(time);
+        requestAnimationFrame(raf);
       }
-      requestAnimationFrame(raf)
+      requestAnimationFrame(raf);
 
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', e => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            lenis.scrollTo(target);
+          }
+        });
+      });
     };
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', e => {
-        target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          lenis.scrollTo(target);
-        }
-      })
-    });
     document.head.appendChild(script);
+  </script>
+  <!----------------------------- Section Divider ----------------------------->
+  <div class="join">
+
+    <div class="bg"> <!-- The background of the page (will be blured) -->
+      <div class="box-bg"> <!-- The background of the box (will be white and small) -->
+        <div class="img-container">
+          <img src="../imgs/join.png" alt="Join Image">
+        </div>
+        <div class="join-container">
+          <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+
+          <p class="join-title">Join Lingrow</p>
+          <form class="joinForm" action="">
+            <div class="horizontal-input-container">
+              <div class="input fname">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Carl" required>
+              </div>
+              <div class="input lname">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Johnson" required>
+              </div>
+            </div>
+
+            <div class="horizontal-input-container">
+
+              <div class="input email">
+                <label for="email">Email Address</label>
+                <input class="email" type="email" name="email" id="email" placeholder="cj@email.com" required>
+              </div>
+            </div>
+
+            <div class="horizontal-input-container">
+              <div class="input pass">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="" required>
+              </div>
+              <div class="input conf">
+                <label for="conf">Confirm Password</label>
+                <input type="password" name="conf" id="conf" required>
+              </div>
+            </div>
+            <div class="horizontal-input-container">
+              <div class="input level">
+                <label for="level">Level</label>
+                <select name="level" id="level" placeholder="C2" required>
+                  <!-- <option value="">Pick English Level</option> -->
+                  <option value="A1">A1</option>
+                  <option value="A2">A2</option>
+
+                  <option disabled>────────────</option>
+                  <option value="B1">B1</option>
+                  <option value="B2">B2</option>
+
+                  <option disabled>────────────</option>
+
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+
+                </select>
+              </div>
+              <div class="input phone">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="phone" id="phone" required>
+              </div>
+            </div>
+            <div class="submit-container">
+              <button class="submit" type="submit">Join</button>
+              <p class="alreadymember">Already a member? <a>Sign in.</a></p>
+            </div>
+          </form>
+
+          <!-- Sign in -->
+
+          <form class="signinForm" action="">
+            <div class="horizontal-input-container">
+
+              <div class="input email">
+                <label for="signinEmail">Email Address</label>
+                <input class="email" type="signinEmail" name="signinEmail" id="signinEmail" placeholder="cj@email.com"
+                  required>
+              </div>
+            </div>
+
+
+
+            <div class="horizontal-input-container">
+              <div class="input signinPassword">
+                <label for="signinPassword">Password</label>
+                <input type="password" name="signinPassword" id="signinPassword" placeholder="" required>
+              </div>
+            </div>
+            <div class="submit-container">
+              <button class="submit" type="submit">Sign in</button>
+              <p class="notamember">Not a member? <a>Join.</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const joinForm = document.querySelector(".joinForm");
+      const signForm = document.querySelector(".signinForm");
+      const joinBtn = document.querySelector(".loginbtn");
+
+      console.log(joinForm);
+
+      const alreadyMemberLink = document.querySelector(".alreadymember a");
+      console.log(alreadyMemberLink);
+
+      const notMemberLink = document.querySelector(".notamember a");
+
+
+      const joinWindow = document.querySelector(".join");
+      const homeWindow = document.querySelector(".home");
+
+      console.log(joinBtn);
+
+
+
+      alreadyMemberLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        joinForm.style.display = "none";
+        signForm.style.display = "flex";
+      });
+
+
+      notMemberLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        signForm.style.display = "none";
+        joinForm.style.display = "flex";
+      });
+
+      document.querySelector(".exit").addEventListener("click", function () {
+        document.querySelector(".join").style.display = "none";
+      });
+      function loginUser() {
+        sessionStorage.setItem("isLoggedIn", "true");
+        alert("Welcome!");
+        location.reload();
+      }
+
+
+      function registerUser() {
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("conf");
+
+        if (passwordInput.value === confirmPasswordInput.value) {
+          sessionStorage.setItem("isLoggedIn", "true");
+          alert("Registration successful!");
+          // updateJoinButton(); // Update the button
+          location.reload();
+        } else {
+          alert("Password does not match.");
+        }
+      }
+
+
+      joinForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        registerUser();
+
+      });
+
+      signForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        loginUser();
+      });
+
+      // Function to change Join to Profile
+      // function updateJoinButton() {
+      //   if (joinBtn) {
+      //     joinBtn.textContent = "Profile";
+      //     joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
+      //     joinBtn.addEventListener("click", function () {
+      //       window.location.href = "profile.html";
+      //     });
+      //   }
+      // }
+
+      function joinDefaultClick() {
+
+      }
+
+      if (sessionStorage.getItem("isLoggedIn") === "true") {
+        if (joinBtn) {
+          console.log("Change join button");
+
+          joinBtn.innerHTML = "Profile";
+          joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
+          joinBtn.addEventListener("click", function () {
+            window.location.href = "../profile/profile.html";
+          });
+        }
+      }
+    });
 
   </script>
 
-
+  <!----------------------------- Section Divider ----------------------------->
 
 </body>
 
