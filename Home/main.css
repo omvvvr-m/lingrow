@@ -38,6 +38,10 @@ body {
     /* font-size: clamp(3rem, 5vw, 5rem); */
 }
 
+input[type="radio"] {
+    display: none;
+}
+
 .carousel {
     position: relative;
     max-width: 37.5rem;
@@ -56,7 +60,14 @@ body {
     transition: all 0.5s ease;
 }
 
-.reviews.active {
+/* .reviews.active {
+    display: block;
+} */
+
+
+#review1:checked ~ .carousel .c1,
+#review2:checked ~ .carousel .c2,
+#review3:checked ~ .carousel .c3 {
     display: block;
 }
 
@@ -115,7 +126,7 @@ body {
     font-size: 2.6rem;
 }
 
-.prev,
+/* .prev,
 .next {
     position: absolute;
     top: 50%;
@@ -139,7 +150,45 @@ body {
 
 .next {
     right: 0.2rem;
+} */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
+
+.dot {
+    height: 0.6rem;
+    width: 0.6rem;
+    margin: 0 0.3rem;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#review1:checked ~ .carousel .dots label[for="review1"],
+#review2:checked ~ .carousel .dots label[for="review2"],
+#review3:checked ~ .carousel .dots label[for="review3"] {
+    background-color: white;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* //////////////////////////////////////////////////// */
 
@@ -152,12 +201,10 @@ body {
         position: relative;
         align-items: center;
         justify-content: center;
-        font-weight: 750;
-        font-family: 'Oswald', sans-serif;
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
         font-size: 1.8rem;
         color: var(--primary-color);
-
-        text-shadow: 2px 2px 4px var(--primary-color);
 
         margin: 0.1rem;
         margin-top: 50px;
@@ -180,9 +227,9 @@ body {
         /* position: relative; */
     }
 
-    .reviews.active {
+    /* .reviews.active {
         display: block;
-    }
+    } */
 
     .header {
         display: flex;
@@ -215,11 +262,11 @@ body {
         font-size: 2rem;
     }
 
-    .prev,
+    /* .prev,
     .next {
         font-size: 0.9rem;
         padding: 0.2rem 0.4rem;
-    }
+    } */
 }
 
 

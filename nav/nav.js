@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
   const joinBtn = document.getElementById("joinBtn");
@@ -163,4 +165,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
