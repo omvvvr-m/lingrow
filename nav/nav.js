@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
 
@@ -162,6 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!user) {
       alert("Email not found!");
       return;
+
+
     }
 
     const userData = JSON.parse(user);
@@ -232,13 +236,3 @@ if (joinBtn) {
     joinForm.style.display = "block";
   }
 });
-const joinBtn = document.getElementById("joinBtn");
-
-if (sessionStorage.getItem("isLoggedIn") === "true") {
-  if (joinBtn) {
-    joinBtn.textContent = "Profile";
-    joinBtn.addEventListener("click", () => {
-      window.location.href = "profile.html";
-    });
-  }
-}
