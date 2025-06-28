@@ -10,14 +10,11 @@ const fuseC = new Fuse(courseData, {
 });
 
 const searchIcon = document.getElementById('searchBut');
-
 function handleSearch(e) {
-    e.preventDefault();
     const query = searchInput.value.trim();
     let result = fuseC.search(query);
     console.log(result[0]);
     let match = result[0]?.item;
-    e.preventDefault();
     if (match) {
         let searching = true;
         courses.forEach(e => {
@@ -56,6 +53,6 @@ searchIcon.addEventListener('click', function (e) {
 });
 
 searchInput.addEventListener("search", e => {
+    console.log("Start searching");
     handleSearch(e);
-
 });

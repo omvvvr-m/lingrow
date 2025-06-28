@@ -15,7 +15,120 @@
 body {
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
+
 }
+
+body.freeze {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+.whoops {
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(8, 0, 19, 0.918);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+
+}
+
+.whoops-bg {
+    position: relative;
+    background-color: white;
+    width: 30rem;
+    height: 40rem;
+    border-radius: 40px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    overflow: hidden;
+}
+
+.whoops .whoops-title {
+
+    margin: 0.2rem;
+    /* margin-top: -0.6rem; */
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    /* text-align: center; */
+    align-items: center;
+    font-weight: 900;
+
+    /* font-size: clamp(1rem, 2vw, 5rem); */
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.whoops .whoops-text-container {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+
+}
+
+.whoops .whoops-text {
+    font-family: 'Poppins';
+}
+
+.whoops .understood-btn {
+
+    line-height: 0em;
+    letter-spacing: 0rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+
+    cursor: pointer;
+    width: 20rem;
+    height: 12rem;
+    z-index: 0;
+    transition: transform 0.2s ease;
+    margin-bottom: 1rem;
+    border-radius: var(--main-radius);
+}
+
+.whoops .understood-btn:hover {
+    transform: scale(1.06);
+}
+
+@media (max-width:768px) {
+    .whoops-bg {
+
+        width: 70vw;
+        height: 70vh;
+
+    }
+
+    .whoops .understood-btn {
+        width: 70%;
+        height: 12rem;
+    }
+
+}
+
 
 /*======================carousel=========================== */
 
@@ -64,9 +177,9 @@ input[type="radio"] {
 } */
 
 
-#review1:checked ~ .carousel .c1,
-#review2:checked ~ .carousel .c2,
-#review3:checked ~ .carousel .c3 {
+#review1:checked~.carousel .c1,
+#review2:checked~.carousel .c2,
+#review3:checked~.carousel .c3 {
     display: block;
 }
 
@@ -165,16 +278,16 @@ input[type="radio"] {
     height: 0.6rem;
     width: 0.6rem;
     margin: 0 0.3rem;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#review1:checked ~ .carousel .dots label[for="review1"],
-#review2:checked ~ .carousel .dots label[for="review2"],
-#review3:checked ~ .carousel .dots label[for="review3"] {
+#review1:checked~.carousel .dots label[for="review1"],
+#review2:checked~.carousel .dots label[for="review2"],
+#review3:checked~.carousel .dots label[for="review3"] {
     background-color: lavender;
 }
 
@@ -1405,18 +1518,18 @@ body {
     transform: perspective(1000px);
     display: flex;
     justify-content: center;
-    
+
 }
 
 
 .pack {
     margin: 2rem;
     border-radius: var(--main-radius);
-     
+
     border: 2px solid var(--primary-color);
     background-color: rgb(255, 255, 255);
-     width:clamp(270px,35vw,380px) ;
-    
+    width: clamp(270px, 35vw, 380px);
+
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1477,8 +1590,8 @@ body {
     border-radius: var(--main-radius);
     border: 2px solid var(--primary-color);
     background-color: rgb(255, 255, 255);
-     width:clamp(270px,35vw,380px) ;
-    
+    width: clamp(270px, 35vw, 380px);
+
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1492,7 +1605,7 @@ body {
     /* border: 2px solid var(--primary-color); */
     background-color: var(--primary-color);
     color: white;
-     width:clamp(270px,35vw,380px) ;
+    width: clamp(270px, 35vw, 380px);
 
     max-width: 30rem;
     height: 40rem;
@@ -1546,7 +1659,7 @@ body {
     border: none;
     height: 4rem;
     align-items: center;
-     width:25rem;
+    width: 25rem;
     transition: transform 0.2s ease;
     border-radius: var(--main-radius);
     font-family: "oswald", sans-serif;
@@ -1858,7 +1971,7 @@ footer {
     width: auto;
     font-weight: 800;
     font-family: "poppins";
-    font-size: clamp(2rem,2rem,6rem);
+    font-size: clamp(2rem, 2rem, 6rem);
     padding: 0;
     margin: 0px;
 }
@@ -1914,7 +2027,7 @@ footer li a:hover {
 
 }
 
-@media (max-resolution: 768)  and (min-resolution:320) {
+@media (max-resolution: 768) and (min-resolution:320) {
 
     footer {
         margin: 0px;

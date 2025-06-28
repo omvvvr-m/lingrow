@@ -192,14 +192,17 @@
         <!-- <button id="logoutBtn">Logout</button> -->
     </div>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
     <script>
         // Smooth Scroll
+        let lenis;
+
         const ease = BezierEasing(0.19, 1, 0.22, 1);;
         const script = document.createElement('script');
         script.src = '../lenis.min.js';
         script.onload = () => {
-            const lenis = new Lenis({
+            lenis = new Lenis({
                 duration: 1,
                 easing: ease,
                 smooth: true
@@ -225,6 +228,7 @@
         document.head.appendChild(script);
 
     </script>
+    <!-- Smooth Scroll -->
 
     <script src="../nav/nav.js"></script>
 </body>

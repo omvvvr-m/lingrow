@@ -83,6 +83,29 @@ cards.forEach((card) => {
 
 
 
+//Whoops
+
+document.addEventListener("DOMContentLoaded", function () {
+    const enrollBtns = document.querySelectorAll('.pack-p');
+    const whoopsBox = document.querySelector('.whoops');
+    const understoodBtn = document.querySelector('.understood-btn');
+
+    console.log(enrollBtns);
+    enrollBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            whoopsBox.style.display = "flex";
+            // scrollY = window.scrollY;
+            // document.body.style.top = `-${scrollY}px`;
+            // document.body.classList.add("freeze");
+        })
+    });
+    understoodBtn.addEventListener('click', () => {
+        whoopsBox.style.display = "none";
+
+    })
+
+});
 
 
 
