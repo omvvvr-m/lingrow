@@ -1,6 +1,4 @@
 :root {
-    /* --primary-color: #78B3CE; */
-    /* --primary-color: #0e0e0e; */
     --primary-color: #3e008f;
     --primary-dark-card-color: #080808;
     --primary-color-light: #6f00ff;
@@ -139,12 +137,9 @@ body.freeze {
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
-    /* text-shadow: 2px 2px 4px var(--primary-color); */
     margin: 0.1rem;
-    /* margin-top: 50px; */
     text-align: center;
     margin-top: 50px;
-
     font-weight: 900;
     font-size: clamp(1.8rem, 3vw, 3rem);
     font-family: "Poppins", sans-serif;
@@ -171,11 +166,6 @@ input[type="radio"] {
     text-align: left;
     transition: all 0.5s ease;
 }
-
-/* .reviews.active {
-    display: block;
-} */
-
 
 #review1:checked~.carousel .c1,
 #review2:checked~.carousel .c2,
@@ -241,32 +231,6 @@ input[type="radio"] {
     color: gold;
     font-size: 2.6rem;
 }
-
-/* .prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: white;
-    border: none;
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.prev:hover,
-.next:hover {
-    background: var(--primary-color-light);
-}
-
-.prev {
-    left: 0.2rem;
-}
-
-.next {
-    right: 0.2rem;
-} */
 
 .dots {
     display: flex;
@@ -340,12 +304,7 @@ input[type="radio"] {
         display: none;
         text-align: left;
         transition: all 0.5s ease;
-        /* position: relative; */
     }
-
-    /* .reviews.active {
-        display: block;
-    } */
 
     .header {
         display: flex;
@@ -377,24 +336,7 @@ input[type="radio"] {
     .stars {
         font-size: 2rem;
     }
-
-    /* .prev,
-    .next {
-        font-size: 0.9rem;
-        padding: 0.2rem 0.4rem;
-    } */
 }
-
-
-
-
-
-
-
-
-
-/* ==================== */
-
 /* ========================== Section Divider ========================== */
 
 

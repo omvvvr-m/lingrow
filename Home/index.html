@@ -40,7 +40,6 @@
 
 
 <body>
-
     <!----------------------------- Section Divider ----------------------------->
 
     <div class="whoops">
@@ -609,29 +608,15 @@
                 <div class="stars">★★★★★</div>
             </div>
 
-            <!-- <button class="prev" onclick="prevReview()">&#10094</button>
-                <button class="next" onclick="nextReview()">&#10095</button> -->
-
             <div class="dots">
                 <label for="review1" class="dot"></label>
                 <label for="review2" class="dot"></label>
                 <label for="review3" class="dot"></label>
             </div>
 
-
-
-
-
-
-
         </div>
-        </div>
-    </section>
 
-
-
-
-    <!---------------------------------------------------------------------------------->
+        <!---------------------------------------------------------------------------------->
 
 
 
@@ -640,23 +625,23 @@
 
 
 
-    <!----------------------------- Section Divider ----------------------------->
+        <!----------------------------- Section Divider ----------------------------->
 
-    <footer class="footer">
-        <div class="footer-des">
-            <p class="lingrow-footer">Lingrow</p>
-            <p class="footer-slogan">Proof that late-night coding does build cool stuff.</p>
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li> <a href="../Home/index.html#home">Home</a></li>
-                <li> <a href="../Contact/contact.html">Contact Us</a></li>
-                <li> <a href="../Home/index.html#why">Features</a></li>
-            </ul>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer-des">
+                <p class="lingrow-footer">Lingrow</p>
+                <p class="footer-slogan">Proof that late-night coding does build cool stuff.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li> <a href="../Home/index.html#home">Home</a></li>
+                    <li> <a href="../Contact/contact.html">Contact Us</a></li>
+                    <li> <a href="../Home/index.html#why">Features</a></li>
+                </ul>
+            </div>
+        </footer>
 
-    <!-- 
+        <!-- 
  <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close-btn">&times;</span>
@@ -669,7 +654,7 @@
       We believe in innovation, collaboration, and making sucsses accessible to achieve  </p>
   </div> -->
 
-    <!-- 
+        <!-- 
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
@@ -683,17 +668,17 @@
         </div> -->
 
 
-    <!----------------------------- Section Divider ----------------------------->
+        <!----------------------------- Section Divider ----------------------------->
 
 
 
 
-    <!-- <script src="../nav/nav.js"></script> -->
+        <!-- <script src="../nav/nav.js"></script> -->
 
 
 
 
-    <!-- 
+        <!-- 
         <script>
             fetch("../nav/nav.html")
 
@@ -705,68 +690,68 @@
         </script> -->
 
 
-    <script>
-        const ourTeam = document.getElementById("ourteam");
-        const popup = document.getElementById("popup");
-        const closeBtn = document.querySelector(".close-btn");
+        <script>
+            const ourTeam = document.getElementById("ourteam");
+            const popup = document.getElementById("popup");
+            const closeBtn = document.querySelector(".close-btn");
 
-        ourTeam.addEventListener("click", function (e) {
-            e.preventDefault();
-            popup.style.display = "block";
-        });
+            ourTeam.addEventListener("click", function (e) {
+                e.preventDefault();
+                popup.style.display = "block";
+            });
 
-        closeBtn.addEventListener("click", function () {
+            closeBtn.addEventListener("click", function () {
 
 
-            popup.style.display = "none";
-        });
-
-        window.addEventListener("click", function (e) {
-            if (e.target === popup) {
                 popup.style.display = "none";
-            }
-        });
-    </script>
+            });
 
-    <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
-    <script>
-        // Smooth Scroll
-        let lenis;
-
-        const ease = BezierEasing(0.19, 1, 0.22, 1);;
-        const script = document.createElement('script');
-        script.src = '../lenis.min.js';
-        script.onload = () => {
-            lenis = new Lenis({
-                duration: 1,
-                easing: ease,
-                smooth: true
-            })
-
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-            requestAnimationFrame(raf)
-
-        };
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
-            link.addEventListener('click', e => {
-                target = document.querySelector(link.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    lenis.scrollTo(target);
+            window.addEventListener("click", function (e) {
+                if (e.target === popup) {
+                    popup.style.display = "none";
                 }
-            })
-        });
-        document.head.appendChild(script);
+            });
+        </script>
 
-    </script>
-    <!-- Smooth Scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
+        <script>
+            // Smooth Scroll
+            let lenis;
 
-    <script src="../nav/nav.js"></script>
-    <script src="main.js"></script>
+            const ease = BezierEasing(0.19, 1, 0.22, 1);;
+            const script = document.createElement('script');
+            script.src = '../lenis.min.js';
+            script.onload = () => {
+                lenis = new Lenis({
+                    duration: 1,
+                    easing: ease,
+                    smooth: true
+                })
+
+                function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+                }
+                requestAnimationFrame(raf)
+
+            };
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        lenis.scrollTo(target);
+                    }
+                })
+            });
+            document.head.appendChild(script);
+
+        </script>
+        <!-- Smooth Scroll -->
+
+        <script src="../nav/nav.js"></script>
+        <script src="main.js"></script>
 
 </body>
 
