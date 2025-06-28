@@ -37,23 +37,17 @@
                 <p class="playlist"></p>
             </div>
             <div class="rightb">
-                <div id="course-video" controls width="600"></div>
-
+           <div id="course-video" controls width="600"></div>
             </div>
         </div>
         <div class="row2">
             <div class="details" id="course-details"></div>
             <div id="course-playlist-button"></div>
-            <!-- <p class="playlist">
-                 <a id="course-playlist-link" href="#" target="_blank">View Full Course Playlist on YouTube</a>
-                </p> -->
-
             <div class="instbox">
                 <h2 id="course-instructor-name"></h2>
                 <p id="course-instructor-bio">
                 </p>
             </div>
-            <!-- <p class="inst" id="course-instructor">vvvvv</p> -->
         </div>
 
 
@@ -69,44 +63,6 @@
                 document.getElementById("navbar").innerHTML = data;
             });
     </script>
-
-
-
-
-    <script>
-        // Smooth Scroll
-        const script = document.createElement('script');
-        script.src = '../lenis.min.js';
-
-        script.onload = () => {
-            const lenis = new Lenis({
-                duration: 1,
-                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                smooth: true
-            })
-
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-            requestAnimationFrame(raf)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        e.preventDefault();
-                        lenis.scrollTo(targetElement);
-                    }
-                });
-            });
-        };
-        document.head.appendChild(script);
-    </script>
-    
-
-
 </body>
 
 </html>
