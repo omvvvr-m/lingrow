@@ -1,3 +1,16 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   const toggleBtn = document.getElementById("toggleBtn");
+//   const navList = document.querySelector(".navlist");
+
+//   if (toggleBtn && navList) {
+//     toggleBtn.addEventListener("click", function () {
+//       navList.classList.toggle("open");
+//     });
+//   } else {
+//     console.warn("Toggle button or navlist not found.");
+//   }
+// });
+
 function waitForElement(selector, callback) {
   const el = document.querySelector(selector);
   if (el) {
@@ -36,6 +49,59 @@ waitForElement("#loginbtn", function (loginBtn) {
     }
   });
 });
+
+
+// /////////////////////////////////////////////////////////
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const homeLink = document.querySelector('.navlist li:first-child > a');
+//   const dropdown = document.querySelector('.dropdown');
+
+//   homeLink.addEventListener("click", function (e) {
+//     if (window.innerWidth <= 768) {
+//       e.preventDefault();
+//       dropdown.classList.toggle("open");
+//     }
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".navlist > li");
+
+  navItems.forEach((item) => {
+    const link = item.querySelector("a.has-dropdown");
+    const dropdown = item.querySelector(".dropdown");
+
+    if (link && dropdown) {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+
+          // قفل أي قائمة تانية مفتوحة
+          document.querySelectorAll(".dropdown.open").forEach((openDropdown) => {
+            if (openDropdown !== dropdown) {
+              openDropdown.classList.remove("open");
+            }
+          });
+
+          dropdown.classList.toggle("open");
+        }
+      });
+    }
+  });
+
+  // إغلاق القائمة عند الضغط خارجها
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      !e.target.closest(".navlist li")
+    ) {
+      document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+        dropdown.classList.remove("open");
+      });
+    }
+  });
+});
+
 
 /* ================= section divider=======================*/
 
@@ -79,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function loginUser() {
     sessionStorage.setItem("isLoggedIn", "true");
     alert("Welcome!");
-    updateJoinButton(); // Update the button text and action
+    location.reload();
   }
 
 
@@ -90,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (passwordInput.value === confirmPasswordInput.value) {
       sessionStorage.setItem("isLoggedIn", "true");
       alert("Registration successful!");
-      updateJoinButton(); // Update the button
+      // updateJoinButton(); // Update the button
       location.reload();
     } else {
       alert("Password does not match.");
@@ -107,20 +173,18 @@ document.addEventListener("DOMContentLoaded", function () {
   signForm.addEventListener("submit", function (e) {
     e.preventDefault();
     loginUser();
-
   });
 
   // Function to change Join to Profile
-  function updateJoinButton() {
-    if (joinBtn) {
-      console.log("Change join button");
-      joinBtn.textContent = "Profile";
-      joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
-      joinBtn.addEventListener("click", function () {
-        window.location.href = "profile.html";
-      });
-    }
-  }
+  // function updateJoinButton() {
+  //   if (joinBtn) {
+  //     joinBtn.textContent = "Profile";
+  //     joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
+  //     joinBtn.addEventListener("click", function () {
+  //       window.location.href = "profile.html";
+  //     });
+  //   }
+  // }
 
   function joinDefaultClick() {
 
@@ -133,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
       joinBtn.innerHTML = "Profile";
       joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
       joinBtn.addEventListener("click", function () {
-        window.location.href = "../profile.html";
+        window.location.href = "../profile/profile.html";
       });
     }
   }
