@@ -41,6 +41,61 @@ waitForElement("#toggleBtn", function (toggleBtn) {
   });
 });
 
+// /////////////////////////////////////////////////////////
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const homeLink = document.querySelector('.navlist li:first-child > a');
+//   const dropdown = document.querySelector('.dropdown');
+
+//   homeLink.addEventListener("click", function (e) {
+//     if (window.innerWidth <= 768) {
+//       e.preventDefault();
+//       dropdown.classList.toggle("open");
+//     }
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".navlist > li");
+
+  navItems.forEach((item) => {
+    const link = item.querySelector("a.has-dropdown");
+    const dropdown = item.querySelector(".dropdown");
+
+    if (link && dropdown) {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+
+          // قفل أي قائمة تانية مفتوحة
+          document.querySelectorAll(".dropdown.open").forEach((openDropdown) => {
+            if (openDropdown !== dropdown) {
+              openDropdown.classList.remove("open");
+            }
+          });
+
+          dropdown.classList.toggle("open");
+        }
+      });
+    }
+  });
+
+  // إغلاق القائمة عند الضغط خارجها
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      !e.target.closest(".navlist li")
+    ) {
+      document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+        dropdown.classList.remove("open");
+      });
+    }
+  });
+});
+
+
+
+
+
 
 
 /* ================= section divider=======================*/

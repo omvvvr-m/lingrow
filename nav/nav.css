@@ -1,5 +1,19 @@
 /* =============================NAVBAR========================== */
 
+:root {
+    /* --primary-color: #78B3CE; */
+    /* --primary-color: #0e0e0e; */
+    --primary-color: #3e008f;
+    --primary-dark-card-color: #080808;
+    --primary-color-light: #6f00ff;
+    --secondary-color: #0071e3;
+    --gradient-f: #3e008f;
+    --gradient-s: #d13bff;
+    --forth-color: #FBF8EF;
+    --fifth-color: #F96E2A;
+    --main-radius: 0.8rem;
+}
+
 .navbar {
     border: solid 0.03rem rgba(188, 72, 255, 0.11);
     position: fixed;
@@ -208,9 +222,8 @@ html {
         border-radius: 30%;
         border: none;
         font-size: 1.5rem;
-        padding: 0.5rem 1rem;
+        padding: 0 0;
         cursor: pointer;
-        ;
     }
 
     #loginbtn {
@@ -233,7 +246,8 @@ html {
 
     .navlist {
         flex-direction: column;
-        position: fixed;
+        /* position: fixed; */
+        position: absolute;
         top: 0;
         right: -100%;
         width: 70%;
@@ -244,6 +258,36 @@ html {
         z-index: 200;
         display: flex;
         align-items: center;
+        text-align: center;
+        gap: 0.1rem !important;
+    }
+
+    .navlist a {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        color: lavender;
+        font-family: "Poppins",sans-serif;
+        font-size: small;
+        font-weight: 600;
+        width: auto;
+        padding: 0;
+        gap: 0;
+    }
+
+    .navlist li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navlist li a:hover {
+        background-color: var(--primary-color-light);
+    }
+    
+    .navbar button {
+        transition: color 0.3 ease, background-color 0.3 ease;
     }
 
     .navlist.open {
@@ -251,16 +295,52 @@ html {
         display: flex;
     }
 
-    .navlist li {
-        margin: 1.5rem 0;
-        text-align: center;
-    }
+
+/* 
+    .dropdown { */
+        /* display: none; */
+        /* flex-direction: column; */
+        /* position: static; */
+        /* box-shadow: none; */
+        /* background-color: transparent; */
+        /* position: absolute;
+        background-color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    } */
 
     .dropdown {
-        position: static;
-        box-shadow: none;
-        /* background-color: transparent; */
+     display: none;
+     position: static;
+     flex-direction: column;
+     background-color: white;
+     padding: 0.5rem 1rem;
+     border-radius: 0.5rem;
     }
+
+    
+   .dropdown.open {
+    display: flex;
+   }
+
+
+/* 
+    .navlist li { */
+        /* margin: 0.2rem 0 !important;
+        text-align: center !important; */
+        /* margin: 0 !important; */
+        /* padding: 0.2rem 0.5rem !important;
+        position: relative !important;
+        display: block !important;
+    } */
+
+    /* .navlist li:hover .dropdown {
+     display: block;
+    } */
 
     /* button {
         color: white;
