@@ -20,10 +20,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
 " crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-<script src="../nav/nav.js"></script>
 
-    
+    <script src="../nav/nav.js"></script>
+
+
 
 
 </head>
@@ -148,10 +148,7 @@
 
                             </select>
                         </div>
-                        <div class="input phone">
-                            <label for="phone">Phone Number</label>
-                            <input type="number" name="phone" id="phone" required>
-                        </div>
+
                     </div>
                     <div class="submit-container">
                         <button class="submit" type="submit" id="joinBtn ">Join</button>
@@ -218,29 +215,29 @@
                             <button class="CTA">Start</button>
 
                             <script>
-                                
-                             document.querySelector(".CTA").addEventListener("click", function () {
-                             document.querySelector(".join").style.display = "block";
-                             });
 
-                             document.querySelector(".exit").addEventListener("click", function () {
-                             document.querySelector(".join").style.display = "none";
-                             });
+                                document.querySelector(".CTA").addEventListener("click", function () {
+                                    document.querySelector(".join").style.display = "block";
+                                });
 
-                             document.querySelector(".alreadymember a").addEventListener("click", function () {
-                             document.querySelector(".joinForm").style.display = "none";
-                             document.querySelector(".signinForm").style.display = "flex";
-                             });
+                                document.querySelector(".exit").addEventListener("click", function () {
+                                    document.querySelector(".join").style.display = "none";
+                                });
 
-                             document.querySelector(".notamember a").addEventListener("click", function () {
-                             document.querySelector(".signinForm").style.display = "none";
-                             document.querySelector(".joinForm").style.display = "flex";
-                             });
+                                document.querySelector(".alreadymember a").addEventListener("click", function () {
+                                    document.querySelector(".joinForm").style.display = "none";
+                                    document.querySelector(".signinForm").style.display = "flex";
+                                });
+
+                                document.querySelector(".notamember a").addEventListener("click", function () {
+                                    document.querySelector(".signinForm").style.display = "none";
+                                    document.querySelector(".joinForm").style.display = "flex";
+                                });
                             </script>
 
 
 
-                            
+
                             <button class="Plans" onclick="location.href='#plans'">Plans&nbsp;&nbsp;<i
                                     class="fa-solid fa-arrow-right"></i></button>
                         </div>
@@ -634,7 +631,7 @@
                     <h3>+50.000</h3>
                     <p class="stat-detailed">Expert instructors </p>
                 </span>
-                   <span class="stat-box">
+                <span class="stat-box">
                     <p class="icons"> <i class="fa fa-check-square" aria-hidden="true"></i>
                     </p>
                     <h3 id="session-completed">+30.000</h3>
@@ -658,7 +655,7 @@
 
                 <span class="stat-box">
 
-                    <p class="icons"> <i class="fa fa-certificate aria-hidden="true"></i>
+                    <p class="icons"> <i class="fa fa-certificate aria-hidden=" true"></i>
 
                     </p>
                     <h3>+20</h3>
@@ -746,11 +743,11 @@
                 <!-- <button class="prev" onclick="prevReview()">&#10094</button>
                 <button class="next" onclick="nextReview()">&#10095</button> -->
 
-              <div class="dots">
-                <label for="review1" class="dot"></label>
-                <label for="review2" class="dot"></label>
-                <label for="review3" class="dot"></label>
-              </div>
+                <div class="dots">
+                    <label for="review1" class="dot"></label>
+                    <label for="review2" class="dot"></label>
+                    <label for="review3" class="dot"></label>
+                </div>
 
 
 
@@ -792,18 +789,18 @@
         </footer>
 
 
- <div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close-btn">&times;</span>
-    <h3>Our Team</h3>
-    <p> 
-  <p> Hello, guys  we are a group of passionate developers, designers,
-     and educators who work together to create high-quality educational
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h3>Our Team</h3>
+                <p>
+                <p> Hello, guys we are a group of passionate developers, designers,
+                    and educators who work together to create high-quality educational
 
-     tools and resources for learners worldwide. 
-      We believe in innovation, collaboration, and making sucsses accessible to achieve  </p>
-  </div>
-</div>
+                    tools and resources for learners worldwide.
+                    We believe in innovation, collaboration, and making sucsses accessible to achieve </p>
+            </div>
+        </div>
 
         <div id="popup" class="popup">
             <div class="popup-content">
