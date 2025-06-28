@@ -230,7 +230,7 @@ html {
 
     #loginbtn {
         all: unset;
-        display: block;
+        display: none;
         background-color: white;
         color: black;
         font-weight: bold;

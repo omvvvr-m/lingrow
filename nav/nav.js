@@ -41,6 +41,16 @@ waitForElement("#toggleBtn", function (toggleBtn) {
   });
 });
 
+waitForElement("#loginbtn", function (loginBtn) {
+  loginBtn.addEventListener("click", function () {
+    const joinWindow = document.querySelector(".join");
+    if (joinWindow) {
+      joinWindow.style.display = "block";
+    }
+  });
+});
+
+
 // /////////////////////////////////////////////////////////
 
 // document.addEventListener("DOMContentLoaded", () => {
@@ -97,54 +107,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
   const joinBtn = document.getElementById("joinBtn");
 
   const alreadyMemberLink = document.querySelector(".alreadymember a");
   const notMemberLink = document.querySelector(".notamember a");
-  // hna tl3t amember m4 member bs :|
-  // w kman zwdna a 3l4qn homa mktobeen gwa <a></a>
 
   const joinWindow = document.querySelector(".join");
   const homeWindow = document.querySelector(".home");
 
+  
   alreadyMemberLink.addEventListener("click", (e) => {
     e.preventDefault();
     joinForm.style.display = "none";
     signForm.style.display = "flex";
   });
 
+  
   notMemberLink.addEventListener("click", (e) => {
     e.preventDefault();
     signForm.style.display = "none";
     joinForm.style.display = "flex";
   });
 
+
   function loginUser() {
-
     sessionStorage.setItem("isLoggedIn", "true");
-    alert(`Welcome!`);
-    location.reload();
-
+    alert("Welcome!");
+    updateJoinButton(); // Update the button text and action
   }
 
-  function registerUser() {
 
+  function registerUser() {
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("conf");
 
     if (passwordInput.value === confirmPasswordInput.value) {
       sessionStorage.setItem("isLoggedIn", "true");
-      location.reload();
+      alert("Registration successful!");
+      updateJoinButton(); // Update the button
     } else {
-      alert(`Password does not match.`);
+      alert("Password does not match.");
     }
   }
 
-
+  
   joinForm.addEventListener("submit", function (e) {
     e.preventDefault();
     loginUser();
@@ -155,13 +163,25 @@ document.addEventListener("DOMContentLoaded", function () {
     registerUser();
   });
 
-
-  if (sessionStorage.getItem("isLoggedIn") === "true") {
+  // Function to change Join to Profile
+  function updateJoinButton() {
     if (joinBtn) {
       joinBtn.textContent = "Profile";
-      joinBtn.addEventListener("click", () => {
+      joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
+      joinBtn.addEventListener("click", function () {
         window.location.href = "profile.html";
       });
     }
   }
+
+
+
+  function joinDefaultClick() {
+    
+  }
+  if (sessionStorage.getItem("isLoggedIn") === "true") {
+    updateJoinButton();
+  }
 });
+
+
