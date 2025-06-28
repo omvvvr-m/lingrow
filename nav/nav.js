@@ -120,6 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("currentUserFname", userData.firstName);
 
     alert(`Welcome, ${userData.firstName}`);
+//  Update the join button to "Profile"
+const joinBtn = document.getElementById("joinBtn");
+if (joinBtn) {
+  joinBtn.textContent = "Profile";
+  joinBtn.addEventListener("click", () => {
+    //  Redirect to profile page
+    window.location.href = "profile.html"; // Change to your profile page path
+  });
+}
+
+
+
     signForm.reset();
 
     joinWindow.style.display = "none";
@@ -165,3 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
     joinForm.style.display = "block";
   }
 });
+const joinBtn = document.getElementById("joinBtn");
+
+if (sessionStorage.getItem("isLoggedIn") === "true") {
+  if (joinBtn) {
+    joinBtn.textContent = "Profile";
+    joinBtn.addEventListener("click", () => {
+      window.location.href = "profile.html";
+    });
+  }
+}
