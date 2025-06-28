@@ -93,11 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
-
 /* ================= section divider=======================*/
 
 
@@ -106,16 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const joinForm = document.querySelector(".joinForm");
   const signForm = document.querySelector(".signinForm");
-
-  const firstNameInput = document.getElementById("firstName");
-  const lastNameInput = document.getElementById("lastName");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
-  const confInput = document.getElementById("conf");
-  const phoneInput = document.getElementById("phone");
-
-  const signEmailInput = document.getElementById("signinEmail");
-  const signPasswordInput = document.getElementById("signinPassword");
+  const joinBtn = document.getElementById("joinBtn");
 
   const alreadyMemberLink = document.querySelector(".alreadymember a");
   const notMemberLink = document.querySelector(".notamember a");
@@ -124,115 +110,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const joinWindow = document.querySelector(".join");
   const homeWindow = document.querySelector(".home");
-  const logoutBtn = document.getElementById("logoutBtn");
 
   alreadyMemberLink.addEventListener("click", (e) => {
     e.preventDefault();
     joinForm.style.display = "none";
-    signForm.style.display = "block";
+    signForm.style.display = "flex";
   });
 
   notMemberLink.addEventListener("click", (e) => {
     e.preventDefault();
     signForm.style.display = "none";
-    joinForm.style.display = "block";
+    joinForm.style.display = "flex";
   });
 
-  function registerUser(firstName, lastName, email, password, phone) {
-    if (localStorage.getItem(email)) {
-      alert("Email already exists!");
-      return;
-    }
-
-    const userData = {
-      firstName,
-      lastName,
-      email,
-      password,
-      phone
-    };
-
-    localStorage.setItem(email, JSON.stringify(userData));
-    alert("Registration successful! You can now log in.");
-    joinForm.reset();
-    joinForm.style.display = "none";
-    signForm.style.display = "block";
-  }
-
-  function loginUser(email, password) {
-    const user = localStorage.getItem(email);
-    if (!user) {
-      alert("Email not found!");
-      return;
-
-
-    }
-
-    const userData = JSON.parse(user);
-    if (userData.password !== password) {
-      alert("Incorrect password!");
-      return;
-    }
+  function loginUser() {
 
     sessionStorage.setItem("isLoggedIn", "true");
-    sessionStorage.setItem("currentUser", email);
-    sessionStorage.setItem("currentUserFname", userData.firstName);
-
-    alert(`Welcome, ${userData.firstName}`);
-//  Update the join button to "Profile"
-const joinBtn = document.getElementById("joinBtn");
-if (joinBtn) {
-  joinBtn.textContent = "Profile";
-  joinBtn.addEventListener("click", () => {
-    //  Redirect to profile page
-    window.location.href = "profile.html"; // Change to your profile page path
-  });
-}
-
-
-
-    signForm.reset();
-
-    joinWindow.style.display = "none";
-    homeWindow.style.display = "block";
-    // hna 5lnaha window 3l4an n4eel L window kolh m4 L form bs
+    alert(`Welcome!`);
+    location.reload();
 
   }
+
+  function registerUser() {
+
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("conf");
+
+    if (passwordInput.value === confirmPasswordInput.value) {
+      sessionStorage.setItem("isLoggedIn", "true");
+      location.reload();
+    } else {
+      alert(`Password does not match.`);
+    }
+  }
+
 
   joinForm.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    const firstName = firstNameInput.value.trim();
-    const lastName = lastNameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-    const confirmPassword = confInput.value;
-    const phone = phoneInput.value.trim();
-
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-
-    registerUser(firstName, lastName, email, password, phone);
+    loginUser();
   });
 
   signForm.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    const email = signEmailInput.value.trim();
-    const password = signPasswordInput.value;
-
-    loginUser(email, password);
+    registerUser();
   });
 
 
   if (sessionStorage.getItem("isLoggedIn") === "true") {
-    joinWindow.style.display = "none";
-    homeWindow.style.display = "block";
-    // hna 5lnaha window 3l4an n4eel L window kolh m4 L form bs
-  } else {
-    signForm.style.display = "none";
-    joinForm.style.display = "block";
+    if (joinBtn) {
+      joinBtn.textContent = "Profile";
+      joinBtn.addEventListener("click", () => {
+        window.location.href = "profile.html";
+      });
+    }
   }
 });

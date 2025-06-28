@@ -6,9 +6,6 @@ function clampToZero(x) {
     return x > 0 ? x : 0;
 }
 
-
-// const tablet = document.querySelector('.tablet-inner');
-// const anytimeText = document.querySelector('.anytime');
 const tabletInner = document.querySelector('.tablet-inner');
 const anytimeText = document.querySelector('.anytime');
 
@@ -26,33 +23,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 observer.observe(tabletInner);
 
-
-// window.addEventListener('scroll', () => {
-//     // if (tabletOnView) {
-//     const tabletFromPageTop = tablet.getBoundingClientRect().top + window.scrollY;
-//     const scrollY = window.scrollY;
-//     const tabletRelativeToViewportTop = tabletFromPageTop - scrollY;
-
-
-//     // console.log("Tablet from top:" + tabletFromPageTop);
-//     // console.log("Scrolled:" + scrollY);
-//     // console.log("Position Between tablet and viewport:" + tabletRelativeToViewportTop);
-
-
-//     const rotateAmount = ((tabletRelativeToViewportTop / 27) - 5);
-//     // console.log(clamp(100 - (rotateAmount - 60), 0, 300));
-//     console.log(rotateAmount);
-
-//     // tablet.style.transform = `rotateX(${clamp(100 - (rotateAmount - 60), 0, 300)}deg)`
-
-//     tablet.style.transform = `rotateX(${clamp(rotateAmount, 0, 100)}deg)`;
-//     anytimeText.style.filter = `blur(${rotateAmount}px)`
-//     anytimeText.style.transform = `translateY(${clampToZero(rotateAmount * 10)}px)`;
-
-
-// });
-
-
 window.addEventListener('scroll', () => {
     const screenWidth = window.innerWidth;
     const tabletRect = tabletInner.getBoundingClientRect();
@@ -63,7 +33,7 @@ window.addEventListener('scroll', () => {
     const translateY = clamp(offsetFromCenter / 5, -100, 100);
 
     if (screenWidth <= 768) {
-        tabletInner.style.transform = `rotateX(${clampToZero(rotateAmount)}deg)`;
+        tabletInner.style.transform = `rotateX(0deg)`;
     } else {
         tabletInner.style.transform = '';
     }
