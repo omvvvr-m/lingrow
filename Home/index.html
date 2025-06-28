@@ -686,13 +686,15 @@
         <!----------------- reviews ------------------->
         <section class="Rstudents" id="reviews">
             <span class="st-rw">
-                <h1>Trusted by Students Worldwide</h1>
+                <h1> STUDENT REVIEWS</h1>
             </span>
 
-
+            <input type="radio" name="carousel" id="review1" checked>
+            <input type="radio" name="carousel" id="review2">
+            <input type="radio" name="carousel" id="review3">
 
             <div class="carousel">
-                <div class="reviews active">
+                <div class="reviews c1">
                     <div class="header">
                         <img src="../imgs\broccoli.jpg" alt="avatar" class="avatar1">
                         <div class="user">
@@ -708,7 +710,7 @@
                     <div class="stars">★★★★★</div>
                 </div>
 
-                <div class="reviews">
+                <div class="reviews c2">
                     <div class="header">
                         <img src="../imgs\avocado.jpg" alt="avatar2" class="avatar2">
                         <div class="user">
@@ -725,7 +727,7 @@
                     <div class="stars">★★★★★</div>
                 </div>
 
-                <div class="reviews">
+                <div class="reviews c3">
                     <div class="header">
                         <img src="../imgs\potato.jpg" alt="avatar3" class="avatar3">
                         <div class="user">
@@ -741,8 +743,16 @@
                     <div class="stars">★★★★★</div>
                 </div>
 
-                <button class="prev" onclick="prevReview()">&#10094</button>
-                <button class="next" onclick="nextReview()">&#10095</button>
+                <!-- <button class="prev" onclick="prevReview()">&#10094</button>
+                <button class="next" onclick="nextReview()">&#10095</button> -->
+
+              <div class="dots">
+                <label for="review1" class="dot"></label>
+                <label for="review2" class="dot"></label>
+                <label for="review3" class="dot"></label>
+              </div>
+
+
 
 
 
