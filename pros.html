@@ -50,6 +50,76 @@
 
 
      </div>
+
+
+
+
+<div class="tracking">
+<div class="first-course">
+    
+<div class="card">
+  <h3   class="pre">Course Progress is 60%</h3>
+  <canvas id="myPieChart" width="200" height="200"></canvas>
+</div>
+
+
+
+<div class="progress-card">
+  <h3>📖 Reading Course</h3>
+  
+    <p>📚 <strong >Modules Completed:</strong> 7 / 10</p>
+    <p>📝<strong>  Last Activity:</strong> June 21</p>
+    <p>📅  <strong>  Enrolled:</strong> May 10, 2025</p>
+    <p>⏱<strong>Estimated Time Left:</strong> 1 week</p>
+    <p>🎯 <strong>Goal:</strong> Finish by July 1 </p>
+
+
+  <button class="btn-container">🔗 Continue Course</button>
+</div>
+</div>
+
+
+
+<div class="second-course">
+
+<div class="card">
+  <h3 class="pre">Course Progress is 85%</h3>
+  <canvas id="Chart2" width="200" height="200"></canvas>
+</div>
+
+
+<div class="progress-card">
+
+
+
+  <h3 >🗣️ TOEFL Preparation Course</h3>
+  <p>📘 <strong>Modules Completed:</strong> 17 / 20</p>
+  <p>📅 <strong>Enrolled:</strong> May 1, 2025</p>
+  <p>📝 <strong>Last Activity:</strong> June 22</p>
+  
+  <p>⏱ <strong>Time Left:</strong> 3 Days</p>
+  <p>🎯 <strong>Goal:</strong> Finish before June 30</p>
+  
+
+  <button class="btn-container">  🔗 Continue Course     </button>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 <footer>
 <div class="social-icons">
@@ -91,9 +161,86 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
 
 
 
+  const ctx1 = document.getElementById('myPieChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Remaining'],
+      datasets: [{
+        data: [60, 40],
+        backgroundColor: ['#d13bff', '#080808'],
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom'}}
+
+          }
+        });
+
+  const ctx2 = document.getElementById('Chart2').getContext('2d');
+  new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Remaining'],
+      datasets: [{
+        data: [85, 15],
+        backgroundColor: ['#d13bff', '#080808'],
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom'}}
+
+          }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var num1 = document.getElementById("session-completed");
+    var num2 = document.getElementById("clients");
+    function animatedCounter(element, start, end, duration) {
+        var range = end - start;
+        var current = start;
+
+
+
+        var increment = end > start ? 1 : -1;
+        let stepTime = Math.max(Math.floor(duration / range), 1); // prevent zero ms
+        var timer = setInterval(function () {
+            current += increment;
+            element.innerText = "+" + current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+    animatedCounter(num1, 0, 500, 1000);
+    animatedCounter(num2, 0, 1200, 1500);
+
+
+
+</script>
 
 
 

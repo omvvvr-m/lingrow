@@ -22,176 +22,209 @@
 " crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    
+
 
 </head>
 
 <body>
     <nav class="navbar">
-    <div class="navdiv">
-        <div class="logo">
-            <a href="../Home/index.html"><span>Lingrow</span></a>
-        </div>
-        <ul class="navlist">
-            <li>
-                 <!-- <a href="../Home/index.html#home">Home</a> -->
-                  <a href="../Home/index.html" class="has-dropdown">Home</a>
-                <ul class="dropdown">
-                    <li><a href="../Home/index.html#home">Features</a></li>
-                    <li><a href="../Home/index.html#courses">Courses</a></li>
-                    <li><a href="../Home/index.html#plans">Packages</a></li>
-                    <li><a href="../Home/index.html#stats">Achieved</a></li>
-                    <li><a href="../Home/index.html#reviews">Reviews</a></li>
-                </ul>
-            </li>
-            <li> <a href="../Courses/courses.html">Courses</a></li>
-            <li> <a href="../Contact/contact.html">Contact Us</a></li>
-        </ul>
-        <button class="mobnav" id="toggleBtn">☰</button>
-        <button class="loginbtn" id="loginbtn">JOIN</button>
-
-        
-
-        <script>
-            // Smooth Scroll
-            const script = document.createElement('script');
-            script.src = '../lenis.min.js';
-            script.onload = () => {
-                const lenis = new Lenis({
-                    duration: 1,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    smooth: true
-                })
-
-                function raf(time) {
-                    lenis.raf(time)
-                    requestAnimationFrame(raf)
-                }
-                requestAnimationFrame(raf)
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-
-                        if (targetElement) {
-                            e.preventDefault();
-                            lenis.scrollTo(targetElement);
-                        }
-                    });
-                });
-            };
-            document.head.appendChild(script);
-
-        </script>
-
-</nav>
-
-<!----------------------------- Section Divider ----------------------------->
-<div class="join">
-
-    <div class="bg"> <!-- The background of the page (will be blured) -->
-        <div class="box-bg"> <!-- The background of the box (will be white and small) -->
-            <div class="img-container">
-                <img src="../imgs/join.png" alt="Join Image">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="../Home/index.html"><span>Lingrow</span></a>
             </div>
-            <div class="join-container">
-                <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+            <ul class="navlist">
+                <li>
+                    <!-- <a href="../Home/index.html#home">Home</a> -->
+                    <a href="../Home/index.html" class="has-dropdown">Home</a>
+                    <ul class="dropdown">
+                        <li><a href="../Home/index.html#home">Features</a></li>
+                        <li><a href="../Home/index.html#courses">Courses</a></li>
+                        <li><a href="../Home/index.html#plans">Packages</a></li>
+                        <li><a href="../Home/index.html#stats">Achieved</a></li>
+                        <li><a href="../Home/index.html#reviews">Reviews</a></li>
+                    </ul>
+                </li>
+                <li> <a href="../Courses/courses.html">Courses</a></li>
+                <li> <a href="../Contact/contact.html">Contact Us</a></li>
+            </ul>
+            <button class="mobnav" id="toggleBtn">☰</button>
+            <button class="loginbtn" id="loginbtn">JOIN</button>
 
-                <p class="join-title">Join Lingrow</p>
-                <form class="joinForm" action="">
-                    <div class="horizontal-input-container">
-                        <div class="input fname">
-                            <label for="firstName">First Name</label>
-                            <input type="text" name="firstName" id="firstName" placeholder="Carl" required>
+            <script>
+                // Smooth Scroll
+                const script = document.createElement('script');
+                script.src = '../lenis.min.js';
+                script.onload = () => {
+                    const lenis = new Lenis({
+                        duration: 1,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        smooth: true
+                    })
+
+                    function raf(time) {
+                        lenis.raf(time)
+                        requestAnimationFrame(raf)
+                    }
+                    requestAnimationFrame(raf)
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+
+                            if (targetElement) {
+                                e.preventDefault();
+                                lenis.scrollTo(targetElement);
+                            }
+                        });
+                    });
+                };
+                document.head.appendChild(script);
+
+            </script>
+
+    </nav>
+
+    <!----------------------------- Section Divider ----------------------------->
+    <div class="join">
+
+        <div class="bg"> <!-- The background of the page (will be blured) -->
+            <div class="box-bg"> <!-- The background of the box (will be white and small) -->
+                <div class="img-container">
+                    <img src="../imgs/join.png" alt="Join Image">
+                </div>
+                <div class="join-container">
+                    <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+
+                    <p class="join-title">Join Lingrow</p>
+                    <form class="joinForm" action="">
+                        <div class="horizontal-input-container">
+                            <div class="input fname">
+                                <label for="firstName">First Name</label>
+                                <input type="text" name="firstName" id="firstName" placeholder="Carl" required>
+                            </div>
+                            <div class="input lname">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" name="lastName" id="lastName" placeholder="Johnson" required>
+                            </div>
                         </div>
-                        <div class="input lname">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" name="lastName" id="lastName" placeholder="Johnson" required>
+
+                        <div class="horizontal-input-container">
+
+                            <div class="input email">
+                                <label for="email">Email Address</label>
+                                <input class="email" type="email" name="email" id="email" placeholder="cj@email.com"
+                                    required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="horizontal-input-container">
-
-                        <div class="input email">
-                            <label for="email">Email Address</label>
-                            <input class="email" type="email" name="email" id="email" placeholder="cj@email.com"
-                                required>
+                        <div class="horizontal-input-container">
+                            <div class="input pass">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" placeholder="" required>
+                            </div>
+                            <div class="input conf">
+                                <label for="conf">Confirm Password</label>
+                                <input type="password" name="conf" id="conf" required>
+                            </div>
                         </div>
-                    </div>
+                        <div class="horizontal-input-container">
+                            <div class="input level">
+                                <label for="level">Level</label>
+                                <select name="level" id="level" placeholder="C2" required>
+                                    <!-- <option value="">Pick English Level</option> -->
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
 
-                    <div class="horizontal-input-container">
-                        <div class="input pass">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" placeholder="" required>
+                                    <option disabled>────────────</option>
+                                    <option value="B1">B1</option>
+                                    <option value="B2">B2</option>
+
+                                    <option disabled>────────────</option>
+
+                                    <option value="C1">C1</option>
+                                    <option value="C2">C2</option>
+
+                                </select>
+                            </div>
+                            <div class="input phone">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" name="phone" id="phone" required>
+                            </div>
                         </div>
-                        <div class="input conf">
-                            <label for="conf">Confirm Password</label>
-                            <input type="password" name="conf" id="conf" required>
+                        <div class="submit-container">
+                            <button class="submit" type="submit">Join</button>
+                            <p class="alreadymember">Already a member? <a>Sign in.</a></p>
                         </div>
-                    </div>
-                    <div class="horizontal-input-container">
-                        <div class="input level">
-                            <label for="level">Level</label>
-                            <select name="level" id="level" placeholder="C2" required>
-                                <!-- <option value="">Pick English Level</option> -->
-                                <option value="A1">A1</option>
-                                <option value="A2">A2</option>
+                    </form>
 
-                                <option disabled>────────────</option>
-                                <option value="B1">B1</option>
-                                <option value="B2">B2</option>
+                    <!-- Sign in -->
 
-                                <option disabled>────────────</option>
+                    <form class="signinForm" action="">
+                        <div class="horizontal-input-container">
 
-                                <option value="C1">C1</option>
-                                <option value="C2">C2</option>
-
-                            </select>
+                            <div class="input email">
+                                <label for="signinEmail">Email Address</label>
+                                <input class="email" type="signinEmail" name="signinEmail" id="signinEmail"
+                                    placeholder="cj@email.com" required>
+                            </div>
                         </div>
-                        <div class="input phone">
-                            <label for="phone">Phone Number</label>
-                            <input type="number" name="phone" id="phone" required>
+
+
+
+                        <div class="horizontal-input-container">
+                            <div class="input signinPassword">
+                                <label for="signinPassword">Password</label>
+                                <input type="password" name="signinPassword" id="signinPassword" placeholder=""
+                                    required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="submit-container">
-                        <button class="submit" type="submit">Join</button>
-                        <p class="alreadymember">Already a member? <a>Sign in.</a></p>
-                    </div>
-                </form>
-
-                <!-- Sign in -->
-
-                <form class="signinForm" action="">
-                    <div class="horizontal-input-container">
-
-                        <div class="input email">
-                            <label for="signinEmail">Email Address</label>
-                            <input class="email" type="signinEmail" name="signinEmail" id="signinEmail"
-                                placeholder="cj@email.com" required>
+                        <div class="submit-container">
+                            <button class="submit" type="submit">Sign in</button>
+                            <p class="notamember">Not a member? <a>Join.</a></p>
                         </div>
-                    </div>
-
-
-
-                    <div class="horizontal-input-container">
-                        <div class="input signinPassword">
-                            <label for="signinPassword">Password</label>
-                            <input type="password" name="signinPassword" id="signinPassword" placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="submit-container">
-                        <button class="submit" type="submit">Sign in</button>
-                        <p class="notamember">Not a member? <a>Join.</a></p>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="home" style="display: none;">
-    <!-- <h1>Welcome to Lingrow!</h1> -->
-    <!-- <button id="logoutBtn">Logout</button> -->
-</div>
+    <div class="home" style="display: none;">
+        <!-- <h1>Welcome to Lingrow!</h1> -->
+        <!-- <button id="logoutBtn">Logout</button> -->
+    </div>
 
-<script src="../nav/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
+    <script>
+        // Smooth Scroll
+        const ease = BezierEasing(0.19, 1, 0.22, 1);;
+        const script = document.createElement('script');
+        script.src = '../lenis.min.js';
+        script.onload = () => {
+            const lenis = new Lenis({
+                duration: 1,
+                easing: ease,
+                smooth: true
+            })
+
+            function raf(time) {
+                lenis.raf(time)
+                requestAnimationFrame(raf)
+            }
+            requestAnimationFrame(raf)
+
+        };
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    lenis.scrollTo(target);
+                }
+            })
+        });
+        document.head.appendChild(script);
+
+    </script>
+
+    <script src="../nav/nav.js"></script>
 </body>

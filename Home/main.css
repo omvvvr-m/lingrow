@@ -1405,16 +1405,18 @@ body {
     transform: perspective(1000px);
     display: flex;
     justify-content: center;
+    
 }
 
 
 .pack {
     margin: 2rem;
     border-radius: var(--main-radius);
-
+     
     border: 2px solid var(--primary-color);
     background-color: rgb(255, 255, 255);
-    width: 80%;
+     width:clamp(270px,35vw,380px) ;
+    
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1475,7 +1477,8 @@ body {
     border-radius: var(--main-radius);
     border: 2px solid var(--primary-color);
     background-color: rgb(255, 255, 255);
-    width: 80%;
+     width:clamp(270px,35vw,380px) ;
+    
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1489,7 +1492,8 @@ body {
     /* border: 2px solid var(--primary-color); */
     background-color: var(--primary-color);
     color: white;
-    width: 80%;
+     width:clamp(270px,35vw,380px) ;
+
     max-width: 30rem;
     height: 40rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1540,11 +1544,9 @@ body {
     color: white;
     background-color: var(--primary-color);
     border: none;
-    width: 25rem;
     height: 4rem;
     align-items: center;
-
-
+     width:25rem;
     transition: transform 0.2s ease;
     border-radius: var(--main-radius);
     font-family: "oswald", sans-serif;
@@ -1588,6 +1590,7 @@ body {
         font-size: 0.7rem;
 
     }
+
 
 }
 
@@ -1729,7 +1732,6 @@ body {
 @media screen and (max-width:490px) and (min-width:320px) {
 
 
-
     .stats-section span {
         margin-left: 1rem;
 
@@ -1759,6 +1761,8 @@ body {
         font-size: 26px;
 
     }
+
+
 }
 
 @media screen and (max-width:1130px)and (min-width:767px) {
@@ -1803,7 +1807,7 @@ body {
 
 
 
-
+/* 
 
 .popup {
     display: none;
@@ -1811,24 +1815,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-}
-
-.popup-content {
-    background-color: var(--primary-color);
-    color: var(--forth-color);
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-    font-family: "poppins";
-}
-
+} */
+/* 
 .close-btn {
     position: absolute;
     top: 8px;
@@ -1836,7 +1826,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     color: #888;
-}
+} */
 
 
 
@@ -1868,7 +1858,7 @@ footer {
     width: auto;
     font-weight: 800;
     font-family: "poppins";
-    font-size: 4rem;
+    font-size: clamp(2rem,2rem,6rem);
     padding: 0;
     margin: 0px;
 }
@@ -1924,7 +1914,7 @@ footer li a:hover {
 
 }
 
-@media (max-resolution: 768) {
+@media (max-resolution: 768)  and (min-resolution:320) {
 
     footer {
         margin: 0px;
@@ -1937,11 +1927,15 @@ footer li a:hover {
 
     .footer-slogan {
         line-height: 14px;
+
     }
-
-
-
 }
+
+
+
+
+
+
 
 
 
