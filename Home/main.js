@@ -83,7 +83,7 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    var num1 = document.getElementById("session-completed");
+     var num1 = document.getElementById("session-completed");
     var num2 = document.getElementById("clients");
 
     function animatedCounter(element, start, end, duration, holdTime) {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 clearInterval(timer);
                 setTimeout(() => {
                     element.isCounting = false;
-                }, holdTime); // الرقم يثبت بعد ما يخلص
+                }, holdTime); 
             }
         }, stepTime);
     }
@@ -117,10 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function checkCountersRepeat() {
         if (isInViewport(num1)) {
-            animatedCounter(num1, 0, 800, 2000, 3000);
+            animatedCounter(num1, 0, 800, 2000, 2000);
         }
         if (isInViewport(num2)) {
-            animatedCounter(num2, 0, 1000, 6000, 2000);
+            animatedCounter(num2, 0, 1000, 6000, 3000);
         }
     }
 
