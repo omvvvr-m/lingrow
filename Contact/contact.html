@@ -22,11 +22,24 @@
 " crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Contact Us</title>
+  <script>
+    fetch('../nav/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '../nav/nav.js';
+        document.body.appendChild(script);
+      });
+  </script>
+  <script src="../nav/nav.js"></script>
+
 </head>
 
-<div id="navbar"></div>
-
 <body>
+  <div id="navbar"></div>
+
   <section class="banner-section">
     <!-- <h1>Contact Us</h1> -->
   </section>
@@ -81,7 +94,7 @@
     </div>
 
   </section>
-
+  <!-- 
   <script>
     fetch("../nav/nav.html")
 
@@ -89,7 +102,7 @@
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
       });
-  </script>
+  </script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
   <script>
@@ -125,7 +138,6 @@
 
   </script>
 
-  <script src="../nav/nav.js"></script>
 
 
 </body>

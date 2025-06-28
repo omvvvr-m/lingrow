@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lingrow | Profile</title>
 
 
-    <link rel="stylesheet" href="profile.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
 " crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="nav.js"></script>
 
+  <script>
+    fetch('/nav/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
 
+        const script = document.createElement('script');
+        script.src = '../nav/nav.js';
+        document.body.appendChild(script);
+      });
+  </script>
 </head>
 
 <div id="navbar"></div>
@@ -30,187 +40,183 @@
 <body>
 
 
-   <div class="profile-details">
-<i class="fa fa-user-circle" aria-hidden="true"></i>
-<div class="info">
-<div class="first-name">MOSTAFA EMAD</div>
-<div class="gmail"> mostafaemad@gmail.com</div>
+  <div class="profile-details">
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+    <div class="info">
+      <div class="first-name">MOSTAFA EMAD</div>
+      <div class="gmail"> mostafaemad@gmail.com</div>
 
-<div class="edit-profile">
-<button class="EPB" onclick="toggleForm()"> Edit profile</button>
-<!-- <hidden form></hidden> -->
-</div>
-</div>
-
-
-
-   </div>
-
-
-<div class="tracking">
-
-<div class="first-course">
-  <h3 class="progress-card">your progress is 60%</h3>
-<div class="card">
-  <canvas id="myPieChart" width="200" height="200"></canvas>
-</div>
-<div class="progress-card">
-  
-    <p>📝<strong>  Last Activity:</strong> June 21</p>
-    <p>🎯 <strong>Goal:</strong> Finishing by July 1 </p>
-  <button class="btn-container">🔗 Continue Course</button>
-
-</div>
-</div>
-</div>
-
-<div class="client-details">
-
-  
-  <div class="client-info">
-    <p><strong>Name: </strong> </p>
-      
-    <p> MOSTAFA EMAD</p>
-    <p><strong>Gmail:</strong> </p>
-      
-    <p>  mostafaemad@gmail.com</p>
-    <p><strong>Phone:</strong> </p>
-      
-   <p>   +01 01115557777</p>
-    <p><strong>Level:</strong> </p>
-      
-    <p>  Intermediate</p>
-    <p><strong>Country: </strong></p>
-
-
-   <p> </strong> USA </p>
-    
-  
-</div>
+      <div class="edit-profile">
+        <button class="EPB" onclick="toggleForm()"> Edit profile</button>
+        <!-- <hidden form></hidden> -->
+      </div>
+    </div>
 
 
 
-<form id="hidden-form"  onsubmit="updateProfile(event)" >
-<label>Full Name</label>
-<input type="  text"  placeholder="Your name"  id="nameinput" required>
-<label>Gmail</label>
-<input type="text" placeholder=" @gmail.com "  id="gmailinput" required>
-<label>Phone number</label>
-<input type="text"   placeholder="+02 " id="phoneinput">
+  </div>
 
 
-<label>Your level</label>
-<select name="level" id="levelinput">
-<option> A1 LEVEL</option>
-<option> A2 LEVEL</option>
-<option> B1 LEVEL</option>
-<option> B2 LEVEL</option>
-<option> C1 LEVEL</option>
-<option> C2 LEVEL</option>
-</select>
+  <div class="tracking">
+
+    <div class="first-course">
+      <h3 class="progress-card">your progress is 60%</h3>
+      <div class="card">
+        <canvas id="myPieChart" width="200" height="200"></canvas>
+      </div>
+      <div class="progress-card">
+
+        <p>📝<strong> Last Activity:</strong> June 21</p>
+        <p>🎯 <strong>Goal:</strong> Finishing by July 1 </p>
+        <button class="btn-container">🔗 Continue Course</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="client-details">
 
 
-<label>Country</label>
-<input  type="text"   placeholder="Your country">
-<button class="EPB" type="submit">Save changes</button>
+    <div class="client-info">
+      <p><strong>Name: </strong> </p>
 
-</div>
+      <p> MOSTAFA EMAD</p>
+      <p><strong>Gmail:</strong> </p>
 
+      <p> mostafaemad@gmail.com</p>
+      <p><strong>Phone:</strong> </p>
 
-</div>
-</div>
+      <p> +01 01115557777</p>
+      <p><strong>Level:</strong> </p>
 
-
-</form>
-
-<p class="title">Certificates</p>
-<div class="nnn">
-<div class="ph1"> 
-
-<img class="Certificate2" src="/imgs/certificate2.jpg">
-<p class="des">     <i class="fa fa-certificate" aria-hidden="true"></i>
-    Congratilations!<br> You passed reading test on lingrow & thats your award </p>
-<button class="btn"> Download</button>
-</div>
-<div class="ph2"> 
-<img   class="Certificate1"  src="/imgs/certificate.jpg">
-<p class="des">  <i class="fa fa-certificate" aria-hidden="true"></i>
-    Congratilations! <br> Today you passed C1 level test on lingrow & thats your award</p>
-
-<button class="btn"> Download</button>
+      <p> Intermediate</p>
+      <p><strong>Country: </strong></p>
 
 
-</div>
-</div>
+      <p> </strong> USA </p>
 
 
+    </div>
+
+
+
+    <form id="hidden-form" onsubmit="updateProfile(event)">
+      <label>Full Name</label>
+      <input type="  text" placeholder="Your name" id="nameinput" required>
+      <label>Gmail</label>
+      <input type="text" placeholder=" @gmail.com " id="gmailinput" required>
+      <label>Phone number</label>
+      <input type="text" placeholder="+02 " id="phoneinput">
+
+
+      <label>Your level</label>
+      <select name="level" id="levelinput">
+        <option> A1 LEVEL</option>
+        <option> A2 LEVEL</option>
+        <option> B1 LEVEL</option>
+        <option> B2 LEVEL</option>
+        <option> C1 LEVEL</option>
+        <option> C2 LEVEL</option>
+      </select>
+
+
+      <label>Country</label>
+      <input type="text" placeholder="Your country">
+      <button class="EPB" type="submit">Save changes</button>
+
+  </div>
+
+
+  </div>
+  </div>
+
+
+  </form>
+
+  <p class="title">Certificates</p>
+  <div class="nnn">
+    <div class="ph1">
+
+      <img class="Certificate2" src="/imgs/certificate2.jpg">
+      <p class="des"> <i class="fa fa-certificate" aria-hidden="true"></i>
+        Congratilations!<br> You passed reading test on lingrow & thats your award </p>
+      <button class="btn"> Download</button>
+    </div>
+    <div class="ph2">
+      <img class="Certificate1" src="/imgs/certificate.jpg">
+      <p class="des"> <i class="fa fa-certificate" aria-hidden="true"></i>
+        Congratilations! <br> Today you passed C1 level test on lingrow & thats your award</p>
+
+      <button class="btn"> Download</button>
+
+
+    </div>
+  </div>
 
 
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
 
- function toggleForm() {
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+
+    function toggleForm() {
       const form = document.getElementById('hidden-form');
-      
+
 
 
       form.style.display = form.style.display === 'block' ? 'none' : 'block';
 
-}
+    }
 
 
 
 
-  const ctx1 = document.getElementById('myPieChart').getContext('2d');
-  new Chart(ctx1, {
-    type: 'pie',
-    data: {
-      labels: ['Completed', 'Remaining'],
-      datasets: [{
-        data: [60, 40],
-        backgroundColor: ['#d13bff', '#080808'],
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { position: 'bottom'}}
+    const ctx1 = document.getElementById('myPieChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['Completed', 'Remaining'],
+        datasets: [{
+          data: [60, 40],
+          backgroundColor: ['#d13bff', '#080808'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
 
-          }
-        });
-
-  const ctx2 = document.getElementById('Chart2').getContext('2d');
-  new Chart(ctx2, {
-    type: 'pie',
-    data: {
-      labels: ['Completed', 'Remaining'],
-      datasets: [{
-        data: [85, 15],
-        backgroundColor: ['#d13bff', '#080808'],
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { position: 'bottom'}}
-
-          }
-  });
-</script>
-</body>
-
-
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
+      }
     });
-</script>
+
+    const ctx2 = document.getElementById('Chart2').getContext('2d');
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Completed', 'Remaining'],
+        datasets: [{
+          data: [85, 15],
+          backgroundColor: ['#d13bff', '#080808'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+
+      }
+    });
+  </script>
+
+  <script src="/nav/nav.js"></script>
+
+</body>
 
 </html>

@@ -1710,6 +1710,7 @@ body {
 @media screen and (width:768px)and (min-width: 500px) {
     .packs {
 
+        width: 95vw;
         justify-content: flex-start;
         flex-direction: column;
         align-items: center;
@@ -1722,7 +1723,7 @@ body {
 
 
 
-        max-width: 30rem;
+        /* max-width: 30rem; */
 
         height: auto;
     }
@@ -2043,14 +2044,6 @@ footer li a:hover {
 
     }
 }
-
-
-
-
-
-
-
-
 
 /* ========================== Section Divider ========================== */
 
