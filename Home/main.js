@@ -47,6 +47,7 @@ const cards = document.querySelectorAll('.oc-card');
 const ocElements = document.querySelector('.our-courses-elements');
 const options = {
     rootMargin: "-40% 0px -40% 0px"
+
 };
 let shown = false;
 const cardObserver = new IntersectionObserver((entries) => {

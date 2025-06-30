@@ -5,17 +5,6 @@
     <meta charset="UTF-8">
 
 
-    <script>
-        fetch('../nav/nav.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-
-                const script = document.createElement('script');
-                script.src = '../nav/nav.js';
-                document.body.appendChild(script);
-            });
-    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingrow | Home</title>
@@ -93,16 +82,7 @@
                     <div class="btns-container">
                         <button class="CTA">Start</button>
 
-                        <script>
 
-                            document.querySelector(".CTA").addEventListener("click", function () {
-                                document.querySelector(".join").style.display = "flex";
-                            });
-
-
-
-
-                        </script>
 
 
 
@@ -282,7 +262,7 @@
                         <i class="fas fa-clock"></i>
                         <span>+20 HRS</span>
                     </div>
-                    <button onclick="window.location.href='/Courses/courses.html'"><span>MORE</span></button>
+                    <button onclick="window.location.href='../Courses/courses.html'"><span>MORE</span></button>
                 </div>
             </div>
             <!------------------- CARD  ------------------->
@@ -299,7 +279,7 @@
                         <i class="fas fa-clock"></i>
                         <span>+50 HRS</span>
                     </div>
-                    <button onclick="window.location.href='/Courses/courses.html'"><span>MORE</span></button>
+                    <button onclick="window.location.href='../Courses/courses.html'"><span>MORE</span></button>
                 </div>
             </div>
             <!------------------- CARD  ------------------->
@@ -317,7 +297,7 @@
                         <i class="fas fa-clock"></i>
                         <span>+5 HRS</span>
                     </div>
-                    <button onclick="window.location.href='/Courses/courses.html'"><span>MORE</span></button>
+                    <button onclick="window.location.href='../Courses/courses.html'"><span>MORE</span></button>
                 </div>
             </div>
             <!------------------- CARD  ------------------->
@@ -690,29 +670,6 @@
         </script> -->
 
 
-        <script>
-            const ourTeam = document.getElementById("ourteam");
-            const popup = document.getElementById("popup");
-            const closeBtn = document.querySelector(".close-btn");
-
-            ourTeam.addEventListener("click", function (e) {
-                e.preventDefault();
-                popup.style.display = "block";
-            });
-
-            closeBtn.addEventListener("click", function () {
-
-
-                popup.style.display = "none";
-            });
-
-            window.addEventListener("click", function (e) {
-                if (e.target === popup) {
-                    popup.style.display = "none";
-                }
-            });
-        </script>
-
         <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
         <script>
             // Smooth Scroll
@@ -854,9 +811,7 @@
             </div>
         </div>
 
-
         <script>
-
 
             document.addEventListener("DOMContentLoaded", function () {
                 const joinForm = document.querySelector(".joinForm");
@@ -866,7 +821,7 @@
                 console.log(joinForm);
 
                 const alreadyMemberLink = document.querySelector(".alreadymember a");
-                console.log(alreadyMemberLink);
+                console.log("Already a member: " + alreadyMemberLink);
 
                 const notMemberLink = document.querySelector(".notamember a");
 
@@ -915,7 +870,6 @@
                     }
                 }
 
-
                 joinForm.addEventListener("submit", function (e) {
                     e.preventDefault();
                     registerUser();
@@ -926,17 +880,6 @@
                     e.preventDefault();
                     loginUser();
                 });
-
-                // Function to change Join to Profile
-                // function updateJoinButton() {
-                //   if (joinBtn) {
-                //     joinBtn.textContent = "Profile";
-                //     joinBtn.removeEventListener("click", joinDefaultClick); // Avoid duplicate listeners
-                //     joinBtn.addEventListener("click", function () {
-                //       window.location.href = "profile.html";
-                //     });
-                //   }
-                // }
 
                 function joinDefaultClick() {
 
@@ -957,9 +900,114 @@
 
         </script>
 
+
         <!----------------------------- Section Divider ----------------------------->
 
-        <script src="../nav/nav.js"></script>
+        <script>
+            fetch('../nav/nav.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+
+                    const script = document.createElement('script');
+                    script.src = '../nav/nav.js';
+                    document.body.appendChild(script);
+
+                    script.onload = function () {
+                        console.log("loaded");
+
+
+
+
+                        const joinForm = document.querySelector(".joinForm");
+                        const signForm = document.querySelector(".signinForm");
+                        const joinBtn = document.querySelector(".loginbtn");
+
+                        console.log(joinForm);
+                        const alreadyMemberLink = document.querySelector(".alreadymember a");
+                        console.log("Already a member: " + alreadyMemberLink);
+                        const notMemberLink = document.querySelector(".notamember a");
+                        const joinWindow = document.querySelector(".join");
+                        const homeWindow = document.querySelector(".home");
+
+                        console.log(joinBtn);
+                        document.querySelector(".CTA").addEventListener("click", function () {
+
+                            console.log(joinWindow);
+                            console.log(joinWindow);
+                            joinWindow.style.display = "flex";
+                        });
+                        if (alreadyMemberLink && notMemberLink && joinForm && signForm) {
+                            alreadyMemberLink.addEventListener("click", (e) => {
+                                e.preventDefault();
+                                joinForm.style.display = "none";
+                                signForm.style.display = "flex";
+                            });
+
+                            notMemberLink.addEventListener("click", (e) => {
+                                e.preventDefault();
+                                signForm.style.display = "none";
+                                joinForm.style.display = "flex";
+                            });
+                        }
+
+                        const exitBtn = document.querySelector(".exit");
+                        if (exitBtn) {
+                            exitBtn.addEventListener("click", function () {
+                                joinWindow.style.display = "none";
+                            });
+                        }
+
+                        function loginUser() {
+                            sessionStorage.setItem("isLoggedIn", "true");
+                            alert("Welcome!");
+                            location.reload();
+                        }
+
+                        function registerUser() {
+                            const passwordInput = document.getElementById("password");
+                            const confirmPasswordInput = document.getElementById("conf");
+
+                            if (passwordInput.value === confirmPasswordInput.value) {
+                                sessionStorage.setItem("isLoggedIn", "true");
+                                alert("Registration successful!");
+                                location.reload();
+                            } else {
+                                alert("Password does not match.");
+                            }
+                        }
+
+                        if (joinForm) {
+                            joinForm.addEventListener("submit", function (e) {
+                                e.preventDefault();
+                                registerUser();
+                            });
+                        }
+
+                        if (signForm) {
+                            signForm.addEventListener("submit", function (e) {
+                                e.preventDefault();
+                                loginUser();
+                            });
+                        }
+
+                        if (sessionStorage.getItem("isLoggedIn") === "true") {
+                            if (joinBtn) {
+                                console.log("Change join button");
+
+                                joinBtn.innerHTML = "Profile";
+                                joinBtn.addEventListener("click", function () {
+                                    window.location.href = "../profile/profile.html";
+                                });
+                            }
+                        }
+                    };
+
+                    document.body.appendChild(script);
+                });
+
+        </script>
+
         <script src="main.js"></script>
 
 </body>
